@@ -1,0 +1,52 @@
+@r-rad: 3px;
+@gray: #333;
+@gray1: lighten(@gray, 3%);
+@gray2: lighten(@gray1, 3%);
+@gray3: lighten(@gray2, 3%);
+@gray4: lighten(@gray3, 3%);
+
+@color: #00b0ff;
+@color_light: lighten(@color, 10%);
+@color_lightest: lighten(@color, 20%);
+
+@white: #fff;
+@black: #000;
+@bt-bord-width: 2px;
+
+@font_size: 20px;
+@m_w_1: 65em;
+
+@padding: 1rem;
+
+:root{
+	--radius: .3rem;
+	--padding-small: .5rem;
+	--padding: 1rem;
+	--padding-big: 3rem;
+	--padding-huge: 6rem;
+	
+	--c_l_danger: fade(#d32f2f, 100%);
+	--c_l_freak: fade(#9c27b0, 100%);
+	--c_l_savior: fade(#009688, 100%);
+	--c_l_superior: fade(#03a9f4, 100%);
+	--c_l_mundane: fade(#fb8c00, 100%);
+	
+	--c_p_npc: #ab47bc;
+	--c_p_pc: #26c6da;
+	
+	//--c_p_hit: #8bc34a;
+	--c_p_hit: #afb42b;
+	--c_p_great: #4caf50;
+	--c_p_partial: #ffca28;
+	--c_p_miss: #d81b60;
+
+	--color: @color;
+	--c_light: @color_light;
+	--c_lighest: @color_lightest;
+
+	--c_contrast: #fff;
+
+	--c_shadow_dark: #000;
+
+	--c_back_part: #00000029;
+}

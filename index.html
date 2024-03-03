@@ -1,0 +1,392 @@
+<!doctype html>
+<html>
+<head>
+  <title>MASKS - помощник</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta name="description" content="Списки ходов и прочих механик">
+  <link href="../_fonts/FortAwesome/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="icon.ico" />
+  <link rel="canonical" href="https://tentaculus.ru/masks_helper" />
+	
+  <meta property="og:image" content="img/bg2.jpg" />
+  <meta property="og:image" content="img/og.jpg" />
+  <meta property="og:title" content="MASKS - помощник" />
+  <meta property="og:description" content="Списки ходов и прочих механик" />
+    <!-- IE must understand HTML5: -->
+  <!--[if IE]>
+   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+  <style>
+   article, aside, details, figcaption, figure, footer,header,
+   hgroup, menu, nav, section, div { display: block; }
+  </style>
+</head>
+<body>
+
+	
+	<div class='wrap'  id='app' >	
+	
+		<div id='loader_overflow' v-show="!bAppIsReady">		
+			<div style='text-align: center;'>
+				<div id='loader' class='loader'>
+					
+				</div>
+				
+				<div id='loader_warning'>
+					Некотороые мобильные браузеры, например Firefox, не могут открыть все это великолепие.
+					<p>
+					¯\_(ツ)_/¯
+					</p>
+					<p>
+						Chrome и Firefox Nightly - могуть
+					</p>
+				</div>
+				
+				
+			</div>
+		</div>
+	
+		<menu id='menu' :class='{maximise: enlarge_menu}' @click="menu_priority(1)">
+			<ul id="data_list">
+				<li class='top_menu'>
+					<a href="/" title='На главную страницу сайта'  ><i class='icon home'></i></a>
+					<a href="#" title='Показать стартовую страницу' @click="show_start"><span style='position: relative; top: -.3rem;'>☰</span></a>
+					<a href="https://tentaculus.ru/message/?theme=masks_helper" title='Написать сообщение'><span style='position: relative; top: -.3rem;'>✉</span></a>
+				</li>
+				<item v-for="item in structure"
+					:key="item.key"
+					:name="item.key"
+					src='data'
+					:title="item.title"
+					:ico="item.ico"
+					:color="item.color"
+					:checked="checked.main"
+					
+					@lclick="dataClick($event)"
+				>
+				</item>
+			</ul>
+			<ul id="section_list">				
+				<item v-for="item in section_action_list" 
+					:key="item.key"
+					:name="item.key"
+					src='section'
+					:title="item.title"
+					:ico="item.ico"
+					:color="item.color"
+					:checked="checked.section"
+					
+					style_class="action"
+					
+					@lclick="section_actionClick($event)"
+				>
+				</item>		
+				
+				<item v-for="item in section"
+					:key="item.key"
+					:name="item.key"
+					src='section'
+					:title="item.title"
+					:type="String(item.type)"
+					:kind="String(item.kind)"
+					:ico="item.ico"
+					:color="item.color"
+					:checked="checked.section"
+					
+					@lclick="sectionClick($event)"
+				>
+				</item>	
+			</ul>
+			<ul id="subsection_list">	
+				<item v-for="item in subsection"
+					:key="item.key"
+					:name="item.key"
+					src='subsection'
+					:type="String(item.type)"
+					:kind="String(item.kind)"
+					:title="item.title"
+					:checked="checked.subsection"
+					:ico="item.ico"
+					:color="item.color"
+					
+					@lclick="subsectionClick($event)"
+				>
+				</item>
+			</ul>
+		</menu>
+		
+		<div id='contain' class='contain'  @click="menu_priority(0)">
+					
+			<!-- Ходы -->
+			<div id='move' class='widther' v-show="showMove">
+				<move 
+					:name="displayMove.key"
+					:title="displayMove.title"
+					:modifier="displayMove.modifier"
+					:replace="displayMove.replace"
+					:condition="displayMove.condition"
+					:kind="displayMove.kind"
+					@fail="show_move_fail"					
+				>
+					<move_part v-for="part in displayMove.parts"
+						:key="part.title"
+						:title="part.title"
+						:info="part.info"
+						:after="part.after"
+						:type="part.type"
+						:kind="part.kind"
+						:list="part.list"
+						:params="part.params"
+						>
+						<move_part v-for="subpart in part.parts"
+							:key="subpart.title"
+							:title="subpart.title"
+							:info="subpart.info"
+							:after="subpart.after"
+							:type="subpart.type"
+							:kind="part.kind"
+							:list="subpart.list"
+							:params="subpart.params"
+							>							
+							<move_part v-for="subsubpart in subpart.parts"
+								:key="subsubpart.title"
+								:title="subsubpart.title"
+								:info="subsubpart.info"
+								:after="subsubpart.after"
+								:type="subsubpart.type"
+								:kind="part.kind"
+								:list="subsubpart.list"
+								:params="subsubpart.params"
+								>
+								
+							</move_part>
+						</move_part>
+					</move_part>
+				</move>
+				
+				<ul class="move_fails">
+					<li v-for="el in move_fails">
+						{{el}}
+					</li>
+				</ul>
+			</div>
+			
+			<!-- Предметы и заклинания-->			
+			<div id='move' class='widther' v-show="showItem">
+				<card
+					:title="displayItem.title"
+					:tags="displayItem.tags"
+					:level="displayItem.level"
+					:cost="displayItem.cost"
+					:weight="displayItem.weight"
+					:hold="displayItem.hold"
+					:description="displayItem.description"
+					/>				
+			</div>
+			
+			<!-- Случайный набор -->
+			<div id='random_set' class='widther' v-show="showRandomSet">
+				<h1>
+					{{_random_set_title}}
+				</h1>
+				<ul style='display: block; padding: 0'>
+					<li v-for="item in _random_set_result" class='random_item'>
+						<div>
+							<span class='color'>{{item.title}}: </span>
+							<span v-html="item.value"></span>
+						</div>						
+						<button @click="_onRandomGeneratedClick(item)" style='margin-left: .7rem'>🎲</button>
+					</li>
+				</ul>
+			</div>
+			
+			<!-- Списки -->
+			<div id='result' class='widther'  v-show="showResult" >				
+				<section class='padding'  v-show="String(random_result).length > 0">
+					<header>
+						<h1>Случайный результат:</h1>
+						<button @click="_random" title='Получить случайный результат' id='getRandom'>🎲</button>
+					</header>
+					
+					<div class='highlight' v-html="random_result">
+					</div>
+					
+					
+					<!-- <p v-html="displayData.pre"> -->
+					<!-- </p>		 -->
+					
+					<ul class='move_options'>
+						<chooser v-for="item in options"
+							:key="item.key"
+							:name="item.key"
+							:title="item.title"
+							:val="item.value"
+							:type="item.type"
+							:selected="item.checked"
+							@iclick="onChoose($event)"
+						></chooser>
+					</ul>
+					
+				</section>
+				<section class='padding'>
+					<p v-html="displayData.pre">
+					</p>
+				</section>
+				<section class='padding'>
+					<h1 v-if="String(random_result).length > 0">Все варианты:</h1>
+					<h1 v-else> Список:</h1>
+					<ul :class="{compact: listCompact}">
+						<lister v-for="item in displayData.list"
+							:key="item.i"
+							:title="item.title"
+							:subtitle="item.subtitle"
+						>
+
+						</lister>
+					</ul>
+				</section>
+				
+				<section style='font-size: 90%; margin-top: 3rem'>
+					<div v-html="sources_info">
+					</div>
+				</section>
+			</div>
+			
+
+			<div class='info widther'  v-show="showInfo">
+				<h1>
+					Помощник MASKS
+				</h1>
+				
+				<p>
+					Здесь собраны некоторые ходы и идеи, которые могут пригодиться во время игры.
+				</p>
+				
+				<p>
+					Ходы переведены так, чтоб максималоьно передавать суть. Но полное разъяснение, что и как применять описано в рулбуке. Надеемся, он скоро выйдет на русском.
+				</p>
+				
+				<p>
+					Тут есть и официальные ходы из рулбука, и разные самопальные собранные на просторах. 
+				</p>
+				
+				<p>
+					Если есть предложения, пишите в группу в VK или в Telegram. 
+				</p>
+				<!-- <p> -->
+					<!-- Кроме того, есть своеобразный "Подсказчик" для мастера. Кнопка с кубиком [⚅] в правом нижнем углу показывает варианты ходов мастера, которые преиодически обновляются. Если в сцене назрела ситуация, где мастеру нужно сделать ход, но с идеями туговато, подсказчик может помочь. -->
+				<!-- </p> -->
+				<p>
+					GitHub: <a href="https://github.com/Etignis/dw_master_helper">https://github.com/Etignis/masks_helper</a>
+				</p>
+			</div>
+
+			<footer>
+				<!-- <p> -->
+					<!-- Данные распространются по лицензии Creative Commons Attribution 4.0 Unported License. -->
+				<!-- </p> -->
+				<!-- <h1> -->
+					<!-- Источникик и полезности:  -->
+				<!-- </h1> -->
+				<!-- <div class='creditials'>				 -->
+					<!-- <div class='source'> -->
+						<!-- <a href="https://dungeon-world.com/" class='outer_logo' title='Официальный сайт'> -->
+							<!-- <img src='img/DW_LOGO.jpg'> -->
+						<!-- </a> -->
+					<!-- </div>			 -->
+			
+				<!-- </div> -->
+			</footer>
+			
+		</div>
+		
+		<!-- <div class="floater"> -->
+			<!-- <div class="timer_settings_container"> -->
+				<!-- <transition name="fade"> -->
+					<!-- <div class='opt_container' v-show="dm_helper.show_sources"> -->
+						<!-- <ul>						 -->
+							<!-- <li v-for="opt in dm_helper.sources"  -->
+								<!-- v-bind:key="opt.key" -->
+								<!-- :class='{option: true, active: opt.active}' -->
+								<!-- @click="onPressHelperSrc(opt)"> -->
+								<!-- {{opt.title}} -->
+							<!-- </li>				 -->
+						<!-- </ul> -->
+					<!-- </div> -->
+				<!-- </transition> -->
+				<!-- <button class='timer_settings' title='Настройки подсказчика' @click="dm_helper.show_sources = !dm_helper.show_sources"> -->
+					<!-- <span class='ico' data-icons="☀">✎</span> -->
+				<!-- </button> -->
+			<!-- </div> -->
+			
+			<!-- <div> -->
+				<!-- <button :class='{play: true, timer: dm_helper.active}' title='Подсказчик' @click="switch_helper"> -->
+					<!-- <span class='ico' data-icons="♘">⚅</span> -->
+				<!-- </button> -->
+				<!-- <transition name="fade"> -->
+					<!-- <div class='prompt_container' v-show="dm_helper.show_prompt"> -->
+						<!-- <div class='text' v-html="dm_helper.prompt"> -->
+					
+						<!-- </div> -->
+						<!-- <button @click="next_prompt"> -->
+							<!-- <span class='ico' data-icons="➔➛➜➤➧">⟳</span> -->
+						<!-- </button> -->
+					<!-- </div> -->
+				<!-- </transition> -->
+			<!-- </div> -->
+		<!-- </div> -->
+		
+	</div>
+	
+	<div id='preload' style="position: absolute; overflow :hidden; width: 0; height: 0">
+		<img src="img/brush1.png">
+		<img src="img/brush2.png">
+		<img src="img/brush3.png">
+		<img src="img/brush4.png">
+		<img src="img/brush5.png">
+		<img src="img/brush6.png">
+	</div>
+
+	<script type='text/javascript' src="js/lib_MASKS.js" defer></script>
+	<script type='text/javascript' src="js/vue.js" defer></script>
+  <!-- <script type='text/javascript' src='js/data.js' defer></script> -->
+  <script type='text/javascript' src='js/controller.js' defer></script>
+	
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter42911239 = new Ya.Metrika({
+                    id:42911239,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true,
+                    trackHash:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/42911239" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

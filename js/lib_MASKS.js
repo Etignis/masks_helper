@@ -2284,8 +2284,503 @@
 					ico: "",
 					type: 1,				
 					sub: [
+						{
+							en: {
+								title: "Thick and thin skinned",
+								key: "thick_and_thin",
+								data: {
+									move: {
+										data: {
+											info: "Whenever you have {Angry} marked, take +1 ongoing to <unleash your powers#player_moves|basic_moves|unleash_your_power>.",
+											}
+									}									
+								}
+							},
+							ru: {
+								title: "И под толстой шкурой есть чувства",
+								key: "thick_and_thin",
+								data: {
+									move: {
+										data: {
+											info: "Пока у тебя отмечено состояние {Злой}, получай +1 когда <проявляешь всю свою мощь#player_moves|basic_moves|unleash_your_power>",
+											}
+									}									
+								}
+							}
+						},
+						{
+							en: {
+								title: "You've got a head you don't need",
+								key: "head_you_dont_need",
+								data: {
+									move: {
+										data: {
+											condition: "When you <provoke someone#player_moves|basic_moves|provoke> with obvious threats and shows of force, roll +%DANGER% instead of +%SUPERIOR%.",
+										}
+									}									
+								}
+							},
+							ru: {
+								title: "Сила есть ума не надо",
+								key: "head_you_dont_need",
+								data: {
+									move: {
+										data: {
+											info: "Когда ты <провоцируешь кого-то#player_moves|basic_moves|provoke> с явной угрозой и демонстрацией силы, используй +%DANGER% вместо +%SUPERIOR%.",
+										}
+									}									
+								}
+							}
+						},
+						{
+							en: {
+								title: "Punch everyone",
+								key: "punch_everyone",
+								data: {
+									move: {
+										data: {
+											condition: "Whenever you [charge into a fight without hedging your bets], you can shift your {Danger} up and any other {Label} down.",
+
+											notes: "For [Punch everyone], charging into a fight without hedging your bets means dashing into danger without any thought to your own safety or the safety of others. It needs to be meaningful that you aren’t hedging your bets or thinking about what you’re doing. Often, that means you aren’t participating in the move to <generate team#player_moves|periphreal_moves|adding_teampool> for the fight."
+										}
+									}									
+								}
+							},
+							ru: {
+								title: "Время ломать лица",
+								key: "punch_everyone",
+								data: {
+									move: {
+										data: {
+											condition: "Всякий раз [врываясь в драку и не заботясь о прикрытии], можешь повысить свой Ярлык {Danger} и понизить любой другой.",
+
+											notes: "For [Punch everyone], charging into a fight without hedging your bets means dashing into danger without any thought to your own safety or the safety of others. It needs to be meaningful that you aren’t hedging your bets or thinking about what you’re doing. Often, that means you aren’t participating in the move to <generate team#player_moves|periphreal_moves|adding_teampool> for the fight."
+										}
+									}									
+								}
+							}
+						},
+						{
+							en: {
+								title: "There when it matters",
+								key: "there_when_it_matters",
+								data: {
+									move: {
+										data: {
+											condition: "When you <defend someone#player_moves|basic_moves|defend>...",
+
+											parts: [
+												{
+													type: "hit",
+													info: "...on a hit you can {hold 1} instead of choosing one from the list.",
+													after: " Spend your {hold} when they are in danger later to arrive on the scene ready to help.",
+												}
+											],
+
+											notes: "[There when it matters] allows you to appear in a scene you weren’t previously in — just work with the GM to explain how you got there so quickly. It could be anything from you just happening to be in the area to you actively tailing the person you protect."
+										}
+									}									
+								}
+							},
+							ru: {
+								title: "Там, где нужен",
+								key: "there_when_it_matters",
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты успешно <защищаешь кого-то#player_moves|basic_moves|defend>...",
+
+											parts: [
+												{
+													type: "hit",
+													info: "...можешь получить {1 запас} вместо выбора из вариантов.",
+													after: "Можешь потратить {запас} позже, чтобы появитсья в сцене, когда кому-то грозит опасность.",
+												}
+											],
+
+											notes: "[There when it matters] allows you to appear in a scene you weren’t previously in — just work with the GM to explain how you got there so quickly. It could be anything from you just happening to be in the area to you actively tailing the person you protect."
+										}
+									}									
+								}
+							}
+						},
+						{
+							en: {
+								title: "In a china shop",
+								key: "china_shop",
+								data: {
+									move: {
+										data: {
+											condition: "When you <directly engage a threat#player_moves|basic_moves|directly_engage_threat>, you can cause significant collateral damage to your environment to choose an additional option, even on a miss.",
+										}
+									}									
+								}
+							},
+							ru: {
+								title: "В посудной лавке",
+								key: "china_shop",
+								data: {
+									move: {
+										data: {
+											condition: "<Выходя против явной угрозы#player_moves|basic_moves|directly_engage_threat>, можешь причинить ощутимый ущерб окружению, чтобы выбрать еще 1 вариант, даже при провале.",
+										}
+									}									
+								}
+							}
+						},
+						{
+							en: {
+								title: "Physics? What physics?",
+								key: "what_physics",
+								data: {
+									move: {
+										data: {
+											condition: "When you <unleash your powers#player_moves|basic_moves|unleash_your_power> to barrel through an insurmountable barrier, roll +%DANGER% instead of +%FREAK%.",
+										}
+									}									
+								}
+							},
+							ru: {
+								title: "Физика? Какая еще физика?",
+								key: "what_physics",
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты <даешь волю силам#player_moves|basic_moves|unleash_your_power>, чтобы прорваться через непреодолимый барьер, используй +%DANGER% вместо +%FREAK%.",
+										}
+									}									
+								}
+							}
+						},
+
 					]
 				},
+				{
+					title: "Бунтарь",
+					key: "delinquent",
+					color: "",
+					ico: "",
+					type: 1,				
+					sub: [
+						{
+							en: {
+								title: "Mary Contrary",
+								key: "mary_contrary",
+								type: 0,
+								data: {
+									move: {
+										data: {
+											condition: "When someone tries to <pierce your mask#player_moves|basic_moves|pierce_mask>, <comfort or support#player_moves|basic_moves|comfort_support> you, or <provoke#player_moves|basic_moves|provoke> you, you can interfere. Roll +%SUPERIOR%",
+											
+											parts: [
+												{
+													type: "hit",
+													info: "On a hit, they take a -2 on their roll.",
+													parts: [
+														{
+															type: "great",
+															info: "On a 10+, you also take {Influence} over them or clear a {condition}.",
+																	
+														},
+													],														
+												},
+
+												{
+													info: "On a miss, they get a 10+ no matter what they rolled and you mark a {condition} of their choice.", 
+													type: 'miss',
+												}
+											]
+											
+										}
+									}									
+								}
+							},
+							ru: {
+								title: "Мари Контари",
+								key: "mary_contrary",
+								type: 0,
+								data: {
+									move: {
+										data: {
+											condition: "Когда кто-то пытается <заглянуть тебе под маску#player_moves|basic_moves|pierce_mask>, <утешить или поддержать#player_moves|basic_moves|comfort_support> тебя, или <спровоцировать#player_moves|basic_moves|provoke> тебя, ты можешь воспротивиться. Брось +%SUPERIOR%",
+											
+											parts: [
+												{
+													type: "hit",
+													info: "При успехе цель получает -2 к броску",
+													parts: [
+														{
+															type: "great",
+															info: "На 10+ ты получаешь {Влияние} на цель или очищаешь {Состояние}.",
+																	
+														},
+													],														
+												},
+
+												{
+													info: "При провале его результат становится как 10+, а ты отмечаешь {Состояние} по его выбору.", 
+													type: 'miss',
+												}
+											]
+											
+										}
+									}									
+								}						
+							}															
+						},
+
+						{
+							en: {
+								title: "I don’t care what you think!",
+								key: "dont_care",
+								type: 1,
+								data: {
+									move: {
+										data: {
+											info: "Whenever you reject others’ {Influence}, add +2 to your roll.",
+										}
+									}									
+								}
+							},
+							ru: {
+								title: "Мне плевать, что вы обо мне думаете!",
+								key: "dont_care",
+								type: 1,
+								data: {
+									move: {
+										data: {
+											info: "Каждый раз отвергая чье-то {Влияние}, получи +2 к своему броску.",
+										}
+									}									
+								}				
+							}															
+						},
+
+						{
+							en: {
+								title: "Team? What team?",
+								key: "what_team",
+								type: 1,
+								data: {
+									move: {
+										data: {
+											info: "When you [use {Team} selfishly], clear a {condition} or mark {potential}. The first time in a session that you use Team to <help#player_moves|periphreal_moves|using_team> a teammate, take {+1 forward}.",
+										}
+									}									
+								}
+							},
+							ru: {
+								title: "Команда? Какая команда?",
+								key: "what_team",
+								type: 1,
+								data: {
+									move: {
+										data: {
+											info: "Когда ты [используешь {Тимпул} эгоистично], очисть {Состояние} или отметь {Потенциал}. <Используя тимпул#player_moves|periphreal_moves|using_team> для помощи товарищу в первый раз за сессию, получи {+1 к следующему броску}.",
+										}
+									}									
+								}				
+							}															
+						},
+
+						{
+							en: {
+								title: "Criminal mind",
+								key: "сriminal_mind",
+								type: 0,
+								data: {
+									move: {
+										data: {
+											condition: "When you <assess the situation#player_moves|basic_moves|asses_sitiation>, you can always ask one of the following questions, even on a miss:",
+											
+											parts: [
+												{												
+													list: [
+														{
+															title: "what here is useful or valuable to me?"
+														},
+														{
+															title: "how could I best infuriate or provoke ____________?"
+														},
+														{
+															title: "what’s the best way in/way past?"
+														}
+													]		
+												}
+											],
+
+											notes: "For [Criminal mind], you still get +1 ongoing to act on the answers to those questions, just like for a normal <assess the situation move#player_moves|basic_moves|asses_sitiation>."
+										}
+									}									
+								}
+							},
+							ru: {
+								title: "Преступный разум",
+								key: "advantage_influence",
+								type: 0,
+								data: {
+									move: {
+										data: {
+											condition: "<Оценивая ситуацию#player_moves|basic_moves|asses_sitiation>, ты можешь задать один из этих вопросов, даже при провале:",
+											
+											parts: [
+												{												
+													list: [
+														{
+															title: "Что здесь полезного или ценного для меня?"
+														},
+														{
+															title: "Как я могу его взбесить или спровоцировать"
+														},
+														{
+															title: "Как лучше всего попасть туда или выбраться?"
+														}
+													]		
+												}
+											],
+
+											notes: "For [Criminal mind], you still get +1 ongoing to act on the answers to those questions, just like for a normal <assess the situation move#player_moves|basic_moves|asses_sitiation>."
+										}
+									}									
+								}					
+							}															
+						},
+						
+						{
+							en: {
+								title: "Troublemaker",
+								key: "troublemaker",
+								type: 1,
+								data: {
+									move: {
+										data: {
+											condition: "When you [<help#player_moves|periphreal_moves|using_team> a teammate through destructive, criminal, or rule-breaking actions], you can give them a +2 instead of a +1 when you spend a {Team} from the pool.",
+										}
+									}									
+								}
+							},
+							ru: {
+								title: "Смутьян",
+								key: "troublemaker",
+								type: 1,
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [<помогаешь#player_moves|periphreal_moves|using_team> товарищу с помощью деструктивных, криминальных или нарушающих правило действий], дай ему +2 вместо +1, тратя очко из {тимпула}.",
+										}
+									}									
+								}				
+							}															
+						},
+
+						{
+							en: {
+								title: "Are you watching closely?",
+								key: "watching_closely",
+								data: {
+									move: {
+										data: {
+											condition: "When you [mislead, distract, or trick someone], roll +%SUPERIOR%.",
+											
+											parts: [
+												{
+													type: "hit",
+													info: "On a hit, they are fooled, at least for a moment.",
+													parts: [
+														{
+															type: "great",
+															info: "On a 10+, choose three.",
+																	
+														},
+														{
+															type: "partial",
+															info: "On a 7-9, choose two.",
+																	
+														},
+													],
+													list: [
+														{
+															title: "you get an opportunity"
+														},
+														{
+															title: "you expose a weakness or flaw"
+														},
+														{
+															title: "you confuse them for some time"
+														},
+														{
+															title: "you avoid further entanglement"
+														},
+													]		
+												},
+												{
+													type: "miss",
+													info: "On a miss, you’re hopelessly embroiled in it and under pressure; mark a condition.",
+															
+												},
+											],
+											
+											notes: "For [Are you watching closely?], you’re assumed not to get any of the options that you don’t choose. That means if you don’t choose “You confuse them for some time,” then your trick may not last very long. If you don’t choose “You avoid further entanglement,” then you can assume someone’s going to check up on you later about that deception. Getting an opportunity means you get a chance you might not have had otherwise to take action, and exposing a weakness or flaw means you learn something you might be able to exploit."
+										}
+									}									
+								}
+							},
+							ru: {
+								title: "Следишь за руками?",
+								key: "watching_closely",
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [вводишь в заблуждение, отвлекаешь или обманываешь]кого-то, брось +%SUPERIOR%.",
+											
+											parts: [
+												{
+													type: "hit",
+													info: "При успехе они одурачены хотя бы на мгновение.",
+													parts: [
+														{
+															type: "great",
+															info: "На 10+ спроси 3.",
+																	
+														},
+														{
+															type: "partial",
+															info: "На 7-9 спроси 2.",
+																	
+														},
+													],
+													list: [
+														{
+															title: "ты получил возможность"
+														},
+														{
+															title: "обнаружил слабость или недостаток"
+														},
+														{
+															title: "ты путаешь их на некоторое время"
+														},
+														{
+															title: "избегаешь дальнейших затруднений"
+														},
+													]		
+												},
+												{
+													type: "miss",
+													info: "При провале ты безнадежно увяз во всем этом и находишься под давлением, отметь {Состояние}.",
+															
+												},
+											],
+											
+											notes: "For [Are you watching closely?], you’re assumed not to get any of the options that you don’t choose. That means if you don’t choose “You confuse them for some time,” then your trick may not last very long. If you don’t choose “You avoid further entanglement,” then you can assume someone’s going to check up on you later about that deception. Getting an opportunity means you get a chance you might not have had otherwise to take action, and exposing a weakness or flaw means you learn something you might be able to exploit."
+
+										}
+									}									
+								}
+							}
+						},
+						
+					]
+				}
 				
 			]
 		},

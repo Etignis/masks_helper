@@ -543,6 +543,18 @@ a:hover {
 }
 .move .modifier {
   margin-top: var(--padding);
+  line-height: 1.5em;
+}
+.move .move_info,
+.move .condition {
+  margin: var(--padding) 0;
+  margin-bottom: var(--padding-big);
+  line-height: 1.5em;
+}
+.move .notes {
+  margin: var(--padding) 0;
+  margin-top: var(--padding-huge);
+  line-height: 1.5em;
 }
 mark.label {
   padding: .3em;

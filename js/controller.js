@@ -20,17 +20,17 @@ function _formatText(sText, oParams){
 	if(oParams && oParams.noP) {
 		return sText?sText
 		.replace(/<([^#]+)(#[^\>]+)>/ig, `<a href='$2'>$1</a>`)
-			//.split("|").map(el=>`${el}`).join("\r\n")
+			.split("||").map(el=>`${el}`).join("\r\n")
 				.replace(/\[([^\[\]]+)\]/g, "<b>$1</b>")
 				.replace(/\{([^\{\}]+)\}/g, "<i>$1</i>")
-				.replace(/\%([^\%]+)\%/g, "<mark class='label' data-label='$1'>$1</mark>"):"";
+				.replace(/\%([^\%]+)\%/g, `<mark class='label' data-label='$1'>$1</mark>`):"";
 	} else {
 		return sText?sText
 		.replace(/<([^#]+)(#[^\>]+)>/ig, `<a href='$2'>$1</a>`)
-		//	.split("|").map(el=>`<p>${el}</p>`).join("\r\n")
+			.split("||").map(el=>`<p>${el}</p>`).join("\r\n")
 				.replace(/\[([^\[\]]+)\]/g, "<b>$1</b>")
 				.replace(/\{([^\{\}]+)\}/g, "<i>$1</i>")
-				.replace(/\%([^\%]+)\%/g, "<mark class='label' data-label='$1'>$1</mark>"):"";
+				.replace(/\%([^\%]+)\%/g, `<mark class='label' data-label='$1'>$1</mark>`):"";
 	}
 	
 }
@@ -481,6 +481,14 @@ Vue.component('move', {
 		name: {
 			type: String,
 			default: ""
+		},	
+		info: {
+			type: String,
+			default: ""
+		},
+		notes: {
+			type: String,
+			default: ""
 		},
 		kind: {
 			type: String,
@@ -522,6 +530,18 @@ Vue.component('move', {
 			}
 			return sText;
 		},
+		_info: function(){
+			let sText = _formatText(this.info);//.split("|").join("<br>");
+			return sText;
+		},
+		_notes: function(){
+			let sText = '';
+			if(this.notes && this.notes.length>2){
+				sText = `Пояснение из книги правил:<br>`+_formatText(this.notes);
+			}
+			
+			return sText;
+		},
 		_modifier: function(){
 			let sText = '';
 			if(Array.isArray(this.modifier)) {
@@ -554,12 +574,13 @@ Vue.component('move', {
 		<h1 class='title'>{{title}}</h1>
 		<div class='kind' v-show='_kind.length>3' v-html='_kind'></div>
 		<div class='replace'>{{_replace_title}}{{replace}}</div>
+		<div class='move_info' v-html="_info" v-show="_info.length>1"></div>
 		<div class='condition' v-html="_condition"></div>
 		<div class='modifier' v-html="_modifier" v-if="_modifier.length>2"></div>
 		
-		<slot></slot>
+		<slot></slot>		
 		
-		
+		<div class='notes' v-html="_notes" v-if="_notes.length>2"></div>
 </article>`
 });
 
@@ -1089,7 +1110,7 @@ var app = new Vue({
 			return {};
 		},
 		showMove: function(){
-			let bMove = !!(this.displayMove && this.displayMove.condition);
+			let bMove = !!(this.displayMove && this.displayMove.title);
 			return bMove;
 		},
 		
@@ -1354,7 +1375,9 @@ var app = new Vue({
 			this._random();			
 			
 			this.section_actions.forEach(oAction => {oAction.list.forEach(oListItem => {oListItem.value = ""})});
-			this.libPathValue = {};
+			if(!this.checked.subsection) {
+				this.libPathValue = {};
+			}
 		},
 		
 		

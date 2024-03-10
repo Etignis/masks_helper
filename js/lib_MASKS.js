@@ -2174,7 +2174,7 @@
 													parts: [													
 														{
 															type: "partial",
-															info: "On a 7-9the GM will tell you something else they’ve heard, and pick a second {Label} they assign to you.",
+															info: "On a 7-9 the GM will tell you something else they’ve heard, and pick a second {Label} they assign to you.",
 																	
 														},
 													]													
@@ -3055,6 +3055,318 @@
 
 					]
 				},
+
+				{
+					title: "Наследие",
+					key: "legasy",
+					color: "",
+					ico: "",
+					type: 1,				
+					sub: [
+						{
+							en: {
+								title: "Fight the good fight",
+								key: "good_fight",
+								data: {
+									move: {
+										data: {											
+											condition: "When you [pull your punches while <directly engaging a threat#player_moves|basic_moves|directly_engage_threat>], you can roll +%SAVIOR% instead of +%DANGER%. If you do, you cannot choose {to impress, surprise, or frighten your foe}. ",	
+										}
+									}									
+								}
+							},
+							ru: {
+								title: "За правое дело",
+								key: "good_fight",
+								data: {
+									move: {
+										data: {											
+											condition: "Когда ты [сдерживаешь свои удары, <выходя против явной угрозы#player_moves|basic_moves|directly_engage_threat>], ты можешь бросить +%SAVIOR% вместо +%DANGER%. Если ты это делаешь, ты не сможешь {произвести впечатление, удивить или напугать своего врага}.",		
+											}
+										}
+									}																		
+								}
+						},
+
+						{
+							en: {
+								title: "I know what I am",
+								key: "i_know_what_i_am",
+								data: {
+									move: {
+										data: {											
+											condition: "Once per scene, when [you <defendl#player_moves|basic_moves|defend> a teammate] you can shift {Savior} up and another {Label} down in addition to any other benefits from the move, even on a miss. If you do, add {1 Team} to the pool.",	
+										}
+									}									
+								}
+							},
+							ru: {
+								title: "Я тот, кто я есть",
+								key: "i_know_what_i_am",
+								data: {
+									move: {
+										data: {											
+											condition: "Один раз за сцену, [<защищая#player_moves|basic_moves|defend> кого-то из команды] ты можешь сдвинуть {Savior} вверх и любой другой {Ярлык} вниз. Если ты сделаешь это, добавь {1 в тимпул}.",		
+											}
+										}
+									}																		
+								}
+						},
+
+						{
+							en: {
+								title: "Words of the past",
+								key: "words_of_past",
+								data: {
+									move: {
+										data: {											
+											condition: "When you [seek the guidance of one of your elders or a member of your legacy], tell them a problem you face, and ask them a question about the problem. They will answer it honestly, and tell you what to do. Take {+1 ongoing} if you listen. If you go your own way, {mark potential}.",	
+
+											notes: "[Words of the past] lets you ask members of your legacy for input on a problem. <The legacy matters#player_moves|legasy|legacy_matters> is about taking and giving {Influence} to members of your legacy, and allowing yourself to be shaped by their words and opinions. Both are great moves to push you toward interacting with your legacy on a regular basis."
+										}
+									}									
+								}
+							},
+							ru: {
+								title: "Слова из прошлого",
+								key: "words_of_past",
+								data: {
+									move: {
+										data: {											
+											condition: "Когда [ищешь совета кого-то из своих старших или членов наследия], сообщи ему о проблеме, с которой столкнулся, и задай вопрос. Он ответит честно и подскажет тебе, что делать. Если ты прибегнешь к совету, {получи +1} к любым действиям с ним связанным. Если ты сделаешь все по-своему, отметь {Потенциал}.",	
+
+											notes: "[Words of the past] lets you ask members of your legacy for input on a problem. <The legacy matters#player_moves|legasy|legacy_matters> is about taking and giving {Influence} to members of your legacy, and allowing yourself to be shaped by their words and opinions. Both are great moves to push you toward interacting with your legacy on a regular basis."	
+											}
+										}
+									}																		
+								}
+						},
+
+						{
+							en: {
+								title: "The legacy matters",
+								key: "legacy_matters",
+								data: {
+									move: {
+										data: {											
+											condition: "When you [take {Influence} over someone from your legacy (or give them {Influence} over you)], mark {potential} and take {+1 forward}.||When [someone from your legacy causes your {Labels} to shift], mark {potential} and take {+1 forward}.",	
+
+											notes: "<Words of the past#player_moves|legasy|words_of_past> lets you ask members of your legacy for input on a problem. [The legacy matters] is about taking and giving {Influence} to members of your legacy, and allowing yourself to be shaped by their words and opinions. Both are great moves to push you toward interacting with your legacy on a regular basis."
+										}
+									}									
+								}
+							},
+							ru: {
+								title: "Семейное дело",
+								key: "legacy_matters",
+								data: {
+									move: {
+										data: {											
+											condition: "[Оказывая {Влияние} на кого-то из своего наследия (или когда они {Влияют} на тебя)], отметь {Потенциал} и получи {+1 к следующему}.||Когда [кто-то из наследия заставляет твои {Ярлыки} двигаться], отметь {Потенциал} и получи {+1 к следующему}.",	
+
+											notes: "<Words of the past#player_moves|legasy|words_of_past> lets you ask members of your legacy for input on a problem. [The legacy matters] is about taking and giving {Influence} to members of your legacy, and allowing yourself to be shaped by their words and opinions. Both are great moves to push you toward interacting with your legacy on a regular basis."	
+										}
+									}
+								}																		
+							}
+						},
+
+						{
+							en: {
+								title: "Never give up, never surrender",
+								key: "never_give_up",
+								data: {
+									move: {
+										data: {											
+											condition: "When you [<take a powerful blow#player_moves|basic_moves|powerful_blow> from someone with far greater power than you], use this move instead of the basic move. Roll +%SAVIOR%.",	
+											replace: "<take a powerful blow#player_moves|basic_moves|powerful_blow>",
+											parts: [
+												{
+													type: "hit",
+													info: "On a hit, you stand strong and choose one:",
+													params: {
+														list_first: true
+													},
+													parts: [													
+														{
+															type: "partial",
+															info: "On a 7-9, mark a {condition}.",
+																	
+														},
+													],
+													list: [
+														{
+															title: "you get an {opportunity or opening} against your attacker"
+														},
+														{
+															title: "you rally from the hit, and it inspires the team; add {1 Team} to the pool"
+														},
+														{
+															title: "you keep your attacker’s attention"
+														},
+													]						
+												},
+												{
+													type: "miss",
+													info: "On a miss, you go down hard but leave your opponent {off balance and vulnerable}.",															
+												},
+											],
+
+											notes: "[Never give up, never surrender] only triggers when you get hit by someone {far stronger than you}. Choosing {“}You get an opportunity or opening against your attacker} means the GM tells you what {opportunity or opening} you receive, suited to the situation. Choosing {to keep your attacker’s attention} ensures they won’t stop trying to attack you afer they notice how hardy you are — you can continue defending others by sacrificing yourself."
+										}
+									}									
+								}
+							},
+							ru: {
+								title: "Никогда не сдавайся",
+								key: "never_give_up",
+								data: {
+									move: {
+										data: {											
+											condition: "[<Получив мощный удар#player_moves|basic_moves|powerful_blow> от кого-то гораздо более сильного, чем ты], используй этот ход, вместо базового. Брось +%SAVIOR%.",	
+
+											replace: "<Получи мощный удар#player_moves|basic_moves|powerful_blow>",
+
+											parts: [
+												{
+													type: "hit",
+													info: "При успехе ты держишься и выбираешь 1:",
+													params: {
+														list_first: true
+													},
+													parts: [													
+														{
+															type: "partial",
+															info: "На 7-9 отметь {Состояние}",
+																	
+														},
+													],
+													list: [
+														{
+															title: "ты получаешь {возможность} против атакующего"
+														},
+														{
+															title: "твоя стойкость вдохновляет команду, добавь {1 в тимпул}"
+														},
+														{
+															title: "ты удерживаешь внимание врага"
+														},
+													]						
+												},
+												{
+													type: "miss",
+													info: "При провале ты повержен, но и твой противник {выбит из равновесия и уязвим}.",															
+												},
+											],
+
+											notes: "[Never give up, never surrender] only triggers when you get hit by someone {far stronger than you}. Choosing {“}You get an opportunity or opening against your attacker} means the GM tells you what {opportunity or opening} you receive, suited to the situation. Choosing {to keep your attacker’s attention} ensures they won’t stop trying to attack you afer they notice how hardy you are — you can continue defending others by sacrificing yourself."
+										}
+									}
+								}																		
+							}
+						},
+
+						{
+							en: {
+								title: "Symbol of authority",
+								key: "symbol_of_authority",
+								data: {
+									move: {
+										data: {											
+											condition: "When you [give an NPC an order based on authority they recognize], roll +%SAVIOR%.",	
+											parts: [
+												{
+													type: "hit",
+													info: "On a hit, they choose one:",
+													params: {
+														list_first: true
+													},
+													parts: [													
+														{
+															type: "great",
+															info: "On a 10+, you also take {+1 forward} against them.",
+																	
+														},
+													],
+													list: [
+														{
+															title: "do what you say"
+														},
+														{
+															title: "get out of your way"
+														},
+														{
+															title: "attack you at a disadvantage"
+														},
+														{
+															title: "freeze"
+														},
+													]						
+												},
+												{
+													type: "miss",
+													info: "On a miss, they do as they please and you take {-1 forward} against them.",															
+												},
+											],
+
+											notes: "[Symbol of authority] should be aimed pretty specifically when you trigger it. You should be clear about the {specific person or group of people} you’re using it on — and the GM has final say over whether it makes sense that you’re using the move on a larger group. Generally speaking, you can only use [Symbol oа authority] on a group that’s {unified and not differentiated} from each other. ||The move only triggers when the person you command actually {recognizes and understands your authority}. If you tell a group of unintelligent robots — or 	aliens who’ve never heard oа your legacy — that they must stop what they’re doing, the move won’t trigger. It still triggers {on enemies} who know of you, but hate your legacy — they recognize your authority, even if they loathe it and choose to ignore it as much as possible. || You also might give them an order that lines up with one of the options on the list — for instance, ordering them to get out of your way. That’s fine, and it still comes down to the GM’s choice to say exactly which option they choose."
+										}
+									}									
+								}
+							},
+							ru: {
+								title: "Символ власти",
+								key: "symbol_of_authority",
+								data: {
+									move: {
+										data: {											
+											condition: "Когда ты [даешь NPC приказ, основанный на признаваемом ими авторитете], брось +%SAVIOR%.",	
+											parts: [
+												{
+													type: "hit",
+													info: "При успехе цель выбирает 1:",
+													params: {
+														list_first: true
+													},
+													parts: [													
+														{
+															type: "great",
+															info: "На 10+ ты также получаешь {+1 к следующему} против них.",
+																	
+														},
+													],
+													list: [
+														{
+															title: "сделать то, что ты сказал"
+														},
+														{
+															title: "убраться с пути"
+														},
+														{
+															title: "атаковать тебя из невыгодной позиции"
+														},
+														{
+															title: "замереть"
+														},
+													]						
+												},
+												{
+													type: "miss",
+													info: "При провале они делают что захотят и ты получаешь {-1 к следующему}.",															
+												},
+											],
+
+											notes: "[Symbol of authority] should be aimed pretty specifically when you trigger it. You should be clear about the {specific person or group of people} you’re using it on — and the GM has final say over whether it makes sense that you’re using the move on a larger group. Generally speaking, you can only use [Symbol oа authority] on a group that’s {unified and not differentiated} from each other. ||The move only triggers when the person you command actually {recognizes and understands your authority}. If you tell a group of unintelligent robots — or 	aliens who’ve never heard oа your legacy — that they must stop what they’re doing, the move won’t trigger. It still triggers {on enemies} who know of you, but hate your legacy — they recognize your authority, even if they loathe it and choose to ignore it as much as possible. || You also might give them an order that lines up with one of the options on the list — for instance, ordering them to get out of your way. That’s fine, and it still comes down to the GM’s choice to say exactly which option they choose."
+										}
+									}									
+								}																		
+							}
+						},
+
+					]
+				},
+
+
 								
 			]
 		},

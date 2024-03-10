@@ -544,6 +544,13 @@ Vue.component('move', {
 			let sText = _formatText(this.info);//.split("|").join("<br>");
 			return sText;
 		},
+		_replace: function(){
+			if(!this.replace) {
+				return "";
+			}
+			let sText = _formatText(this.replace, {noP: true});//.split("|").join("<br>");
+			return `Заменяет ход ${sText}`;
+		},
 		_notes: function(){
 			let sText = '';
 			if(this.notes && this.notes.length>2){
@@ -583,7 +590,7 @@ Vue.component('move', {
 	template: `<article class='move'>
 		<h1 class='title'>{{title}}</h1>
 		<div class='kind' v-show='_kind.length>3' v-html='_kind'></div>
-		<div class='replace'>{{_replace_title}}{{replace}}</div>
+		<div class='replace' v-html="_replace" v-show="_replace.length>1"></div>
 		<div class='move_info' v-html="_info" v-show="_info.length>1"></div>
 		<div class='condition' v-html="_condition"></div>
 		<div class='modifier' v-html="_modifier" v-if="_modifier.length>2"></div>

@@ -530,13 +530,15 @@ a:hover {
 .move h3 {
   font-size: 20px;
 }
-.move .kind {
+.move .kind,
+.move .replace {
   padding: var(--padding);
   font-size: 80%;
   font-style: italic;
   background: var(--c_back_part);
 }
-.move .kind .symbol {
+.move .kind .symbol,
+.move .replace .symbol {
   background: var(--c_back_part);
   display: inline-block;
   padding: var(--padding-small);

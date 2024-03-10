@@ -17,22 +17,32 @@ function shuffle(o, bRand){
 };
 
 function _formatText(sText, oParams){
-	if(oParams && oParams.noP) {
-		return sText?sText
-		.replace(/<([^#]+)(#[^\>]+)>/ig, `<a href='$2'>$1</a>`)
-			.split("||").map(el=>`${el}`).join("\r\n")
-				.replace(/\[([^\[\]]+)\]/g, "<b>$1</b>")
-				.replace(/\{([^\{\}]+)\}/g, "<i>$1</i>")
-				.replace(/\%([^\%]+)\%/g, `<mark class='label' data-label='$1'>$1</mark>`):"";
-	} else {
-		return sText?sText
-		.replace(/<([^#]+)(#[^\>]+)>/ig, `<a href='$2'>$1</a>`)
-			.split("||").map(el=>`<p>${el}</p>`).join("\r\n")
-				.replace(/\[([^\[\]]+)\]/g, "<b>$1</b>")
-				.replace(/\{([^\{\}]+)\}/g, "<i>$1</i>")
-				.replace(/\%([^\%]+)\%/g, `<mark class='label' data-label='$1'>$1</mark>`):"";
+	if(!sText) {
+		return "";
 	}
+
+	// if(sText.includes("●")) {
+	// 	let aLines = t.split(/●/);
+	// 	let sStart = aLines.shift();
+	// 	let aList = aLines.map(item=>`<li>${item.trim()}</li>`);
+	// 	return `${sStart} <ul>${aList.join("")}</ul>`;
+	// }
 	
+	sText = sText	
+		.replace(/<([^#]+)(#[^\>]+)>/ig, `<a href='$2'>$1</a>`)
+		.replace(/\[([^\[\]]+)\]/g, "<b>$1</b>")
+		.replace(/\{([^\{\}]+)\}/g, "<i>$1</i>")							
+		.replace(/\%([^\%]+)\%/g, `<mark class='label' data-label='$1'>$1</mark>`);
+
+	if(oParams && oParams.noP) {
+		sText = sText		
+			.split("||").map(el=>`${el}`).join("<br>\r\n>")
+	} else {
+		sText = sText	
+			.split("||").map(el=>`<p>${el}</p>`).join("\r\n")
+	}
+
+	return sText;
 }
 
 function parseDie(sDie){

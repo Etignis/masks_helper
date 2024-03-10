@@ -242,8 +242,7 @@
 											}
 										}									
 									}
-								}
-																
+								}																
 							},
 							
 							{
@@ -2780,8 +2779,283 @@
 						},
 						
 					]
-				}
-				
+				},
+				{
+					title: "Янус",
+					key: "janus",
+					color: "",
+					ico: "",
+					type: 1,	
+					sub: [
+						{
+							en: {
+								title: "The Mask",
+								key: "mask",
+								data: {
+									move: {
+										data: {
+											info: "You wear a mask and hide your real identity. Choose what {Label} you try to embody while wearing your mask:||●[Freak] ●[Danger] ●[Savior] ●[Superior]||Once per session, you can affirm either your heroic or secret identity to switch your {Mundane} with your mask’s {Label}.",
+											
+											condition: "When you [reveal your secret identity] to someone who didn’t know it already, mark {potential}.",
+
+											notes: "For [The Mask], affirming your secret or masked identity means doing something that firmly plants you in that role. Leaving your teammates to go save your sister might affirm you as your secret identity, even while you’re still wearing your mask. Doing the opposite, going off to fight the Blue Hydra instead of rescuing your sister from the Centipede, might affirm you in your masked role. Affirming your identity should always be a {meaningful choice or action} in the fiction, something with ramifications — good or bad—moving forward."
+											},
+									}									
+								}
+							},
+							ru: {
+								title: "Маска",
+								key: "mask",
+								data: {
+									move: {
+										data: {
+											info: "Ты носишь маску, скрывая свою истинную личность. Выбери {Ярлык} который пытаешься воплотить в маске:||●[Freak] ●[Danger] ●[Savior] ●[Superior]||Один раз за сессию ты можешь заявить о своей геройской или скрытной личности и сдвинуть Ярлыки {Mundane} и {Маски}.",
+											
+											condition: "Когда ты [открываешь свою тайную личность] кому-то, кто еще не знал, отметь {Потенциал}.",
+
+											notes: "For [The Mask], affirming your secret or masked identity means doing something that firmly plants you in that role. Leaving your teammates to go save your sister might affirm you as your secret identity, even while you’re still wearing your mask. Doing the opposite, going off to fight the Blue Hydra instead of rescuing your sister from the Centipede, might affirm you in your masked role. Affirming your identity should always be a {meaningful choice or action} in the fiction, something with ramifications — good or bad—moving forward."
+											},
+									}																			
+								}
+							}
+						},
+						{
+							en: {
+								title: "Game face",
+								key: "game_face",
+								data: {
+									move: {
+										data: {											
+											condition: "When you [commit yourself to save someone or defeat a terrible enemy], mark a {condition} and take {+1 ongoing} to all rolls in direct pursuit of that goal. At the end of any scene in which you don’t make progress towards that goal, mark a {condition}. When you [fulfill your goal], mark {potential}."
+											},
+
+											notes: "For [Game face], whether or not you made progress towards your goal is ultimately down to the GM’s discretion."
+									}									
+								}
+							},
+							ru: {
+								title: "Стремление",
+								key: "game_face",
+								data: {
+									move: {
+										data: {											
+											condition: "Когда ты [обязуешься кого-то спасти или победить ужасного врага], отметьте {Состояние} и {получи +1} для всех бросков связанных с этим стремлением. В конце любой сцены, в которой ты не приблизилась к цели, отметьте {Состояние}. [Добившись цели], отметь {потенциал}."
+											},
+
+											notes: "For [Game face], whether or not you made progress towards your goal is ultimately down to the GM’s discretion."
+									}																			
+								}
+							}
+						},
+						{
+							en: {
+								title: "I am what you see",
+								key: "what_you_see:",
+								data: {
+									move: {
+										data: {											
+											condition: "When you [spend time talking to someone about your identity], you can ask them which {Label} they want to impose on you; their player will tell you honestly. If you [accept what they tell you], take {+1 forward} and either mark {potential} or clear a {condition}."
+											},
+
+											notes: "For [I am what you see], you can still <reject#player_moves|periphreal_moves|reject_influence> the {Label} they try to impose on you — and you’ll probably have to if you don’t accept it."
+									}									
+								}
+							},
+							ru: {
+								title: "Я то, что ты видишь",
+								key: "what_you_see",
+								data: {
+									move: {
+										data: {											
+											condition: "Когда ты [рассказываешь кому-то о своей настоящей личности], можешь спросить, какой {Ярлык} он хочет навязать тебе. Если [ты соглашаешься] с тем, что тебе говорят, получи {+1 к следующему} ходу и либо отметь {потенциал}, либо очистить {состояние}.",
+
+											notes: "For [I am what you see], you can still <reject#player_moves|periphreal_moves|reject_influence> the {Label} they try to impose on you — and you’ll probably have to if you don’t accept it."
+											},
+									}																			
+								}
+							}
+						},
+
+						{
+							en: {
+								title: "Mild-mannered",
+								key: "mild_mannered",
+								data: {
+									move: {
+										data: {
+											condition: "When you [try to use your civilian identity] to deceive, trick, or slip past someone, roll +%MUNDANE%.",
+											parts: [
+												{
+													type: "hit",
+													info: "On a hit they buy your facade.",
+													parts: [													
+														{
+															type: "partial",
+															info: "On a 7-9, choose one",
+															list: [
+																{
+																	title: "you’re still under observation"
+																},
+																{
+																	title: "you leave something incriminating behind"
+																},
+																{
+																	title: "you’re forced to make a fool of yourself to sell it"
+																},
+															]																
+														}
+													],														
+												},
+												{
+													type: "miss",
+													info: "On a miss, one of your {civilian obligations} rears its ugly head."
+												}
+											],
+
+											notes: "For [Mild-mannered], if they buy your facade you’re in no immediate danger of being found out. If you’re still {under observation}, it means that if you do anything too problematic, you’re likely to get into trouble — they’re watching you. If you {leave something incriminating}, it means that later you can expect someone to put two and two together and come to find you. If you have to {make a fool of yourself}, you can expect NPCs to use their {Influence} to affect how you see yourself — and probably inflict a {condition}."
+											
+										}
+									}									
+								}
+							},
+							ru: {
+								title: "Хорошие манеры",
+								key: "mild_mannered",
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [пытаешься использоват mcdj. гражданкую личность] ввести в заблуждение, обхитрить или проскользнуть мимо кого-то, брось +%MUNDANE%.",
+											parts: [
+												{
+													type: "hit",
+													info: "При успехе цель купилась.",
+													parts: [													
+														{
+															type: "partial",
+															info: "На 7-9 выбери 1:",
+															list: [
+																{
+																	title: "ты все еще под наблюдением"
+																},
+																{
+																	title: "ты оставляешь после себя что-то компрометирующее"
+																},
+																{
+																	title: "ты вынужден выставить себя дураком для достижения цели"
+																},
+															]																
+														}
+													],														
+												},
+												{
+													type: "miss",
+													info: "При промахе одно из ваших {гражданских обязательств} поднимает свою уродливую голову."
+												}
+											],
+
+											notes: "For [Mild-mannered], if they buy your facade you’re in no immediate danger of being found out. If you’re still {under observation}, it means that if you do anything too problematic, you’re likely to get into trouble — they’re watching you. If you {leave something incriminating}, it means that later you can expect someone to put two and two together and come to find you. If you have to {make a fool of yourself}, you can expect NPCs to use their {Influence} to affect how you see yourself — and probably inflict a {condition}."
+											
+										}
+									}									
+								}
+							}																
+						},
+
+						{
+							en: {
+								title: "I’ll save you!",
+								key: "save_you",
+								data: {
+									move: {
+										data: {											
+											condition: "You’re willing to pay high costs to keep your loved ones safe. [Reveal your secret identity] to someone watching or [mark a {condition}] to <defend#player_moves|basic_moves|defend> a loved one as if you rolled a 12+.",											
+
+											notes: "[I’ll save you] is ultimately a move for making sure the people from your civilian life are safe at critical moments—though it may come at some cost to you."
+										}
+									}									
+								}
+							},
+							ru: {
+								title: "Я спасу тебя!",
+								key: "save_you",
+								data: {
+									move: {
+										data: {											
+											condition: "Ты готов заплатить любую цену, чтобы твои близкие были в безопасности. [Открой тайную личность] тому кто рядом и видит это либо [отметь {Состояние}], чтобы <Защитить#player_moves|basic_moves|defend> любимого человека, как если бы получил 12+",											
+
+											notes: "[I’ll save you] is ultimately a move for making sure the people from your civilian life are safe at critical moments—though it may come at some cost to you."
+											}
+										}
+									}																		
+								}
+						},
+
+						{
+							en: {
+								title: "Dangerous web:",
+								key: "dangerous_web",
+								data: {
+									move: {
+										data: {
+											condition: "When you [reveal a trap] you’ve left for someone using your powers, roll +%your mask’s Label%.",
+											parts: [
+												{
+													type: "hit",
+													info: "On a hit, your opponent trips into it, and you get an {opening or opportunity} against them.",
+													parts: [													
+														{
+															type: "great",
+															info: "On a 10+, take {+1 forward} to pursuing it",																											
+														}
+													],														
+												},
+												{
+													type: "miss",
+													info: "On a miss, the trap inadvertently leads to a dangerous escalation"
+												}
+											],
+
+											notes: "For [Dangerous web], you don’t actually have to have put the trap in earlier — when you trigger the move, it can be the first time that you’ve mentioned setting the trap. It has to fit the fiction — if there’s no way you possibly could have left a trap, then you can’t trigger the move."
+											
+										}
+									}									
+								}
+							},
+							ru: {
+								title: "Опасная паутина",
+								key: "dangerous_web",
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [раскрываешь расставленную тобой ловушку], которую ты создала используя свои силы, брось +%Ярлык своей маски%.",
+											parts: [
+												{
+													type: "hit",
+													info: "При успехе твой противник попал в нее и ты получаешь {возможность} против него.",
+													parts: [													
+														{
+															type: "great",
+															info: "На 10+, получи {+1 к следующему} на преследование цели",																											
+														}
+													],														
+												},
+												{
+													type: "miss",
+													info: "При провале ловушка внезапно приводит к опасной эскалации."
+												}
+											],
+
+											notes: "For [Dangerous web], you don’t actually have to have put the trap in earlier — when you trigger the move, it can be the first time that you’ve mentioned setting the trap. It has to fit the fiction — if there’s no way you possibly could have left a trap, then you can’t trigger the move."
+											
+										}
+									}									
+								}
+							}																
+						},						
+
+					]
+				},
+								
 			]
 		},
 		

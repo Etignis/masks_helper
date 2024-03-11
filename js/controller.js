@@ -496,8 +496,12 @@ Vue.component('move', {
 			type: String,
 			default: ""
 		},
-		notes: {
+		pre: {
 			type: String,
+			default: ""
+		},
+		notes: {
+			type: [String, Array],
 			default: ""
 		},
 		kind: {
@@ -544,6 +548,10 @@ Vue.component('move', {
 			let sText = _formatText(this.info);//.split("|").join("<br>");
 			return sText;
 		},
+		_pre: function(){
+			let sText = _formatText(this.pre);//.split("|").join("<br>");
+			return sText;
+		},
 		_replace: function(){
 			if(!this.replace) {
 				return "";
@@ -553,18 +561,20 @@ Vue.component('move', {
 		},
 		_notes: function(){
 			let sText = '';
-			if(this.notes && this.notes.length>2){
-				sText = `Пояснение из книги правил:<br>`+_formatText(this.notes);
+			if(Array.isArray(this.notes) && this.notes.length) {
+				sText = this.notes.map(el=>_formatText(el, {noP: false})).join('\r\n');
+			} else if(this.notes && this.notes.length>2){
+				sText = _formatText(this.notes);
 			}
 			
-			return sText;
+			return `Пояснение из книги правил:<br>`+sText;
 		},
 		_modifier: function(){
 			let sText = '';
 			if(Array.isArray(this.modifier)) {
-				sText = this.modifier.map(el=> _formatText(el)).join('<br>');
+				sText = this.modifier.map(el=> _formatText(el), {noP: true}).join('');
 			} else {
-				sText = _formatText(this.modifier);
+				sText = _formatText(this.modifier, {noP: true});
 			}		 
 		
 			return sText;
@@ -591,9 +601,10 @@ Vue.component('move', {
 		<h1 class='title'>{{title}}</h1>
 		<div class='kind' v-show='_kind.length>3' v-html='_kind'></div>
 		<div class='replace' v-html="_replace" v-show="_replace.length>1"></div>
-		<div class='move_info' v-html="_info" v-show="_info.length>1"></div>
+		<div class='move_info' v-html="_pre" v-show="_pre.length>1"></div>
 		<div class='condition' v-html="_condition"></div>
 		<div class='modifier' v-html="_modifier" v-if="_modifier.length>2"></div>
+		<div class='move_info' v-html="_info" v-show="_info.length>1"></div>
 		
 		<slot></slot>		
 		
@@ -639,13 +650,14 @@ Vue.component('move_part', {
 			let aList = [];
 			if(this.list) {
 				if(Array.isArray(this.list)) {
-					aList = this.list;
+					aList = this.list
 				} else if (typeof this.list === "object" && this.list.data){
 					aList = this.list.data;
 				}
 			}
+			
 			let aResultList = aList.map(el=>({
-				title: _formatText(el.title, {noP: true}),
+				title: _formatText(typeof el=='object'? el.title : el, {noP: true}),
 				list: el.list?el.list.map(item=>({title: _formatText(item.title, {noP: true})})): []
 			}));
 			

@@ -551,7 +551,6 @@ a:hover {
 .move .condition {
   margin: var(--padding) 0;
   margin-bottom: var(--padding-big);
-  line-height: 1.5em;
 }
 .move .notes {
   margin: var(--padding) 0;
@@ -587,6 +586,7 @@ mark.label[data-label='MUNDANE'] {
   color: white;
 }
 .move_part {
+  line-height: 1.5em;
   margin-top: 1rem;
   padding: 1rem;
   background: var(--c_back_part);

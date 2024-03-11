@@ -2794,7 +2794,7 @@
 								data: {
 									move: {
 										data: {
-											info: "You wear a mask and hide your real identity. Choose what {Label} you try to embody while wearing your mask:||●[Freak] ●[Danger] ●[Savior] ●[Superior]||Once per session, you can affirm either your heroic or secret identity to switch your {Mundane} with your mask’s {Label}.",
+											pre: "You wear a mask and hide your real identity. Choose what {Label} you try to embody while wearing your mask:||●[Freak] ●[Danger] ●[Savior] ●[Superior]||Once per session, you can affirm either your heroic or secret identity to switch your {Mundane} with your mask’s {Label}.",
 											
 											condition: "When you [reveal your secret identity] to someone who didn’t know it already, mark {potential}.",
 
@@ -2809,7 +2809,7 @@
 								data: {
 									move: {
 										data: {
-											info: "Ты носишь маску, скрывая свою истинную личность. Выбери {Ярлык} который пытаешься воплотить в маске:||●[Freak] ●[Danger] ●[Savior] ●[Superior]||Один раз за сессию ты можешь заявить о своей геройской или скрытной личности и сдвинуть Ярлыки {Mundane} и {Маски}.",
+											pre: "Ты носишь маску, скрывая свою истинную личность. Выбери {Ярлык} который пытаешься воплотить в маске:||●[Freak] ●[Danger] ●[Savior] ●[Superior]||Один раз за сессию ты можешь заявить о своей геройской или скрытной личности и сдвинуть Ярлыки {Mundane} и {Маски}.",
 											
 											condition: "Когда ты [открываешь свою тайную личность] кому-то, кто еще не знал, отметь {Потенциал}.",
 
@@ -3366,7 +3366,128 @@
 					]
 				},
 
+				{
+					title: "Нова",
+					key: "nova",
+					color: "",
+					ico: "",
+					type: 1,				
+					sub: [
+						{
+							en: {
+								title: "Burn",
+								key: "burn",
+								data: {
+									move: {
+										data: {
+											condition: "When you [charge up your powers], roll +%conditions% you currently have marked.",
+											info: "Spend your {burn} on your {flares}. You lose all {burn} at the end of the scene.",
 
+											parts: [
+												{
+													type: "hit",
+													info: "On a hit, hold 3 {burn}",
+													parts: [
+														{
+															type: "partial",
+															info: "On a 7-9, mark a {condition}",
+																	
+														},
+													]
+												},
+												{
+													type: "miss",
+													info: "On a miss, hold 2 {burn} and mark three {conditions}."
+												},
+												{
+													list: [
+														"[Reality storm]: You channel a destructive burst with your powers. Spend {1 burn} to <directly engage a threat#player_moves|basic_moves|directly_engage_threat> using your powers, rolling +%FREAK% instead of +%DANGER%. If you do, you will cause {unwanted collateral damage} unless you spend another {burn}.",
+														"[Shielding]: You call up a {fast protective field} to stop a danger. Spend {1 burn} to <defend#player_moves|basic_moves|defend> someone else from an immediate threat, rolling +%FREAK% instead of +%SAVIOR%.",
+														"[Constructs]: Spend {1 burn} to {create any object with your powers}, up to the size of a person. Spend an additional {burn} to animate it independently of yourself. The construct dissolves at the end of the scene.",
+														"[Moat]: Spend {1 burn} to {create a barrier} that will hold back threats as long as you keep your attention on it. The GM may call for you to spend another {burn} if the barrier is threatened by particularly powerful enemies.",
+														"[Worship]: You {put out a tremendous display} of your might. Spend {1 burn} to awe an audience into silence, respect, and attention when you <unleash your powers#player_moves|basic_moves|unleash_your_power>.",
+														"[Move]: Spend {1 burn} to {move to any place you choose within the scene}, breaking through or slipping past any barriers or restraints in your way. Spend a second {burn} to move to any place you’ve previously been.",
+														"[Boost]: Spend {1 burn} to {supercharge a teammate’s efforts with your powers}, giving them a {+1 bonus} to their roll as if you had spent {Team} from the pool.",
+														"[Overcharge]: You channel the full capacity of your incredible powers to {overcome an obstacle}, {reshape your environment}, or {extend your senses}. Spend {2 burn} to take a 10+ when you <unleash your powers#player_moves|basic_moves|unleash_your_power>.",
+														"[Elemental awareness]: Spend {1 burn} and mark a {condition} to {open your mind up to the world around you} with your powers. You can ask any one question about the world around you, and the GM will answer honestly.",
+														"[Snatch]: Spend {1 burn} to use your powers to {seize any one object} up to the size of a person from someone within view.",
+													]
+												}
+											],
+
+											notes: [
+												"When you charge up your powers, the burn you generate lasts until the end of the scene. To charge up your powers, tell the GM what you’re {actually doing}, what that {looks like} for you. If, through charging up your powers, you wind up marking {one condition too many}, that still takes you {out of the scene}, just like normal. When you roll {+ conditions marked}, add the total number of {conditions} you currently have marked to your roll — but keep in mind your bonus can’t go higher than +4.",
+												"For [Reality storm], if you cause {unwanted collateral damage}, the GM tells you what it is — and you can expect not to like it.",
+												"For [Constructs], when you animate a construct {independent of yourself}, you can give it orders and have it take actions. It will obey you. For the most part, the GM tells you the results of anything it does, but the GM might have you make a move through your construct, if appropriate.",
+												"[Shielding] allows you to protect someone in the moment, rolling +%FREAK% to defend. It’s {transient and immediate}.",
+												"[Moat] allows you to set up a {lasting defense} in advance, but it won’t necessarily help you right in the moment when your friend is in danger. Moat lasts as long as you focus on it and spend more {burn} when it gets hit especially hard.",
+												"[Worship] allows you to awe an audience in addition to whatever else you do when you unleash. You can <unleash your powers#player_moves|basic_moves|unleash_your_power> specififically to put on the display if you so choose.",
+												"[Move] can refer to teleportation, barreling hard in one direction, or anything else that fifits your powers.",
+												"[Elemental awareness] lets you ask the GM any question you want, but it has to be about the place you’re currently in, or elements in the area around you.",											
+											]
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Воспылай",
+								key: "burn",
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [заряжаешь свои силы], брось +%Состояния%, которые у тебя отмечены.",
+											info: "Трать полученное {Пламя} на твои {Вспышки}. Ты теряешь весь запас {Пламени} в конце сцены.",
+
+											parts: [
+												{
+													type: "hit",
+													info: "При успехе получи 3 {Пламени}",
+													parts: [
+														{
+															type: "partial",
+															info: "На 7-9 отметь {Состояние}",
+																	
+														},
+													]
+												},
+												{
+													type: "miss",
+													info: "При провале получи 2 {Пламени} и отметь три {Состояния}."
+												},
+												{
+													info: "Выбери 4 {Вспышки}:",
+													list: [
+														"[Сверхшторм]: Ты используешь разрушающий элемент своих сил. Потрать {1 Пламя}, <выходя против явной угрозы#player_moves|basic_moves|unleash_your_power>, чтобы бросить +%FREAK% вместо +%DANGER%. Если ты делаешь это, твои силы причинять {нежелательный побочный ущерб}, если не потратить еще {1 Пламя}.",
+														"[Заслон]: Ты создаешь защитное поле, чтобы остановить опасность. Потрать {1 Пламя}, чтобы <защитить#player_moves|basic_moves|defend> кого-то от сиюминтутной угрозы, чтобы бросить +%FREAK% вместо +%SAVIOR%.",
+														"[Конструкт]: Потрать {1 Пламя}, чтобы с помощью своих сил создать объект размером не превышающим человека. Потрать дополнительно {1 Пламя}, чтобы оживить его. Конструк развоплотится в конце сцены.",
+														"[Барьер]: Потрать {1 Пламя}, чтобы создать барьер, который будет сдерживать угрозы до тех пор, пока ты концентрируешься на нём. ГМ может потребовать, чтобы ты потратил еще {1 Пламя}, если барьеру причинен особенно сильный вред.",
+														"[Богоподобный]: Ты являешь невероятную демонстрацию своих возможностей. Потрать 1 Пламя, чтобы присутсвующие застыли в немом благоговении, когда ты <даешь волю силам#player_moves|basic_moves|unleash_your_power>",
+														"[Сверхшаг]: Потрать {1 Пламя}, чтобы переместиться в любое место по своему выбору внутри сцены, прорвавшись или проскользнув мимо любых препятствий или ограничений. Потрать 2 {Пламени}, чтобы переместиться в любое место, в котором ты ранее бывал.",
+														"[Усиление]: Потрать 1 {Пламя}, чтобы усилить своими силами действия товарища по команде, дав ему бонус {+1 к броску}, как если бы ты потратил очко из {тимпула}.",
+														"[Передоз]: Ты запускаешь свои невероятные способности на полную мощность, чтобы {преодолеть препятствие}, {изменить окружение} или {расширить свои чувства}. Потрать 2 {Пламени}, чтобы получить 10+, когда <даешь волю силам#player_moves|basic_moves|unleash_your_power>.",
+														"[Сверхзнание]: Потрать 1 {Пламя} и отметь {Состояние}, чтобы с помощью своих сил открыть свой разум миру вокруг. Ты можешь задать любой вопрос о мире вокруг себя, и ГМ ответит честно.",
+														"[Стащить]: Потрать 1 {Пламя}, чтобы с помощью своих сил стащить один предмет размером до человека у кого-то в пределах видимости.",
+													]
+												}
+											],
+
+											notes: [
+												"When you charge up your powers, the burn you generate lasts until the end of the scene. To charge up your powers, tell the GM what you’re {actually doing}, what that {looks like} for you. If, through charging up your powers, you wind up marking {one condition too many}, that still takes you {out of the scene}, just like normal. When you roll {+ conditions marked}, add the total number of {conditions} you currently have marked to your roll — but keep in mind your bonus can’t go higher than +4.",
+												"For [Reality storm], if you cause {unwanted collateral damage}, the GM tells you what it is — and you can expect not to like it.",
+												"For [Constructs], when you animate a construct {independent of yourself}, you can give it orders and have it take actions. It will obey you. For the most part, the GM tells you the results of anything it does, but the GM might have you make a move through your construct, if appropriate.",
+												"[Shielding] allows you to protect someone in the moment, rolling +%FREAK% to defend. It’s {transient and immediate}.",
+												"[Moat] allows you to set up a {lasting defense} in advance, but it won’t necessarily help you right in the moment when your friend is in danger. Moat lasts as long as you focus on it and spend more {burn} when it gets hit especially hard.",
+												"[Worship] allows you to awe an audience in addition to whatever else you do when you unleash. You can <unleash your powers#player_moves|basic_moves|unleash_your_power> specififically to put on the display if you so choose.",
+												"[Move] can refer to teleportation, barreling hard in one direction, or anything else that fifits your powers.",
+												"[Elemental awareness] lets you ask the GM any question you want, but it has to be about the place you’re currently in, or elements in the area around you.",											
+											]
+										}
+									}
+								}
+							}
+						}
+					]
+				},
 								
 			]
 		},

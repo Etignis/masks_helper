@@ -338,6 +338,10 @@ ul.checklist li.marked {
   left: -0.47rem;
   transform: rotate(45deg);
 }
+#menu .ico_info {
+  font-weight: bold;
+  font-size: 110%;
+}
 #menu ul {
   margin: 0;
   padding: 0;

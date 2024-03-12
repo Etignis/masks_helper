@@ -58,7 +58,6 @@
 				// max-height: 95%;
 				// overflow-y: hidden;
         // top: 1em;
-\
         // z-index: 9999;
         // background: @white - #111;
         // color: @d-gray;
@@ -103,7 +102,7 @@
     cursor: pointer;
 }
 #infoWin{
-   
+
 }
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s;
@@ -123,6 +122,16 @@
 	
 	background: url('../img/bg2.jpg') no-repeat;	
   background-size: cover;
+}
+
+ul.checklist{
+  li {
+      list-style-type: "🟦 ";
+
+      &.marked{
+        list-style-type: "✅ ";
+      }
+  }
 }
 
 @media screen and (min-width: @m_w_1) {

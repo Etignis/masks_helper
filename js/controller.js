@@ -567,7 +567,7 @@ Vue.component('move', {
 				sText = _formatText(this.notes);
 			}
 			
-			return `Пояснение из книги правил:<br>`+sText;
+			return sText?`Пояснение из книги правил:<br>`+sText:"";
 		},
 		_modifier: function(){
 			let sText = '';

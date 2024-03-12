@@ -233,7 +233,7 @@ a:hover {
     transform: rotate(360deg);
   }
 }
-\ #dbg {
+#dbg {
   position: fixed;
   top: 0;
   left: 0;
@@ -262,6 +262,12 @@ a:hover {
   width: 100vw;
   background: url('../img/bg2.jpg') no-repeat;
   background-size: cover;
+}
+ul.checklist li {
+  list-style-type: "🟦 ";
+}
+ul.checklist li.marked {
+  list-style-type: "✅ ";
 }
 @media screen and (min-width: 65em) {
   #app {

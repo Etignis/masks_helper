@@ -3807,21 +3807,28 @@
 											
 											parts: [	
 												{
-													type: "great",
-													info: "On a 10+, choose two"
-												},
-												{
-													type: "partial",
-													info: "On a 7-9, choose one"
-												},
-														
-												{
-													list: [
-														"confess a flaw of your home; add 1 {Team} to the pool",
-														"mislead them about your home; take {Influence} over them",
-														"describe the glories of your home; clear a {condition}",
+													type: 'hit',
+													info: 'On a hit',
+													parts: [
+														{
+															type: "great",
+															info: "On a 10+, choose two"
+														},
+														{
+															type: "partial",
+															info: "On a 7-9, choose one"
+														},
+																
+														{
+															list: [
+																"confess a flaw of your home; add 1 {Team} to the pool",
+																"mislead them about your home; take {Influence} over them",
+																"describe the glories of your home; clear a {condition}",
+															]
+														},	
 													]
-												},	
+												},
+												
 												{
 													type: "miss",
 													info: "On a miss, you inadvertently reveal more about yourself than you planned; tell them a secret or vulnerability you haven’t shared with Earthlings before now",															
@@ -3844,21 +3851,29 @@
 											
 											parts: [	
 												{
-													type: "great",
-													info: "На 10+ выбери 2"
-												},
-												{
-													type: "partial",
-													info: "На 7-9 выбери 1"
-												},
-														
-												{
-													list: [
-														"признай недостаток своего дома; добавь 1 в {Тимпул}",
-														"введи в заблуждение относительно своего дома; получи {Влияние} на цель",
-														"расскажи, чем славится твой дом; очисть {Состояние}"
+													type: 'hit',
+													info: 'При успехе',
+
+													parts: [
+														{
+															type: "great",
+															info: "На 10+ выбери 2"
+														},
+														{
+															type: "partial",
+															info: "На 7-9 выбери 1"
+														},
+																
+														{
+															list: [
+																"признай недостаток своего дома; добавь 1 в {Тимпул}",
+																"введи в заблуждение относительно своего дома; получи {Влияние} на цель",
+																"расскажи, чем славится твой дом; очисть {Состояние}"
+															]
+														},	
 													]
-												},	
+												},
+												
 												{
 													type: "miss",
 													info: "При провале ты непреднамеренно раскрываешь о себе больше, чем планировала; сообщи им {секрет или уязвимость}, которой ты до сих пор не делились с землянами.",															

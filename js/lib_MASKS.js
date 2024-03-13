@@ -3890,7 +3890,250 @@
 
 
 					]
-				}
+				},
+
+				{
+					title: "Протеже",
+					key: "protege",
+					color: "",
+					ico: "",
+					type: 1,				
+					sub: [
+						{
+							en: {
+								title: "Been reading the files",
+								key: "reading_files",
+								data: {
+									move: {
+										data: {											
+											condition: "You’ve learned about the superhuman world through your mentor’s resources. When you [first encounter an important superpowered phenomenon] (your call), roll +%SUPERIOR%.",	
+											
+											parts: [	
+												{
+													type: 'hit',
+													info: 'On a hit, tell the team one important detail you’ve learned from your studies. The GM will tell you what, if anything, seems different from what you remember.',
+													parts: [
+														{
+															type: "great",
+															info: "On a 10+, ask the GM a follow-up question; they will answer it honestly."
+														}
+													]
+												},
+
+												{
+													type: 'miss',
+													info: 'On a miss, the situation is well outside your base of knowledge; the GM will tell you why.'
+												}
+											],
+
+											notes: "For [Been reading the files], you’re assumed to be reading or otherwise learning about the superhuman world from your mentor — in whatever way fits their MO. You only trigger the move, though, the first time you encounter any given important superhuman phenomenon. You can’t say you read a file about them during a later encounter. When you tell the team the most important detail you remember, you have a responsibility to stick to whatever fiction is already established about the world and this character — but otherwise, you can add whatever detail you want. Te GM tells you if anything is different, meaning that they’ll alert you if things have changed surrounding the detail you provided."
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Читал файлы",
+								key: "reading_files",
+								data: {
+									move: {
+										data: {											
+											condition: "Ты изучал мир суперлюдей с помощью ресурсов наставника. Когда ты [впервые сталкиваешься с важным сверъестественным явленипем] (по своему выбору), брось +%SUPERIOR%.",	
+											
+											parts: [	
+												{
+													type: 'hit',
+													info: 'При успехе расскажи остальным одну важную деталь, которую помнишь из своих исследований. ГМ скажет, если что-нибудь, кажется не таким, как ты помнишь.',
+													parts: [
+														{
+															type: "great",
+															info: "На 10+ задай ГМ дополнительный вопрос; он ответит честно."
+														}
+													]
+												},
+
+												{
+													type: 'miss',
+													info: 'При провале ситуация далеко за пределами твоей базы знаний; ГМ скажет тебе, почему.'
+												}
+											],
+
+											notes: "For [Been reading the files], you’re assumed to be reading or otherwise learning about the superhuman world from your mentor — in whatever way fits their MO. You only trigger the move, though, the first time you encounter any given important superhuman phenomenon. You can’t say you read a file about them during a later encounter. When you tell the team the most important detail you remember, you have a responsibility to stick to whatever fiction is already established about the world and this character — but otherwise, you can add whatever detail you want. Te GM tells you if anything is different, meaning that they’ll alert you if things have changed surrounding the detail you provided."
+										}
+									}
+								}
+							},
+						},
+
+						{
+							en: {
+								title: "Captain",
+								key: "captain",
+								data: {
+									move: {
+										data: {
+											condition: "When you [enter battle as a team], add an extra {Team} to the pool and carry {+1 forward} if you are the leader.",
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Капитан",
+								key: "captain",
+								data: {
+									move: {
+										data: {
+											condition: "[Вступая в битву как команда], добавь дополнительную 1 в {тимпул}; получи {+1 к следующему}, если ты лидер.",
+										}
+									}
+								}
+							}
+						},
+
+						{
+							en: {
+								title: "Venting frustration",
+								key: "venting_frustration",
+								data: {
+									move: {
+										data: {
+											condition: "When you [<directly engage#player_moves|basic_moves|directly_engage_threat> while you are {Angry}], you can roll +%the Label your mentor denies% and clear {Angry}.",
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Сорваться",
+								key: "venting_frustration",
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [<выходишь против угрозы#player_moves|basic_moves|directly_engage_threat>, находясь в Состоянии {Злой}], можешь бросить +%Ярлык, который отрицает твой наставник% и очистить это {Состояние}.",
+										}
+									}
+								}
+							}
+						},
+
+						{
+							en: {
+								title: "Fireside chat",
+								key: "fireside_chat",
+								data: {
+									move: {
+										data: {											
+											condition: "When you [seek advice from your mentor], roll +%the Label they embody%.",	
+											
+											parts: [	
+												{
+													type: 'hit',
+													info: 'On a hit they will tell you what to do',
+													parts: [
+														{
+															type: "great",
+															info: "On a 10+, mark {potential} if you follow their advice, and take {+1 ongoing} to follow through."
+														},
+														{
+															type: "partial",
+															info: "On a 7-9, you get {+1 forward} to see it through if you do it their way."
+														},
+													]
+												},
+
+												{
+													type: 'miss',
+													info: 'On a miss, they don’t have time for you because something big has gone down; mark a {condition}, GM’s choice.'
+												}
+											],
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Беседа у камина",
+								key: "fireside_chat",
+								data: {
+									move: {
+										data: {											
+											condition: "Когда ты [обращаешься за советом к своему наставнику], брось +%Ярлык, который он воплощает%.",	
+											
+											parts: [	
+												{
+													type: 'hit',
+													info: 'При успехе он скажет тебе, что делать',
+													parts: [
+														{
+															type: "great",
+															info: "На 10+ отметь {потенциал}, если будешь следовать его советам и {получи +1} для этих действий."
+														},
+														{
+															type: "partial",
+															info: "На 7-9 получи {+1 к следующему}, если сделаешь все по-своему."
+														},
+													]
+												},
+
+												{
+													type: 'miss',
+													info: 'При провале у него нет времени для тебя, потому что нечто серьезное пошло не так; отметьте {Состояние} по выбору ГМ.'
+												}
+											],
+										}
+									}
+								}
+							},
+						},
+
+						{
+							en: {
+								title: "Be mindful of your surroundings",
+								key: "be_mindful",
+								data: {
+									move: {
+										data: {
+											condition: "When you [<assess the situation#player_moves|basic_moves|asses_sitiation> before entering into a fight], you may ask one additional question, even on a miss.",
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Будь внимательной к окружению",
+								key: "be_mindful",
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [<оцениваешь ситуацию#player_moves|basic_moves|asses_sitiatio> перед вступлением в бой], ты можешь задать еще один вопрос, даже при провале.",
+										}
+									}
+								}
+							}
+						},
+
+						{
+							en: {
+								title: "Heroic tradition",
+								key: "heroic_tradition",
+								data: {
+									move: {
+										data: {
+											condition: "When you [give someone the advice that you think your mentor would give], you can roll +%the Label your mentor embodies% to <comfort or support#player_moves|basic_moves|comfort_support> someone, instead of rolling +%MUNDANE%.",
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Героическая традиция",
+								key: "heroic_tradition",
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [даешь кому-то совет, который, как ты думаешь, дал бы наставник], брось +%Ярлык, который он воплощает%, чтобы <утешить или поддержать#player_moves|basic_moves|comfort_support> кого-то, вместо того, чтобы использовать +%MUNDANE%.",
+										}
+									}
+								}
+							}
+						},
+					]
+				},
 
 
 			]

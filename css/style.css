@@ -339,8 +339,10 @@ ul.checklist li.marked {
   transform: rotate(45deg);
 }
 #menu .ico_info {
+  position: relative;
   font-weight: bold;
-  font-size: 110%;
+  font-size: 140%;
+  top: -0.1em;
 }
 #menu ul {
   margin: 0;
@@ -561,6 +563,7 @@ ul.checklist li.marked {
 .move .condition {
   margin: var(--padding) 0;
   margin-bottom: var(--padding-big);
+  line-height: 1.5em;
 }
 .move .notes {
   margin: var(--padding) 0;
@@ -655,7 +658,8 @@ mark.label[data-label='MUNDANE'] {
   color: var(--c_p_miss);
 }
 .move_part .m_p_info {
-  padding-right: var(--padding-huge);
+  padding-right: var(--padding-big);
+  display: inline-block;
 }
 .move_part .move_part_flex {
   display: flex;

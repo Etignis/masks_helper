@@ -4135,7 +4135,297 @@
 					]
 				},
 
+				{
+					title: "Преображенный",
+					key: "transformed",
+					color: "",
+					ico: "",
+					type: 1,				
+					sub: [
+						{
+							en: {
+								title: "I am not my body",
+								key: "not_my_body",
+								data: {
+									move: {
+										data: {
+											condition: "When you [<take a powerful physical blow#player_moves|basic_moves|powerful_blow>], you may roll as if you had two fewer {conditions} marked.",
+											parts: [
+												{
+													type: 'great',
+													info: 'If you do, on a 10+ you must choose to {lose control of yourself in a terrible way}.'
+												}
+											]
+											
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Я - не мое тело",
+								key: "not_my_body",
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [<получаешь мощный физический удар#player_moves|basic_moves|powerful_blow>], ты можешь бросать так, будто у тебя на два {Состояния} меньше.",
+											parts: [
+												{
+													type: 'great',
+													info: 'Если ты делаешь это и получаешь 10+ {потеряй контроль над собой ужасным образом}.'
+												}
+											]
+											
+										}
+									}
+								}
+							}
+						},
+						
+						{
+							en: {
+								title: "Not human enough",
+								key: "not_human_enough",
+								data: {
+									move: {
+										data: {
+											condition: "When you [<directly engage a threat#player_moves|basic_moves|directly_engage_threat> in a terrifying fashion], mark a {condition} to choose an additional option, even on a miss.",
 
+											notes: "For [Not human enough], what counts as a “terrifying way” is up to you and the GM, but the GM might push you on it to make sure you’re doing something actually terrifying."
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Не совсем человек",
+								key: "not_human_enough",
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [<выходишь против явной угрозы#player_moves|basic_moves|directly_engage_threat> ужасающим образом], можешь отметить {Состояние}, чтобы добавить еще 1 вариант, даже при провале.",
+
+											notes: "For [Not human enough], what counts as a “terrifying way” is up to you and the GM, but the GM might push you on it to make sure you’re doing something actually terrifying."
+										}
+									}
+								}
+							}
+						},
+
+						{
+							en: {
+								title: "Unstoppable",
+								key: "unstoppable",
+								data: {
+									move: {
+										data: {											
+											condition: "When you [smash your way through scenery] to get to or away from something, roll +%DANGER%.",	
+											
+											parts: [		
+												{
+													type: 'hit',
+													info: 'On a hit, the world breaks before you, and you get what you want.',
+													parts: [
+														{
+															type: "partial",
+															info: "On a 7-9, choose one",
+															list: [
+																"mark a {condition}",
+																"leave something behind",
+																"take something with you",
+															]													
+														},
+													]
+												},	
+												{
+													type: "miss",
+													info: "On a miss, you smash through, but leave devastation in your wake or wind up somewhere worse, GM’s choice.",															
+												},
+											],
+										
+										}
+									}									
+								}
+							},
+							ru: {
+								title: "Неудержимый",
+								key: "unstoppable",
+								data: {
+									move: {
+										data: {											
+											condition: "Когда ты [пробиваешься сквозь препятствия], чтобы добратсья до чего-то или убежать от чего-то, брось +%DANGER%.",	
+											
+											parts: [		
+												{
+													type: 'hit',
+													info: 'При успехе все окружающее рассыпается перед тобой и ты достигаешь цели.',
+													parts: [
+														{
+															type: "partial",
+															info: "На 7-9 выбери один",
+															list: [
+																"отметь {Состояние}",
+																"потеряй что-нибудь",
+																"утащи что-нибудь за собой",
+															]													
+														},
+													]
+												},
+													
+												{
+													type: "miss",
+													info: "При провале ты прорываешься, но оставляешь за собой разруху или оказываешься в непростой ситуации, на выбор ГМ",															
+												},
+												
+											],
+
+										
+										}
+									}									
+								}																	
+							}
+						},
+
+						{
+							en: {
+								title: "Coming for you",
+								key: "coming_for_you",
+								data: {
+									move: {
+										data: {
+											condition: "When you [mark a {conditio}n], take {+1 forwar}d against the person you most blame for causing it.",
+											notes: 'For [Coming for you], if it’s not immediately obvious who’s to blame for a given {condition} you mark, don’t worry about it and don’t bother to keep track—you’ll mark plenty of {conditions}, so just worry about the times when it’s a pretty clear choice.'
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Я прийду за тобой",
+								key: "coming_for_you",
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [отмечаешь {Состояние}], получи {+1 к следующему} против того, кого ты больше всего обвиняешь в этом.",
+											notes: 'For [Coming for you], if it’s not immediately obvious who’s to blame for a given {condition} you mark, don’t worry about it and don’t bother to keep track—you’ll mark plenty of {conditions}, so just worry about the times when it’s a pretty clear choice.'
+										}
+									}
+								}
+							}
+						},
+						
+						{
+							en: {
+								title: "Wish I could be",
+								key: "wish_i_could_be",
+								data: {
+									move: {
+										data: {
+											condition: "When you [<comfort or support someone#player_moves|basic_moves|comfort_support>], if you tell them what you most envy about them, you can roll +%FREAK% instead of +%MUNDANE%.",
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Как бы хотелось быть",
+								key: "wish_i_could_be",
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [<утешаешь или поддерживаешь#player_moves|basic_moves|comfort_support>] кого-то и рассказываешь, чему в нём ты больше всего завидуешь, можешь бросать +%FREAK%  вместо +%MUNDANE%.",
+										}
+									}
+								}
+							}
+						},
+
+						{
+							en: {
+								title: "Be the monster",
+								key: "be_the_monster",
+								data: {
+									move: {
+										data: {											
+											condition: "When you [frighten, intimidate, or cow others] with your monstrous form, roll +%FREAK%.",	
+											
+											parts: [	
+												{
+													type: 'hit',
+													info: 'On a hit, they are thrown off and make themselves {vulnerable} to you, or they {flee}.',
+													parts: [
+														{
+															type: "great",
+															info: "On a 10+, choose one"
+														},
+														{
+															type: "partial",
+															info: "On a 7-9, choose two"
+														},
+																
+														{
+															list: [
+																"you frighten others you had not intended to scare",
+																"you hurt someone or break something you shouldn’t have",
+																"you feel like more of a monster afterward; mark a {condition} (GM’s choice)",
+															]
+														},	
+													]
+												},
+												
+												{
+													type: "miss",
+													info: "On a miss, they react with violence, hatred, and paranoia, and you suffer the brunt of it.",															
+												},											
+											],
+
+											notes: "For [Be the monster], there might be times when it doesn’t make sense that you could frighten or intimidate another individual — the GM lets you know if that happens. Otherwise, though, the move should trigger whenever you do something outright meant to provoke fear."
+										}
+									}									
+								}
+							},
+							ru: {
+								title: "Быть монстром",
+								key: "be_the_monster",
+								data: {
+									move: {
+										data: {											
+											condition: "Когда ты [пугаешь, угрожаешь, или принуждаешь] сделать что-то с помощью своей монтруозной формы, брось +%FREAK%.",	
+											
+											parts: [	
+												{
+													type: 'hit',
+													info: 'При успехе они становятся {уязвимыми} для тебя или {убегают}.',
+													parts: [
+														{
+															type: "great",
+															info: "На 10+ выбери один"
+														},
+														{
+															type: "partial",
+															info: "На 7-9 выбери два."
+														},
+																
+														{
+															list: [
+																"ты испугал не только тех, кого собирался",
+																"ты, не желая того, причиняешь кому-то боль или ломаешь что-то",
+																"после этого ты чувствуешь себя монстром еще сильнее, отметь {Состояние} (по выбору ДМ)",
+															]
+														},	
+													]
+												},
+												
+												{
+													type: "miss",
+													info: "При провале их реакцией является насилие, ненависть и паранойя и ты страдаешь от этого первым.",															
+												},											
+											],
+
+											notes: "For [Be the monster], there might be times when it doesn’t make sense that you could frighten or intimidate another individual — the GM lets you know if that happens. Otherwise, though, the move should trigger whenever you do something outright meant to provoke fear."
+										}
+									}									
+								}												
+							}
+						},
+					]
+				}
 			]
 		},
 		

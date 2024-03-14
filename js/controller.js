@@ -69,6 +69,47 @@ function parseDie(sDie){
 
 	////////////////////
 	
+Vue.component('toggler', {
+	props: {		
+		title: {
+			type: String,
+			default: ""
+		},	
+		active: {
+			type: Boolean,
+			default: false
+		},	
+		code: {
+			type: String,
+			default: ""
+		},
+		
+	},
+	data: function(){
+		return {};
+	},
+	methods: {
+		toggle: function(){
+			this.$emit('toggle', this.code);
+		}
+		
+	},
+	computed: {
+		_style_class: function(){
+			let aClasses = ['toggler'];
+			if(this.active) {
+				aClasses.push('active');
+			}
+
+			return aClasses;
+		}
+	},
+	created: function(){
+		
+	},
+	template: `<button :class="_style_class" @click="toggle">{{this.title}}</button>`
+});
+	
 Vue.component('item', {
 	props: {		
 		title: {
@@ -1012,41 +1053,7 @@ var app = new Vue({
 					count: [2,3]
 				}
 			]
-		},{
-			title: "Случайный персонаж",
-			key: "random_character",
-			from: "character_randoms",
-			action: "get_random_character",
-			visible: false,
-			showResult: false,
-			
-			list: [
-				{
-					key: "",
-					title: "Имя",
-					value: "",
-					params: `character_randoms/names`
-				},
-				{
-					key: "",
-					title: "Инстинкт",
-					value: "",
-					params: `character_randoms/instinct`
-				},
-				{
-					key: "",
-					title: "Тактика",
-					value: "",
-					params:`character_randoms/way`
-				},
-				{
-					key: "",
-					title: "Стремление",
-					value: "",
-					params:`character_randoms/drives`
-				}
-			]
-		}
+		},
 		],
 		
 		random: {
@@ -1057,8 +1064,24 @@ var app = new Vue({
 				list: []
 			}
 		},
+
+		settings: {
+			lang: [
+				{
+					code: 'ru',
+					title: "Рус",
+					active: true
+				},
+				{
+					code: 'en',
+					title: "Eng",
+					active: false
+				},
+			]
+		},
 		
 		libPathValue: {},
+		libPathValueLangs: [],
 		list_data: {},
 		random_list: [],
 		options: [],
@@ -1086,6 +1109,7 @@ var app = new Vue({
 	},
 
 	computed: {
+		
 		_libContent: function(){
 			
 		},
@@ -1195,8 +1219,6 @@ var app = new Vue({
 		
 		displayMove: function(){
 			let oData = [];
-			let sKey = this.checked.subsection;
-			//oContent = lib_DW.getByPath(this.checked.main, this.checked.section, this.checked.subsection);
 			let oContent = this.libPathValue;
 			
 			if(oContent && oContent.type=='move'){
@@ -1206,6 +1228,19 @@ var app = new Vue({
 			
 			return {};
 		},
+		
+		displayLangsMove: function(){
+			let aContent = this.libPathValueLangs;
+			let oData = aContent.map(oContent=>{
+				if(oContent && oContent.type=='move'){
+					oData = oContent.move.data;
+					return oData;
+				}
+			})
+			
+			return oData;
+		},
+
 		showMove: function(){
 			let bMove = !!(this.displayMove && this.displayMove.title);
 			return bMove;
@@ -1244,19 +1279,7 @@ var app = new Vue({
 		if(this.bDebug) {
 				alert('mount start');
 			}
-		// this.loadConfigData();			
-		// this.sModalWinCont = $("#info_text").html();
 		
-		// let bInfoIsRead = this.getConfig("infoIsRead");
-		// if(bInfoIsRead) {
-			// this.hideInfo();
-			// this.showCards();
-		// }
-		
-		// this.getHash();			
-		
-		// this.$refs.PactTypeCombobox.toggle(null, this.bPactTypesOpend);
-		// this.$refs.SourceCombobox.toggle(null, this.bSourcesOpend);
 		if(this.bDebug) {
 			alert('lib version: '+lib_DW.version)
 		}
@@ -1301,6 +1324,7 @@ var app = new Vue({
 		this._random();
 	},
 	methods: {
+
 		_random: function(){
 			this.random_list = lib_DW.getResult(
 				`${this.checked.main}/${this.checked.section}/${this.checked.subsection}`, 
@@ -1312,7 +1336,25 @@ var app = new Vue({
 			);
 			
 			//this.list_data = lib_DW.getByPath(this.checked.main, this.checked.section, this.checked.subsection);
-			this.libPathValue = lib_DW.getByPath(this.checked.main, this.checked.section, this.checked.subsection);
+		
+				this.libPathValue = lib_DW.getByPath(this.checked.main, this.checked.section, this.checked.subsection);
+	
+				this.libPathValueLangs = _getWithLangs();
+			
+		},
+		lang_switch: function(sCode){
+			let oLg = this.settings.lang.find(oLang=> oLang.code == sCode);
+			if(oLg) {
+				oLg.active = !oLg.active
+			}
+			if(!this.settings.lang.find(oLang=> oLang.active)) {
+				this.settings.lang[0].active = true;
+			}
+		},
+		_getWithLangs: function(){
+			let aResults = this.settings.lang.filter(oLang=>oLang.active)
+			.map(oLang=>lib_DW.getByPath(this.checked.main, this.checked.section, this.checked.subsection, oLang.code))
+			return aResults;
 		},
 		menu_priority: function(bMax){
 			this.enlarge_menu = !!bMax;
@@ -1328,8 +1370,6 @@ var app = new Vue({
 			this.checked.subsection = "";
 			this.section = lib_DW.getStructure(this.checked.main);
 			this.subsection = [];
-			//this.list_data = lib_DW.getByPath(this.checked.main, this.checked.section, this.checked.subsection);
-			//this.libPathValue = lib_DW.getByPath(this.checked.main, this.checked.section, this.checked.subsection);
 			this.updateHash();
 			
 			this.move_fails = [];

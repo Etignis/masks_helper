@@ -304,6 +304,28 @@ li.no_offset{
 	}
 }
 
+#top_toolbar{	
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+button.toggler{
+	border-color: transparent;
+	border-radius: var(--radius);
+	background: transparent;
+	color: white;
+	transition: border-color .3s, background .3s;
+
+	// &:hover{
+	// 	background: var(--c_light);
+	// }
+
+	&.active{
+		border-color: var(--color);
+	}
+}
+
 .move_fails{
 	margin: 3rem 0 1rem;
 	padding-left: 0;

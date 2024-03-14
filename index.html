@@ -124,7 +124,19 @@
 					
 			<!-- Ходы -->
 			<div id='move' class='widther' v-show="showMove">
+
+				<div id="top_toolbar">
+					<toggler v-for="lang in settings.lang"
+						:key="lang.code"
+						:code="lang.code"
+						:title="lang.title"
+						:active="lang.active"
+						@toggle="lang_switch"
+					></toggler>
+				</div>
+
 				<move 
+					v-for="displayMove in displayLangsMove"
 					:name="displayMove.key"
 					:title="displayMove.title"
 					:modifier="displayMove.modifier"
@@ -340,7 +352,9 @@
 				</div>
 			</footer>
 			
+		
 		</div>
+
 		
 		<!-- <div class="floater"> -->
 			<!-- <div class="timer_settings_container"> -->

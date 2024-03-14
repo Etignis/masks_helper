@@ -937,12 +937,12 @@ var app = new Vue({
 					value: "",
 					params: `villains/alias`
 				},
-				{
-					key: "",
-					title: "Настоящее имя",
-					value: "",
-					params: `villains/real_name`
-				},
+				// {
+				// 	key: "",
+				// 	title: "Настоящее имя",
+				// 	value: "",
+				// 	params: `villains/real_name`
+				// },
 				{
 					key: "",
 					title: "Способности",
@@ -976,9 +976,33 @@ var app = new Vue({
 				},
 				{
 					key: "",
-					title: "Ходы состояний",
+					title: "Ход состояния Испуган",
 					value: "",
-					params: `villains/condition_moves`
+					params: `villains/condition_moves_afraid`
+				},			
+				{
+					key: "",
+					title: "Ход состояния Злой",
+					value: "",
+					params: `villains/condition_moves_angry`
+				},			
+				{
+					key: "",
+					title: "Ход состояния Виноватый",
+					value: "",
+					params: `villains/condition_moves_guilty`
+				},			
+				{
+					key: "",
+					title: "Ход состояния Отчаявшийся",
+					value: "",
+					params: `villains/condition_moves_hopeless`
+				},			
+				{
+					key: "",
+					title: "Ход состояния Неуверенный",
+					value: "",
+					params: `villains/condition_moves_insecure`
 				},			
 				{
 					key: "",

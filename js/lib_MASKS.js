@@ -5124,8 +5124,24 @@
 		
 		return sTitle || sRet;
 	}
+
+	function _filterSub(oData, sSearch=''){
+		if(sSearch.length>2){
+			sSearch = sSearch.toLowerCase();
+			if(
+				oData.en && oData.en.title && oData.en.title.toLowerCase().includes(sSearch) ||
+				oData.ru && oData.ru.title && oData.ru.title.toLowerCase().includes(sSearch) ||
+				oData.title && oData.title.toLowerCase().includes(sSearch)) {
+				return true;
+			}
+
+			return false
+		}
+
+		return true;
+	}
 	
-	function _getSubs(oRoot, sLang='ru') {
+	function _getSubs(oRoot, sSearch='') {
 		let aSections = [];
 
 		if(oRoot && oRoot.sub) {
@@ -5133,6 +5149,9 @@
 				if(oSection.visible==false) {
 					return;
 				}
+
+				let bSearched = _filterSub(oSection, sSearch);
+				let sLang = 'ru';
 				if(oSection[sLang]) {
 					oSection = oSection[sLang];
 				}
@@ -5144,22 +5163,26 @@
 				if(oSection.data && oSection.data.item && oSection.data.item.data && oSection.data.item.data.level != undefined){
 					oSubNode.level = oSection.data.item.data.level;
 				}
-				
-				aSections.push(oSubNode);
+				if(sSearch.length<3 || sSearch.length>2 && bSearched) {					
+					aSections.push(oSubNode);
+				} else {
+					return
+				}
+
 			}); 
 		}
 		
 		return aSections;
 	}
-	function _getSectionsList(sRoot){
+	function _getSectionsList(sRoot, sSearch=''){
 		let oRoot = data.find(el=>el.key == sRoot);
-		return _getSubs(oRoot);
+		return _getSubs(oRoot, sSearch);
 	}
-	function _getSubsectionsList(sRoot, sSection){
+	function _getSubsectionsList(sRoot, sSection, sSearch=''){
 		let oRoot = data.find(el=>el.key == sRoot);
 		if(oRoot.sub) {
 			let oSection = oRoot.sub.find(el=>el.key == sSection)
-			return _getSubs(oSection);
+			return _getSubs(oSection, sSearch);
 		}
 	}
 	function _getSectionsMetadata(sRoot, sSection){
@@ -5190,12 +5213,12 @@
 		}
 	}
 	
-	function _getStructure(sRoot, sSub, sLang='ru'){
+	function _getStructure(sRoot, sSub, sLang='ru', sSearch=''){
 		if(sRoot) {
 			if(sSub) {
-				return _getSubsectionsList(sRoot, sSub);
+				return _getSubsectionsList(sRoot, sSub, sSearch);
 			} 
-			return _getSectionsList(sRoot);
+			return _getSectionsList(sRoot, sSearch);
 		}
 		
 		let aStructure = [];

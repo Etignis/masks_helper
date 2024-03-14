@@ -970,6 +970,10 @@ var app = new Vue({
 			section: "",
 			subsection: ""
 		},
+
+		filterbar: {
+			search: ''
+		},
 		
 		showPreloader: true,
 		
@@ -1308,7 +1312,7 @@ var app = new Vue({
 		if(this.bDebug) {
 			alert('lib version: '+lib_DW.version)
 		}
-		this.structure = lib_DW.getStructure();
+		this.structure = lib_DW.getStructure(null, null, 'ru', this.filterbar.search);
 		if(this.bDebug) {
 			alert('structure length: '+this.structure.length)
 		}
@@ -1391,7 +1395,7 @@ var app = new Vue({
 			this.checked.main = `${name}`;
 			this.checked.section = "";
 			this.checked.subsection = "";
-			this.section = lib_DW.getStructure(this.checked.main);
+			this.section = lib_DW.getStructure(this.checked.main, null, 'ru', this.filterbar.search);
 			this.subsection = [];
 			this.updateHash();
 			
@@ -1701,9 +1705,8 @@ var app = new Vue({
 			let aHash = sHash.split("|");
 			if(aHash[0]) {
 				this.checked.main = aHash[0];
-				//this.section = lib_DW.getStructure(this.checked.main);
 				this.section = this._formatMenuListbyGroups(
-					lib_DW.getStructure(this.checked.main),
+					lib_DW.getStructure(this.checked.main, null, 'ru', this.filterbar.search),
 					lib_DW.getMetadata(this.checked.main)
 				);
 				this._switchSectionAction(this.checked.main);
@@ -1716,7 +1719,7 @@ var app = new Vue({
 			if(aHash[1]) {
 				this.checked.section = aHash[1];
 				this.subsection = this._formatMenuListbyGroups(
-					lib_DW.getStructure(this.checked.main, this.checked.section),
+					lib_DW.getStructure(this.checked.main, this.checked.section, 'ru', this.filterbar.search),
 					lib_DW.getMetadata(this.checked.main, this.checked.section)
 				);
 			} else {

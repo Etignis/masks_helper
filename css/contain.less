@@ -11,6 +11,8 @@
 
 .move{
 	margin: var(--padding);
+	flex-basis: 35rem;
+	flex-grow: 1;
 	ul{
 		margin-top: 1rem;
 	}
@@ -309,15 +311,34 @@ li.no_offset{
 	position: absolute;
 	top: 0;
 	right: 0;
+	z-index: 3;
+
+	.toolbar_content{
+		position: fixed;
+		right: 0;
+	}
 }
 
 button.toggler{
 	border-color: transparent;
 	border-radius: var(--radius);
-	border-width: 3px;
+	border-width: 0px;
 	background: transparent;
 	color: white;
+	position: relative;
 	transition: border-color .3s, background .3s;
+
+	&::after{
+		content: '';
+		display: block;
+		border-radius: var(--radius);
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: -var(--padding-small);
+		height: var(--padding-small);
+		background: transparent;
+	}
 
 	&:hover{
 		background: var(--c_light);
@@ -325,6 +346,9 @@ button.toggler{
 
 	&.active{
 		border-color: var(--color);
+		&::after{
+			background-color: var(--color);
+		}
 	}
 }
 
@@ -498,6 +522,7 @@ ul{
 	}
 	#move{	
 		display: flex;
+		flex-wrap:wrap;
 	}
 	.card{
 		min-width: 20rem;

@@ -126,13 +126,15 @@
 			<div id='move' class='widther' v-show="showMove">
 
 				<div id="top_toolbar">
-					<toggler v-for="lang in settings.lang"
+					<div class="toolbar_content">
+						<toggler v-for="lang in settings.lang"
 						:key="lang.code"
 						:code="lang.code"
 						:title="lang.title"
 						:active="lang.active"
 						@toggle="lang_switch"
 					></toggler>
+					</div>					
 				</div>
 
 				<move 
@@ -147,7 +149,7 @@
 					:info="moveData.info"
 					:notes="moveData.notes"
 					:translator="moveData.translator"
-					:kind="moveData.kind"					
+					:kind="String(moveData.kind)"					
 				>
 					<move_part v-for="part in moveData.parts"
 						:key="part.title"

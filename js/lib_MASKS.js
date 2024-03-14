@@ -1987,13 +1987,12 @@
 					]
 				},
 				{
-					title: "SUPERIOR ходы",
-					key: "roll_superior",
+					title: "SUPER ходы",
+					key: "roll_super",
 					color: "",
 					ico: "",
 					type: 0,
 					kind: 2,
-					source: '111',
 					info: [
 						"31 Custom Moves for Masks: A New Generation by Meghan Cross",
 						"these moves were written as a part of #movemonth hosted by james malloy (@andthemeltdowns) and brandon leon-gambetta (@bleongambetta)",
@@ -2050,7 +2049,7 @@
 								data: {
 									move: {
 										data: {
-											condition: "Когда ты [долго разговариваешь с кем-то на очень интересующую тебя тему], чтобы отвлечь, брось +%SUPERIOR%.",
+											condition: "Когда ты пытаешься [отвлечь кого-то разговором на очень интересующую тебя тему], брось +%SUPERIOR%.",
 
 											parts: [
 												{
@@ -2086,6 +2085,7 @@
 								}
 							},
 						},
+
 						{
 							en: {
 								title: "Poll of players",
@@ -2193,7 +2193,7 @@
 															],
 		
 															list: [
-																"При заказе удалось уговорить приянть просроченный купон. Сдвинь {Mundane} вверх, любой другой {ярлык} вниз.",
+																"При заказе удалось уговорить принять просроченный купон. Сдвинь {Mundane} вверх, любой другой {ярлык} вниз.",
 																"Пицца прибывает раньше, чем ожидалось. Очисть {Состояние}.",
 																"Пицца великолепно приготовлена. Добавь 1 в {Тимпул}.",
 															]
@@ -2237,6 +2237,104 @@
 
 											translator: "Исходный ход забавный, но малоосмысленный, поэтому в переводе добавлено немного механических бонусов"
 											
+										}
+									}
+								}
+							},
+						},
+
+						{
+							en: {
+								title: "A Thousand and Ones",
+								key: "thousand_and_ones",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When you [have completed 1,000 time loops and begin your final loop], choose three goals from the list below, and roll +%FREAK%.",
+
+										
+											parts: [
+												{
+													type: 'hit',
+													info: "On a hit, you successfully break out of the time loop with minimal consequences.",
+
+													parts: [
+														{
+															type: 'great',
+															info: "On a 10+ all three happen"
+														},
+														{
+															type: 'partial',
+															info: "On a 7-9, choose 2"
+														},
+													],
+
+												},
+												{
+													type: 'miss',
+													info: 'On a miss you make it out, but the GM will tell you what important thing you lost in the process. Choose 1 of your chosen goals to have been successfully completed'
+												},
+												{
+													list: [
+														"You return to the normal time stream at the exact moment you entered the loop, losing no time.",
+														"You retain all of your memories from within the loop.",
+														"The one who mattered most to you within the loop remembers some of your moments together.",
+														"You now have the knowledge to ensure you are never stuck in a time loop again.",
+														"The entity keeping you trapped in the loop is still stuck with no means of escape.",
+													]	
+												}
+											],
+										
+																						
+												
+											
+											
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Тысяча и один",
+								key: "thousand_and_ones",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [завершил 1000 временных петель и начинаешь последнюю], выбери три цели из списка ниже и брось +%FREAK%.",
+
+										
+											parts: [
+												{
+													type: 'hit',
+													info: "При успехе ты вырвался из петли с минимальными последствиями",
+
+													parts: [
+														{
+															type: 'great',
+															info: "На 10+ все три выбранные цели достигнуты"
+														},
+														{
+															type: 'partial',
+															info: "На 7-9 выбери 2 из 3"
+														},
+													],
+
+												},
+												{
+													type: 'miss',
+													info: 'При провале ты вырвался, но ГМ расскажет, чего важного ты лишился в процессе. Одна из 3 выбранных целей успешно достигнута.'
+												},
+												{
+													list: [
+														"Ты вернулся в обычный поток времени в тот же момент, что и покинул его. Ты не потреял время. ",
+														"Ты сохранил все воспоминания о происходящем в петле.",
+														"Тот, кто был важен для тебя больше прочих в петле, помнит некоторые из моментов, когда вы были вместе.",
+														"Ты получил знания, дающие уверенноть, что ты никогда больше не застрянешь во временной петле.",
+														"То, что поймало тебя во временную петлю, все еще заперто там без возможности выбраться.",
+													]	
+												}
+											],
 										}
 									}
 								}
@@ -4011,7 +4109,7 @@
 													info: "Недостатки:",
 													list: [
 														"странный источник топлива",
-														"восприимчиваость к_______",
+														"восприимчивость к_______",
 														"легко засечь",
 														"медленный и неповоротливый",
 														"без вооружения",

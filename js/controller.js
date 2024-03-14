@@ -918,43 +918,69 @@ var app = new Vue({
 		showPreloader: true,
 		
 		section_actions: [{
-			title: "Случайный монстр",
-			key: "random_monster",
-			from: "frankenstein",
-			action: "get_random_monster",
+			title: "Случайный злодей",
+			key: "random_villains",
+			from: "villains",
+			action: "get_random_villains",
 			visible: false,
 			showResult: false,
 			
-			list: [
+			list: [				
 				{
 					key: "",
-					title: "Свойства",
+					title: "Псевдоним",
 					value: "",
-					params: `frankenstein/props`
+					params: `villains/alias`
 				},
 				{
 					key: "",
-					title: "Тактика",
+					title: "Настоящее имя",
 					value: "",
-					params:`frankenstein/tactics`
+					params: `villains/real_name`
 				},
 				{
 					key: "",
-					title: "Ход",
+					title: "Способности",
 					value: "",
-					params: `frankenstein/moves`
+					params: `villains/abilities`,
+					count: [2,3,4]
 				},
 				{
 					key: "",
-					title: "Сокровище",
+					title: "Мотивы",
 					value: "",
-					params: `frankenstein/treasure`
+					params: `villains/drives`
+				},
+				{
+					key: "m_1",
+					title: "Ход 1",
+					value: "",
+					params:`villains/moves`
+				},
+				{
+					key: "m_2",
+					title: "Ход 2",
+					value: "",
+					params:`villains/moves`
+				},
+				{
+					key: "m_3",
+					title: "Ход 3",
+					value: "",
+					params:`villains/moves`
 				},
 				{
 					key: "",
-					title: "Слабость",
+					title: "Ходы состояний",
 					value: "",
-					params: `frankenstein/vulnerability`
+					params: `villains/condition_moves`
+				},			
+				{
+					key: "",
+					title: "Происхождение",
+					value: "",
+					params: `villains/background`,
+					count: [2,3]
 				}
 			]
 		},{
@@ -1386,11 +1412,16 @@ var app = new Vue({
 				//this[oSelected.action].call(this, oSelected);
 				
 				oSelected.list.forEach(oItem => {
+					let nCount = 1;
+					if(oItem.count && Array.isArray(oItem.count) && oItem.count.length>0) {
+						nCount = shuffle(oItem.count, true)[0];
+					}
+
 					let sVal =  lib_DW.getResult(
-					oItem.params, {}
+						oItem.params, {options:{count: nCount}}
 					);
 					
-					oItem.value = this._formatTitle(sVal[0]);
+					oItem.value = this._formatTitle(sVal.join('; '));
 				});
 			}
 		},
@@ -1410,72 +1441,51 @@ var app = new Vue({
 		},
 		
 		
-		_formatTitle: function(sText){
+		_formatTitle: function(sText=''){
 			let aParts = sText.split("|");
 			return aParts.length>1? `<b>${aParts[0]}</b> ${aParts[1]}` : aParts[0];
 		},
 		
-		get_random_monster: function(){
-			let aProps = this.random_list = lib_DW.getResult(
-				`frankenstein/props`, {}
+		get_random_villains: function(){
+			let aDrives = this.random_list = lib_MASKS.getResult(
+				`villain/drives`, {}
 				);
-			let aTactics = this.random_list = lib_DW.getResult(
-				`frankenstein/tactics`, {}
+			let aMoves = this.random_list = lib_MASKS.getResult(
+				`villain/moves`, {}
 				);
-			let aMoves = this.random_list = lib_DW.getResult(
-				`frankenstein/moves`, {}
-				);
-			let aTreasure = this.random_list = lib_DW.getResult(
-				`frankenstein/treasure`, {}
-				);
-			let aVvulnerability = this.random_list = lib_DW.getResult(
-				`frankenstein/vulnerability`, {}
-				);
+			
 				
 				
-				this.section_actions.find(el=> el.key == "random_monster").list = [
+				this.section_actions.find(el=> el.key == "random_villain").list = [
 					{
 						key: "",
-						title: "Свойства",
+						title: "Мотивы",
 						value: this._formatTitle(aProps[0]),
-						params: `frankenstein/props`
+						params: `frankenstein/drives`
 					},
 					{
 						key: "",
-						title: "Тактика",
+						title: "Ходы",
 						value: aTactics[0],
-						params:`frankenstein/tactics`
+						params:`frankenstein/moves`
 					},
-					{
-						key: "",
-						title: "Ход",
-						value: aMoves[0],
-						params: `frankenstein/moves`
-					},
-					{
-						key: "",
-						title: "Сокровище",
-						value: aTreasure[0],
-						params: `frankenstein/treasure`
-					},
-					{
-						key: "",
-						title: "Слабость",
-						value: aVvulnerability[0],
-						params: `frankenstein/vulnerability`
-					}
+					
 				];
 				
 		},
 		
 		_onRandomGeneratedClick: function(oData){
+			let nCount = 1;
+			if(oData.count && Array.isArray(oData.count) && oData.count.length>0) {
+				nCount = shuffle(oData.count)[0];
+			}
 			//debugger;
 			let aVals = this.random_list = lib_DW.getResult(
-				oData.params, {}
+				oData.params, {options:{count: nCount}}
 				);
 			let oItem = this.section_actions.find(el=> el.showResult == true);
 			if(oItem){				
-				oItem.list.find(el=>el.params == oData.params).value = this._formatTitle(aVals[0]);
+				oItem.list.find(el=>el.key ? el.key == oData.key : el.params == oData.params).value = this._formatTitle(aVals.join('; '));
 			}
 		},
 		//moves

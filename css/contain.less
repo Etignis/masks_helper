@@ -10,7 +10,7 @@
 }
 
 .move{
-	margin: 0 var(--padding);
+	margin: var(--padding);
 	ul{
 		margin-top: 1rem;
 	}
@@ -254,7 +254,7 @@ li.no_offset{
 		transition: background .3s, border .3s;
 		
 		&:hover{
-			border: 2px solid var(--color);
+			border-color: var(--color);
 			background: var(--color);
 		}
 	}
@@ -314,13 +314,14 @@ li.no_offset{
 button.toggler{
 	border-color: transparent;
 	border-radius: var(--radius);
+	border-width: 3px;
 	background: transparent;
 	color: white;
 	transition: border-color .3s, background .3s;
 
-	// &:hover{
-	// 	background: var(--c_light);
-	// }
+	&:hover{
+		background: var(--c_light);
+	}
 
 	&.active{
 		border-color: var(--color);

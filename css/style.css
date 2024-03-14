@@ -527,7 +527,7 @@ ul.checklist li.marked {
   background: #424242;
 }
 .move {
-  margin: 0 var(--padding);
+  margin: var(--padding);
 }
 .move ul {
   margin-top: 1rem;
@@ -743,7 +743,7 @@ li.no_offset {
   transition: background .3s, border .3s;
 }
 .contain button:hover {
-  border: 2px solid var(--color);
+  border-color: var(--color);
   background: var(--color);
 }
 .contain #getRandom {
@@ -791,9 +791,13 @@ li.no_offset {
 button.toggler {
   border-color: transparent;
   border-radius: var(--radius);
+  border-width: 3px;
   background: transparent;
   color: white;
   transition: border-color 0.3s, background 0.3s;
+}
+button.toggler:hover {
+  background: var(--c_light);
 }
 button.toggler.active {
   border-color: var(--color);

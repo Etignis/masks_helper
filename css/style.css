@@ -16,6 +16,7 @@
   --c_p_partial: #ffca28;
   --c_p_miss: #d81b60;
   --color: #00b0ff;
+  --color_t: rgba(0, 176, 255, 0.5);
   --c_light: #33c0ff;
   --c_lighest: #66d0ff;
   --c_contrast: #fff;
@@ -207,7 +208,7 @@ a:hover {
 }
 .loader:before,
 .loader:after {
-  color: #00b0ff;
+  color: var(--color);
   font-size: 200%;
   content: "🎲";
   position: absolute;
@@ -291,13 +292,13 @@ ul.checklist li.marked {
   height: 0.5rem;
 }
 #menu::-webkit-scrollbar-thumb {
-  background: #00b0ff;
+  background: var(--color);
 }
 #menu::-webkit-scrollbar-track {
   background: transparent;
 }
 #menu body {
-  scrollbar-face-color: #00b0ff;
+  scrollbar-face-color: var(--color);
   scrollbar-track-color: transparent;
 }
 #menu.maximise {
@@ -317,7 +318,7 @@ ul.checklist li.marked {
   transition: color .3s;
 }
 #menu .top_menu a:hover {
-  color: #00b0ff;
+  color: var(--color);
 }
 #menu .icon.home {
   display: inline-block;
@@ -371,11 +372,11 @@ ul.checklist li.marked {
   border-radius: .3rem;
   padding: .9rem;
   margin: .9rem;
-  border: 1px solid #00b0ff;
+  border: 1px solid var(--color);
   transition: background .2s;
 }
 #menu li.action:hover {
-  background: #00b0ff;
+  background: var(--color);
 }
 #menu li.action:active {
   background: #008dcc;
@@ -503,13 +504,13 @@ ul.checklist li.marked {
     height: 0.5rem;
   }
   #menu ul::-webkit-scrollbar-thumb {
-    background: #00b0ff;
+    background: var(--color);
   }
   #menu ul::-webkit-scrollbar-track {
     background: transparent;
   }
   #menu ul body {
-    scrollbar-face-color: #00b0ff;
+    scrollbar-face-color: var(--color);
     scrollbar-track-color: transparent;
   }
   #menu li {
@@ -683,13 +684,13 @@ li.no_offset {
   height: 0.5rem;
 }
 .contain::-webkit-scrollbar-thumb {
-  background: #00b0ff;
+  background: var(--color);
 }
 .contain::-webkit-scrollbar-track {
   background: transparent;
 }
 .contain body {
-  scrollbar-face-color: #00b0ff;
+  scrollbar-face-color: var(--color);
   scrollbar-track-color: transparent;
 }
 .contain .padding {
@@ -702,7 +703,7 @@ li.no_offset {
   transition: background .6s, color .3s;
 }
 .contain .item:hover {
-  background: rgba(0, 176, 255, 0.5);
+  background: var(--color_t);
   color: white;
 }
 .contain h1 {
@@ -714,9 +715,9 @@ li.no_offset {
   margin-left: 0.5rem;
 }
 .contain .highlight {
-  border-radius: 3px;
-  background: #00b0ff;
-  padding: 1rem;
+  border-radius: var(--radius);
+  background: var(--color);
+  padding: var(--padding);
   color: white;
 }
 .contain .requirements,
@@ -739,8 +740,8 @@ li.no_offset {
   transition: background .3s, border .3s;
 }
 .contain button:hover {
-  border: 2px solid #00b0ff;
-  background: #00b0ff;
+  border: 2px solid var(--color);
+  background: var(--color);
 }
 .contain #getRandom {
   padding: 1rem;
@@ -748,7 +749,7 @@ li.no_offset {
 }
 .contain .random_item {
   border-radius: .3rem;
-  border: 1px solid #00b0ff;
+  border: 1px solid var(--color);
   background: #424242;
   padding: .6rem;
   margin: .3rem;
@@ -757,7 +758,7 @@ li.no_offset {
   justify-content: space-between;
 }
 .color {
-  color: #00b0ff;
+  color: var(--color);
 }
 #contain {
   display: flex;
@@ -774,6 +775,11 @@ li.no_offset {
   margin-top: 4rem;
   border-top: 1px solid gray;
 }
+#contain footer h4,
+#contain footer h5,
+#contain footer h6 {
+  margin: var(--padding-small);
+}
 .move_fails {
   margin: 3rem 0 1rem;
   padding-left: 0;
@@ -787,23 +793,23 @@ li.no_offset {
   opacity: 0.7;
 }
 .move_fails li:first-child {
-  background: #00b0ff;
+  background: var(--color);
   color: white;
   padding: .8rem;
   border-radius: .4rem;
   opacity: 1;
 }
 .info {
-  border: 2px solid #00b0ff;
+  border: 2px solid var(--color);
   padding: 1rem;
   border-radius: 3px;
-  background: rgba(0, 176, 255, 0.4);
+  background: var(--color_t);
   color: white;
 }
 .card {
   padding: 1rem;
   margin: .4rem;
-  border: 1px solid #00b0ff;
+  border: 1px solid var(--color);
   border-radius: .3rem;
   max-width: 70rem;
 }
@@ -818,7 +824,7 @@ li.no_offset {
   font-size: 90%;
 }
 .card .description {
-  border-top: 1px solid #00b0ff;
+  border-top: 1px solid var(--color);
   padding-top: 1rem;
   margin-top: 1rem;
 }
@@ -881,7 +887,7 @@ ul.compact li {
   margin-right: 0.5rem;
 }
 .checkboxer.selected::before {
-  background: #00b0ff;
+  background: var(--color);
 }
 .creditials {
   display: flex;

@@ -206,6 +206,11 @@
 						<button @click="_onRandomGeneratedClick(item)" style='margin-left: .7rem'>🎲</button>
 					</li>
 				</ul>
+
+				<div v-show="_random_set_notes.length>0" >
+					<h3>Примечания:</h3>
+					<div v-html="_random_set_notes"></div>
+				</div>
 			</div>
 			
 			<!-- Списки -->
@@ -314,14 +319,25 @@
 				<!-- <h1> -->
 					<!-- Источникик и полезности:  -->
 				<!-- </h1> -->
-				<!-- <div class='creditials'>				 -->
-					<!-- <div class='source'> -->
-						<!-- <a href="https://dungeon-world.com/" class='outer_logo' title='Официальный сайт'> -->
-							<!-- <img src='img/DW_LOGO.jpg'> -->
-						<!-- </a> -->
-					<!-- </div>			 -->
-			
-				<!-- </div> -->
+				<div class='creditials'>
+					<div class="flexChild">
+						<h5>Авторы:</h5>
+						<div class='source'>
+							<a href="https://magpiegames.com/pages/masks" class='outer_logo' title='Официальный сайт'>
+								<img src='img/MASKS_LOGO.png'> 
+							</a> 
+						</div>
+					</div>				
+				
+					<div class="flexChild">
+						<h5>Перевод (в процессе):</h5>
+						<div class='source'>
+							<a href="https://vk.com/red_librarian" class='outer_logo' title='Перевод'>
+								<img src='img/RED_LIBRARIAN_LOGO.png'> 
+							</a> 
+						</div>
+					</div>
+				</div>
 			</footer>
 			
 		</div>

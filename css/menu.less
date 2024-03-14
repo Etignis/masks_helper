@@ -9,7 +9,7 @@
 	flex-shrink: 0;
 	background: fade(@gray3, 90%);
 	position: relative;
-	.scrollbars(1rem/2, @color /*fade(black, 20%)*/, transparent);
+	.scrollbars(1rem/2, var(--color) /*fade(black, 20%)*/, transparent);
 
 	
 	&.maximise{
@@ -30,7 +30,7 @@
 			transition: color .3s;
 			
 			&:hover{
-				color: @color;
+				color: var(--color);
 			}
 		}
 	}
@@ -42,7 +42,7 @@
 			width: @size;
 			height: @size;
 			
-			@color: currentColor;
+			//@color: currentColor;
 			
 			border: 3px solid currentColor;
 			&:before {
@@ -106,12 +106,12 @@
 			padding: .9rem;
 			margin: .9rem;			
 			
-			border: 1px solid @color;
+			border: 1px solid var(--color);
 			
 			transition: background .2s;
 			
 			&:hover{
-				background: @color;
+				background: var(--color);
 			}
 			&:active{
 				background: darken(@color, 10%);
@@ -242,7 +242,7 @@
 			
 			
 			/*overflow-y: auto;*/
-			.scrollbars(1rem/2, @color /*fade(black, 20%)*/, transparent);
+			.scrollbars(1rem/2, var(--color) /*fade(black, 20%)*/, transparent);
 		}
 		li{
 			/*width: 17rem;*/

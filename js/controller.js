@@ -924,6 +924,11 @@ var app = new Vue({
 			action: "get_random_villains",
 			visible: false,
 			showResult: false,
+			notes: [
+				"Представленный вариант скорее отправная точка для фантазии, чем готовый результат.",
+				"У Злодея может быть от 1 до 5 {состояний}. Чем больше состояний, тем более могущественный противник. Всегда можно увеличить или уменьшить количество состяний, чтобы сделать противостоянее сложнее/проще. Когда злодей должен получить новое состояние, но все уже отмечены, он повержен. Злодей может сбежать до того, как его победят.",
+				"Когда Злодей получает {состояние}, он сразу же делает соотвествующих ход состояния."
+			],
 			
 			list: [				
 				{
@@ -1059,6 +1064,19 @@ var app = new Vue({
 	computed: {
 		_libContent: function(){
 			
+		},
+		_random_set_notes: function(){
+			let oItem = this.section_actions.find(el=> el.showResult == true);
+			if(oItem && oItem.notes){
+				if(Array.isArray(oItem.notes)) {
+					return _formatText(oItem.notes.join('||'));
+				} else if (typeof oItem.notes == 'string') {
+					return _formatText(oItem.notes);
+				} else {
+					return '//не удалось отформатировать текст';
+				}
+			}
+			return "";
 		},
 		_random_set_result: function (){
 			let oItem = this.section_actions.find(el=> el.showResult == true);

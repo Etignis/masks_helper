@@ -4993,6 +4993,7 @@
 					o.type = 'move';
 					o.move = oContent.data.move;
 					o.move.data.title = oContent.title;					
+					o.move.data.key = oContent.key;					
 				}
 				
 				//item

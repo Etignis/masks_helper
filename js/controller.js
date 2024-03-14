@@ -1146,9 +1146,9 @@ var app = new Vue({
 			let aList = [];
 			let o = {list: [], pre: ""};
 			
-			let sKey = this.checked.subsection;
-			//oContent = this.list_data; //lib_DW.getByPath(this.checked.main, this.checked.section, this.checked.subsection);
-			oContent = this.libPathValue; //lib_DW.getByPath(this.checked.main, this.checked.section, this.checked.subsection);
+			//let sKey = this.checked.subsection;
+			oContent = Array.isArray(this.libPathValue)? this.libPathValue[0] : this.libPathValue; 
+
 			this.options = [];
 
 			let bRand = true;
@@ -1183,8 +1183,8 @@ var app = new Vue({
 		
 		displayItem: function(){
 			let oData ={};
-			//et oContent = lib_DW.getByPath(this.checked.main, this.checked.section, this.checked.subsection);
-			let oContent = this.libPathValue;
+			let oContent = Array.isArray(this.libPathValue)? this.libPathValue[0] : this.libPathValue; 
+			
 			if(oContent && oContent.type=='item' ){
 				oData = oContent.item.data;
 				return oData;
@@ -1230,19 +1230,22 @@ var app = new Vue({
 		},
 		
 		displayLangsMove: function(){
-			let aContent = this.libPathValueLangs;
-			let oData = aContent.map(oContent=>{
-				if(oContent && oContent.type=='move'){
-					oData = oContent.move.data;
-					return oData;
-				}
-			})
+			let oData=[];
+			let aContent = this.libPathValue;
+			if(aContent && Array.isArray(aContent)){
+				oData = aContent.map(oContent=>{
+					if(oContent && oContent.type=='move'){
+						oData = oContent.move.data;
+						return oData;
+					}
+				}).filter(el=>el)
+			}
 			
 			return oData;
 		},
 
 		showMove: function(){
-			let bMove = !!(this.displayMove && this.displayMove.title);
+			let bMove = !!(this.displayMove && this.displayMove.title || this.displayLangsMove.length) ;
 			return bMove;
 		},
 		
@@ -1335,12 +1338,8 @@ var app = new Vue({
 				}
 			);
 			
-			//this.list_data = lib_DW.getByPath(this.checked.main, this.checked.section, this.checked.subsection);
-		
-				this.libPathValue = lib_DW.getByPath(this.checked.main, this.checked.section, this.checked.subsection);
-	
-				this.libPathValueLangs = _getWithLangs();
 			
+			this.libPathValue = this._getWithLangs();			
 		},
 		lang_switch: function(sCode){
 			let oLg = this.settings.lang.find(oLang=> oLang.code == sCode);
@@ -1350,11 +1349,13 @@ var app = new Vue({
 			if(!this.settings.lang.find(oLang=> oLang.active)) {
 				this.settings.lang[0].active = true;
 			}
+			this.libPathValue = this._getWithLangs();
 		},
 		_getWithLangs: function(){
 			let aResults = this.settings.lang.filter(oLang=>oLang.active)
-			.map(oLang=>lib_DW.getByPath(this.checked.main, this.checked.section, this.checked.subsection, oLang.code))
-			return aResults;
+			.map(oLang=>lib_DW.getByPath(this.checked.main, this.checked.section, this.checked.subsection, oLang.code) || null)
+			.filter(el=>el);
+			return aResults;//.length>1? aResults: aResults[0];
 		},
 		menu_priority: function(bMax){
 			this.enlarge_menu = !!bMax;
@@ -1466,12 +1467,7 @@ var app = new Vue({
 		sectionClick: function({src, name}){
 			this.checked.section = `${name}`;
 			this.checked.subsection = "";
-			// this.subsection = this._formatMenuListbyGroups(
-				// lib_DW.getStructure(this.checked.main, this.checked.section),
-				// lib_DW.getMetadata(this.checked.main, this.checked.section)
-				// );
-			//this.list_data = lib_DW.getByPath(this.checked.main, this.checked.section, this.checked.subsection);
-			this.libPathValue = lib_DW.getByPath(this.checked.main, this.checked.section, this.checked.subsection);
+			this.libPathValue = this._getWithLangs();
 			this.updateHash();
 			
 			this.move_fails = [];
@@ -1509,8 +1505,6 @@ var app = new Vue({
 		},
 		subsectionClick: function({src, name}){
 			this.checked.subsection = `${name}`;
-			//this.list_data = lib_DW.getByPath(this.checked.main, this.checked.section, this.checked.subsection);
-			//this.libPathValue = lib_DW.getByPath(this.checked.main, this.checked.section, this.checked.subsection);
 			this.updateHash();
 			
 			this.move_fails = [];
@@ -1715,8 +1709,7 @@ var app = new Vue({
 				// this.subsection = []
 			}
 			
-			//this.list_data = lib_DW.getByPath(this.checked.main, this.checked.section, this.checked.subsection);
-			this.libPathValue = lib_DW.getByPath(this.checked.main, this.checked.section, this.checked.subsection);
+			this.libPathValue = this._getWithLangs();
 			
 		}
 	}

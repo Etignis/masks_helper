@@ -526,6 +526,9 @@ ul.checklist li.marked {
   padding: .5rem;
   background: #424242;
 }
+.move {
+  margin: 0 var(--padding);
+}
 .move ul {
   margin-top: 1rem;
 }
@@ -939,6 +942,9 @@ ul.compact li {
 @media screen and (min-width: 65em) {
   #contain {
     box-shadow: 0 0 20px 10px #333;
+  }
+  #move {
+    display: flex;
   }
   .card {
     min-width: 20rem;

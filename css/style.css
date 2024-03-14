@@ -16,7 +16,7 @@
   --c_p_partial: #ffca28;
   --c_p_miss: #d81b60;
   --color: #2196f3;
-  --color_t: rgba(33, 150, 243, 0.5);
+  --color_t: rgba(33, 150, 243, 0.4);
   --c_light: #51adf6;
   --c_lighest: #82c4f8;
   --c_contrast: #fff;
@@ -848,7 +848,7 @@ button.toggler.active::after {
   border: 2px solid var(--color);
   padding: 1rem;
   border-radius: 3px;
-  background: var(--color_t);
+  background: #455A64;
   color: white;
 }
 .card {

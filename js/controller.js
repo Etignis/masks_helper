@@ -545,6 +545,10 @@ Vue.component('move', {
 			type: [String, Array],
 			default: ""
 		},
+		translator: {
+			type: [String, Array],
+			default: ""
+		},
 		kind: {
 			type: String,
 			default: ""
@@ -610,6 +614,16 @@ Vue.component('move', {
 			
 			return sText?`Пояснение из книги правил:<br>`+sText:"";
 		},
+		_translator: function(){
+			let sText = '';
+			if(Array.isArray(this.translator) && this.translator.length) {
+				sText = this.translator.map(el=>_formatText(el, {noP: false})).join('\r\n');
+			} else if(this.translator && this.translator.length>2){
+				sText = _formatText(this.translator);
+			}
+			
+			return sText?`Примечание переводчика:<br>`+sText:"";
+		},
 		_modifier: function(){
 			let sText = '';
 			if(Array.isArray(this.modifier)) {
@@ -650,6 +664,7 @@ Vue.component('move', {
 		<slot></slot>		
 		
 		<div class='notes' v-html="_notes" v-if="_notes.length>2"></div>
+		<div class='translator' v-html="_translator" v-if="_translator.length>2"></div>
 </article>`
 });
 
@@ -1268,12 +1283,19 @@ var app = new Vue({
 		},
 		
 		showInfo: function(){
-			return !this.showMove && !this.showResult && !this.showItem && !this.showRandomSet;
+			return !this.showMove && !this.showResult && !this.showItem && !this.showRandomSet && !this.about_sub;
 		},
 		
 		sources_info: function(){
 			if (this.libPathValue && this.libPathValue.sources) {
 				return this.libPathValue.sources.map(el=>_formatText(el)).join("\r\n");
+			}
+			return "";
+		},
+
+		about_sub: function(){
+			if(this.libPathValue && this.libPathValue[0] && this.libPathValue[0].type=='about' && this.libPathValue[0].info.length){
+				return this.libPathValue[0].info.map(el=>_formatText(el)).join("\r\n");
 			}
 			return "";
 		}

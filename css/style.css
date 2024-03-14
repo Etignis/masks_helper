@@ -569,7 +569,8 @@ ul.checklist li.marked {
   margin-bottom: var(--padding-big);
   line-height: 1.5em;
 }
-.move .notes {
+.move .notes,
+.move .translator {
   margin: var(--padding) 0;
   margin-top: var(--padding-huge);
   line-height: 1.5em;

@@ -137,7 +137,7 @@
 
 				<move 
 					v-for="moveData in displayLangsMove"
-					:key="moveData.key"
+					:key="moveData.title"
 					:name="moveData.key"
 					:title="moveData.title"
 					:modifier="moveData.modifier"
@@ -146,6 +146,7 @@
 					:condition="moveData.condition"
 					:info="moveData.info"
 					:notes="moveData.notes"
+					:translator="moveData.translator"
 					:kind="moveData.kind"					
 				>
 					<move_part v-for="part in moveData.parts"
@@ -274,7 +275,7 @@
 			</div>
 			
 
-			<div class='info widther'  v-show="showInfo">
+			<div class='info widther' v-show="showInfo">
 				<h1>
 					Помощник MASKS
 				</h1>
@@ -320,6 +321,9 @@
 				</p>
 			</div>
 
+			<div class='info widther' v-html="about_sub" v-show="about_sub.length">
+
+			</div>
 			<footer>
 				<!-- <p> -->
 					<!-- Данные распространются по лицензии Creative Commons Attribution 4.0 Unported License. -->

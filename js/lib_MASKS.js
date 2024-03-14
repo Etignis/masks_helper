@@ -1987,6 +1987,266 @@
 					]
 				},
 				{
+					title: "SUPERIOR ходы",
+					key: "roll_superior",
+					color: "",
+					ico: "",
+					type: 0,
+					kind: 2,
+					source: '111',
+					info: [
+						"31 Custom Moves for Masks: A New Generation by Meghan Cross",
+						"these moves were written as a part of #movemonth hosted by james malloy (@andthemeltdowns) and brandon leon-gambetta (@bleongambetta)",
+						"{В процессе добавления...}"
+					],
+					sub: [
+						{
+							en: {
+								title: "Passion or Heartbreak",
+								key: "passion_or_eartbreak",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When you [talk to someone at length about a subject you are passionate about as a means of distraction], roll +%SUPERIOR%.",
+
+											parts: [
+												{
+													type: 'hit',
+													info: "On a hit, your audience is enraptured and you create an opportunity for  your team to act without being noticed.",
+
+													parts: [
+														{
+															type: 'great',
+															info: "On a 10+, choose 2"
+														},
+														{
+															type: 'partial',
+															info: "On a 7-9+, choose 1"
+														},
+													],
+
+													list: [
+														"Your team gets {+1 forward} on any actions that are a direct result of your distraction.",
+														"You gain {influence} over your target and {+1 forward} on moves against them.",
+														"You are able to join your team without being noticed once you are done.",
+													]
+												},
+
+												{
+													type:'miss',
+													info: 'On a miss, the distraction fails. Mark the {insecure condition} and leave with your team to create a new plan.'
+												}
+											]
+											
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Заговори зубы",
+								key: "passion_or_eartbreak",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [долго разговариваешь с кем-то на очень интересующую тебя тему], чтобы отвлечь, брось +%SUPERIOR%.",
+
+											parts: [
+												{
+													type: 'hit',
+													info: "При успехе ваша аудитория приходит в восторг, и вы даете  команде возможность действовать незаметно.",
+
+													parts: [
+														{
+															type: 'great',
+															info: "На 10+ выбери 2"
+														},
+														{
+															type: 'partial',
+															info: "На 7-9 выбери 1"
+														},
+													],
+
+													list: [
+														"Команда получает {+1 на следующий бросок}, являющися прямым следствием вашего отвлечения.",
+														"Ты получаешь {Влияние} на цель и {+1 на следующий} ход против него.",
+														"По завершении вы можете незаметно присоединиться к команде.",
+													]
+												},
+
+												{
+													type:'miss',
+													info: 'При провале отвлечь не удалось. Отметь {состояние Неуверенный} и покиньте это место всей командой, чтобы разработать новый план.'
+												}
+											]
+											
+										}
+									}
+								}
+							},
+						},
+						{
+							en: {
+								title: "Poll of players",
+								key: "poll_of_players",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When it is [time to come together to decide what type of pizza to order], choose one player to place the order. The Orderer will begin by telling the group what type of pizza they want and ask each player the same question.",
+
+											parts: [
+												{
+													info: "If there is a consensus, roll +%MUNDANE%.",
+													parts: [
+														{
+															type: 'hit',
+															info: "On a hit, the pizza is ordered successfully.",
+		
+															parts: [
+																{
+																	type: 'great',
+																	info: "On a 10+, choose 2"
+																},
+																{
+																	type: 'partial',
+																	info: "On a 7-9+, choose 1"
+																},
+															],
+		
+															list: [
+																"The person taking the order honors an expired coupon, saving you money.",
+																"The pizza arrives faster than expected.",
+																"The pizza is cooked to perfection.",
+															]
+														},
+													]
+												},
+
+												{
+													info: "If there is a disagreement, roll +%SUPERIOR%.",
+													parts: [
+														{
+															type: 'hit',
+															info: "On a hit, you are barely able to reach a compromise and place the order.",
+		
+															parts: [
+																{
+																	type: 'great',
+																	info: "On a 10+, {hold} 2"
+																},
+																{
+																	type: 'partial',
+																	info: "On a 7-9+, {hold} 1"
+																},
+																{
+																	info: 'Spend 1 {hold} to remove an option from the list below.'
+																},
+																{
+																	list: [
+																		"The pizza disagreement caused a rift in the team. Players who did not agree with the final order may remove {influence} over them from another player.",
+																		"The delivery person gets lost and by the time the pizza arrives, it is cold and unsatisfying. (And they refuse to waive the delivery fee!) Mark the {Angry condition} as you grumpily eat cold pizza",
+																		"Either something was undercooked or it was the combination of hamburger, olives, and pineapple - but something isn’t sitting right. {-1 ongoing} until you are able to take some Tums and sleep off the nausea.",
+																	]
+																}
+															],
+															
+														},
+														{
+															info: "At any point during the disagreement, the orderer can choose to mark a {condition} to overrule the group and order what they want."
+														}
+													]
+												}
+											]
+											
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Выберите пиццу",
+								key: "poll_of_players",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда пришло время собраться и [решить, каую пиццу заказать], выберите одного игрока, который будет делать заказ. Он сначала говорит какую пиццу хочет сам, потом спрашивает мнение остальных.",
+
+											parts: [
+												{
+													info: "Если все согласны, брось +%MUNDANE%.",
+													parts: [
+														{
+															type: 'hit',
+															info: "При успехе пицца успешно заказана.",
+		
+															parts: [
+																{
+																	type: 'great',
+																	info: "На 10+ выбери 2"
+																},
+																{
+																	type: 'partial',
+																	info: "На 7-9+ выбери 1"
+																},
+															],
+		
+															list: [
+																"При заказе удалось уговорить приянть просроченный купон. Сдвинь {Mundane} вверх, любой другой {ярлык} вниз.",
+																"Пицца прибывает раньше, чем ожидалось. Очисть {Состояние}.",
+																"Пицца великолепно приготовлена. Добавь 1 в {Тимпул}.",
+															]
+														},
+													]
+												},
+
+												{
+													info: "Если не удалось прийти к согласию, брось +%SUPERIOR%.",
+													parts: [
+														{
+															type: 'hit',
+															info: "При успехе вам едва удается достичь компромиса и сделать заказ.",
+		
+															parts: [
+																{
+																	type: 'great',
+																	info: "На 10+ выбери 1"
+																},
+																{
+																	type: 'partial',
+																	info: "На 7-9+ выбери 2"
+																},
+																{
+																	list: [
+																		"Разногласия во время выбора пиццы вызвали раскол в команде. Игроки, несогласные с получившимся выбором могут забрать {Влияние} у других игроков.",
+																		"Доставщик заблудился, и когда пицца у вас, она холодная и невкусная. (И вам отказываются вернуть деньги!) Отметьте состояние {Злой}, недовольно поедая холодную пиццу.",
+																		"То ли что-то было сыровато, то ли это сочетание гамбургера, оливок и ананаса - но что-то пошло не так. Получи {-1 на следующие} броски, пока не удастся приянть таблетки от изжоги и выспаться, избавивишись от тошноты.",
+																	]
+																}
+															],
+															
+														},
+												
+														{
+															info: "В любой момент заказывающий может отметить себе {Сотояние}, чтобы преиграть решение и заказать то, что все хотят."
+														}
+													]
+												}
+											],
+
+											translator: "Исходный ход забавный, но малоосмысленный, поэтому в переводе добавлено немного механических бонусов"
+											
+										}
+									}
+								}
+							},
+						},
+
+					]
+				},
+
+				{
 					title: "Маяк",
 					key: "beacon",
 					color: "",
@@ -5017,7 +5277,13 @@
 				}
 
 				return o;
+			} else if(oContent && oContent.info){
+				return {
+					type: 'about',
+					info: oContent.info
+				};
 			}
+
 		}
 	}
 	
@@ -5046,6 +5312,9 @@
 				break;
 			case 'move': 
 				return oData.move.data;
+				break;
+			case 'about': 
+				return oData.info;
 				break;
 		}
 		

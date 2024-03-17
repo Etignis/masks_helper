@@ -29,7 +29,7 @@ function _formatText(sText, oParams){
 	// }
 	
 	sText = sText	
-		.replace(/<([^#]+)(#[^\>]+)>/ig, `<a href='$2'>$1</a>`)
+		.replace(/<([^#]+)(#[^\>]+)>/ig, `<a href='$2' class='internal'>$1</a>`)
 		.replace(/\[([^\[\]]+)\]/g, "<b>$1</b>")
 		.replace(/\{([^\{\}]+)\}/g, "<i>$1</i>")							
 		.replace(/\%([^\%]+)\%/g, `<mark class='label' data-label='$1'>$1</mark>`);
@@ -1128,6 +1128,20 @@ var app = new Vue({
 	},
 
 	computed: {
+
+		_section :function(){
+			if(this.checked.main && this.section.length) {
+				return this.section;
+			}
+			return [];
+		},
+
+		_subsection :function(){
+			if(this.checked.section && this.subsection.length) {
+				return this.subsection;
+			}
+			return [];
+		},
 		
 		_libContent: function(){
 			
@@ -1310,9 +1324,9 @@ var app = new Vue({
 			}
 		
 		if(this.bDebug) {
-			alert('lib version: '+lib_DW.version)
+			alert('lib version: '+lib_MASKS.version)
 		}
-		this.structure = lib_DW.getStructure(null, null, 'ru', this.filterbar.search);
+		this.structure = lib_MASKS.getStructure(null, null, 'ru', this.filterbar.search);
 		if(this.bDebug) {
 			alert('structure length: '+this.structure.length)
 		}
@@ -1355,7 +1369,7 @@ var app = new Vue({
 	methods: {
 
 		_random: function(){
-			this.random_list = lib_DW.getResult(
+			this.random_list = lib_MASKS.getResult(
 				`${this.checked.main}/${this.checked.section}/${this.checked.subsection}`, 
 				{
 					options: this.options
@@ -1379,7 +1393,7 @@ var app = new Vue({
 		},
 		_getWithLangs: function(){
 			let aResults = this.settings.lang.filter(oLang=>oLang.active)
-			.map(oLang=>lib_DW.getByPath(this.checked.main, this.checked.section, this.checked.subsection, oLang.code) || null)
+			.map(oLang=>lib_MASKS.getByPath(this.checked.main, this.checked.section, this.checked.subsection, oLang.code) || null)
 			.filter(el=>el);
 			return aResults;//.length>1? aResults: aResults[0];
 		},
@@ -1395,7 +1409,7 @@ var app = new Vue({
 			this.checked.main = `${name}`;
 			this.checked.section = "";
 			this.checked.subsection = "";
-			this.section = lib_DW.getStructure(this.checked.main, null, 'ru', this.filterbar.search);
+			this.section = lib_MASKS.getStructure(this.checked.main, null, 'ru', this.filterbar.search);
 			this.subsection = [];
 			this.updateHash();
 			
@@ -1521,7 +1535,7 @@ var app = new Vue({
 						nCount = shuffle(oItem.count, true)[0];
 					}
 
-					let sVal =  lib_DW.getResult(
+					let sVal =  lib_MASKS.getResult(
 						oItem.params, {options:{count: nCount}}
 					);
 					
@@ -1582,7 +1596,7 @@ var app = new Vue({
 				nCount = shuffle(oData.count)[0];
 			}
 			//debugger;
-			let aVals = this.random_list = lib_DW.getResult(
+			let aVals = this.random_list = lib_MASKS.getResult(
 				oData.params, {options:{count: nCount}}
 				);
 			let oItem = this.section_actions.find(el=> el.showResult == true);
@@ -1603,7 +1617,7 @@ var app = new Vue({
 		
 		show_move_fail: function (oLink){
 			let aParts = oLink.href.replace("#", "").split("|");
-			let sResult = lib_DW.getResult(`${aParts[0]}/${aParts[1]}/${aParts[2]}`, {});
+			let sResult = lib_MASKS.getResult(`${aParts[0]}/${aParts[1]}/${aParts[2]}`, {});
 			if(this.move_fails.length > 4) {
 				this.move_fails.pop();
 			}
@@ -1621,9 +1635,9 @@ var app = new Vue({
 				this._restart_prompt_animation();
 				let sStart = "master_moves";
 				let sKey = shuffle(aSelected, true)[0];
-				//this.list_data = lib_DW.getByPath(sStart, sKey);
+				//this.list_data = lib_MASKS.getByPath(sStart, sKey);
 				console.log(sStart, sKey);
-				let aResult = lib_DW.getResult(`${sStart}/${sKey}`, {});
+				let aResult = lib_MASKS.getResult(`${sStart}/${sKey}`, {});
 				let aParts = aResult[0].split("|");
 				return aParts.length>1? `<b>${aParts[0]}</b><br>${aParts[1]}` : aParts[0];
 			}
@@ -1679,18 +1693,21 @@ var app = new Vue({
 			var aHash = [];
 			if(this.checked.main) {
 				aHash.push(this.checked.main);
+				if(this.checked.section) {
+					aHash.push(this.checked.section);
+					if(this.checked.subsection) {
+						aHash.push(this.checked.subsection);
+					}
+				}
+				
 			}
-			if(this.checked.section) {
-				aHash.push(this.checked.section);
-			}
-			if(this.checked.subsection) {
-				aHash.push(this.checked.subsection);
-			}
+			
 			
 			if(aHash.length>0) {
 				window.location.hash = aHash.join("|");
 			} else {
 				this.removeHash();
+				this.structure = lib_MASKS.getStructure(null, null, 'ru', this.filterbar.search);
 			}
 		},
 		removeHash: function(){
@@ -1706,8 +1723,8 @@ var app = new Vue({
 			if(aHash[0]) {
 				this.checked.main = aHash[0];
 				this.section = this._formatMenuListbyGroups(
-					lib_DW.getStructure(this.checked.main, null, 'ru', this.filterbar.search),
-					lib_DW.getMetadata(this.checked.main)
+					lib_MASKS.getStructure(this.checked.main, null, 'ru', this.filterbar.search),
+					lib_MASKS.getMetadata(this.checked.main)
 				);
 				this._switchSectionAction(this.checked.main);
 				this.section_actions.forEach(oAction => {oAction.list.forEach(oListItem => {oListItem.value = ""})});
@@ -1719,8 +1736,8 @@ var app = new Vue({
 			if(aHash[1]) {
 				this.checked.section = aHash[1];
 				this.subsection = this._formatMenuListbyGroups(
-					lib_DW.getStructure(this.checked.main, this.checked.section, 'ru', this.filterbar.search),
-					lib_DW.getMetadata(this.checked.main, this.checked.section)
+					lib_MASKS.getStructure(this.checked.main, this.checked.section, 'ru', this.filterbar.search),
+					lib_MASKS.getMetadata(this.checked.main, this.checked.section)
 				);
 			} else {
 				// this.checked.section = "";

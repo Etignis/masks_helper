@@ -19,6 +19,7 @@
   --color_t: rgba(33, 150, 243, 0.4);
   --c_light: #51adf6;
   --c_lighest: #82c4f8;
+  --c_dark: #0c7cd5;
   --c_contrast: #fff;
   --c_shadow_dark: #000;
   --c_back_part: #00000029;
@@ -342,8 +343,11 @@ ul.checklist li.marked {
 #menu .ico_info {
   position: relative;
   font-weight: bold;
-  font-size: 140%;
   top: -0.1em;
+  border: 3px solid currentColor;
+  border-radius: 50%;
+  width: 1.5em;
+  display: inline-block;
 }
 #menu ul {
   margin: 0;
@@ -356,6 +360,7 @@ ul.checklist li.marked {
 }
 #menu li {
   display: flex;
+  justify-content: space-between;
   cursor: pointer;
   font-weight: bold;
   color: #ccc;
@@ -461,6 +466,8 @@ ul.checklist li.marked {
 #menu .menu_item_kind {
   opacity: 0.6;
   transition: opacity .3s;
+  display: grid;
+  align-items: center;
 }
 #menu .menu_item_kind:hover {
   opacity: 1;
@@ -497,7 +504,8 @@ ul.checklist li.marked {
     flex-grow: 0;
     flex-wrap: nowrap;
     flex-basis: auto;
-    /*overflow-y: auto;*/
+    overflow-y: auto;
+    overflow-x: hidden;
   }
   #menu ul::-webkit-scrollbar {
     width: 0.5rem;
@@ -527,6 +535,7 @@ ul.checklist li.marked {
   background: #424242;
 }
 .move {
+  max-width: 80rem;
   margin: var(--padding);
   flex-basis: 35rem;
   flex-grow: 1;
@@ -578,7 +587,7 @@ ul.checklist li.marked {
   line-height: 1.5em;
 }
 mark.label {
-  padding: .3em;
+  padding: .1em;
   text-transform: uppercase;
   font-weight: bold;
   color: white;
@@ -715,6 +724,16 @@ li.no_offset {
 .contain h1 {
   font-size: 24px;
   font-weight: bold;
+}
+.contain a.internal {
+  font-style: italic;
+  text-decoration: none;
+  color: var(--c_light);
+  border-bottom: 1px transparent dashed;
+  transition: border-bottom-color 0.3s;
+}
+.contain a.internal:hover {
+  border-bottom-color: var(--color);
 }
 .contain #getRandom {
   margin: 0;
@@ -973,6 +992,8 @@ ul.compact li {
   #move {
     display: flex;
     flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
   }
   .card {
     min-width: 20rem;

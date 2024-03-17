@@ -65,8 +65,12 @@
 	.ico_info{
 		position: relative;
     font-weight: bold;
-    font-size: 140%;
+    //font-size: 140%;
     top: -0.1em;
+		border: 3px solid currentColor; 
+    border-radius: 50%; 
+    width: 1.5em; 
+    display: inline-block;
 	}
 	
 	ul {
@@ -81,6 +85,7 @@
 
 	li{
 		display: flex;
+		justify-content: space-between;
 		//padding: 0 @padding/2;
 		//border: 13px solid transparent;
 		cursor: pointer;;
@@ -194,6 +199,8 @@
 	.menu_item_kind{
 		opacity: 0.6;
 		transition: opacity .3s;
+		display: grid;
+    align-items: center;
 
 		&:hover{
 			opacity: 1;
@@ -236,12 +243,12 @@
 			max-width: 20rem;
       flex-grow: 0;
 			flex-wrap: nowrap;
-			// flex-basis: 0;
 			
 			flex-basis: auto;
 			
-			
-			/*overflow-y: auto;*/
+			overflow-y: auto;
+    	overflow-x: hidden;
+
 			.scrollbars(1rem/2, var(--color) /*fade(black, 20%)*/, transparent);
 		}
 		li{

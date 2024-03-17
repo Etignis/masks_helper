@@ -10,6 +10,7 @@
 }
 
 .move{
+	max-width: 80rem;
 	margin: var(--padding);
 	flex-basis: 35rem;
 	flex-grow: 1;
@@ -70,7 +71,7 @@
 }
 
 mark.label{
-	padding: .3em;
+	padding: .1em;
 	text-transform: uppercase;
 	font-weight: bold;
 	color: white;
@@ -221,6 +222,18 @@ li.no_offset{
 	h1{
 		font-size: @font_size*1.2;
 		font-weight: bold;
+	}
+
+	a.internal{
+		font-style: italic;
+    text-decoration: none;
+		color: var(--c_light);
+		border-bottom: 1px transparent dashed;
+		transition: border-bottom-color .3s;
+
+		&:hover{
+			border-bottom-color: var(--color);
+		}
 	}
 	
 	#getRandom{
@@ -522,7 +535,9 @@ ul{
 	}
 	#move{	
 		display: flex;
-		flex-wrap:wrap;
+		flex-wrap: wrap;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	.card{
 		min-width: 20rem;

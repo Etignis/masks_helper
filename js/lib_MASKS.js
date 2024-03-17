@@ -48,8 +48,8 @@
 								"Измените окружение.| Окружение это общая атмосфера места, где находятся персонажи: ветвящиеся туннели, кривые деревья, безопасная тропа… Этим ходом вы можете представить новый антураж: туннели постепенно изгибаются, лес становится истлевшим и зловещим, тропинка кончается и персонажи вступают в чащу. Используйте этот ход, чтобы разнообразить местность на пути персонажей и населяющих её созданий.",
 								"Укажите на надвигающуюся угрозу. | Если в подземелье в ожидании игроков томится нечто, с помощью этого хода можно показать его следы и признаки. Опишите следы дракона в грязи или слизистый след желатинового куба.",
 								"Введите новую фракцию или вид существ. | Этот ход предполагает явное столкновение или вброс данных. Не мелочитесь: игроки должны понимать, что происходит. Правда, в лоб действовать тоже не надо: глава злобной секты не обязан размахивать плакатом и вопить на адских языках. Жесткое применение этого хода переходит в боевую сцену или атаку из засады.",
-								"Используйте опасность фракции или вида существ.| Смотрите на фракции и виды широко. Орков сопровождают охотничьи варги. Безумному культу может служить нежить или монстры из глубин бездны. Вы часто будете делать этот ход не задумываясь, а просто красиво вводя в игру уже заготовленные идеи.",
-								"Заставьте вернуться назад. | Взгляните на места, нанесённые на карту. Есть ли там что-то полезное, но не найденное игроками? Можете ли вы добавить новое препятствие, преодолимое, если вернуться назад? Не находится ли ключ от преградившей путь героев двери где-то в прошлых комнатах? что там ищменилось? Какие новые угрозы? О чем забыли?",
+								"Используйте опасность фракции или вида существ.| Смотрите на фракции и виды широко. Орков сопровождают охотничьи враги. Безумному культу может служить нежить или монстры из глубин бездны. Вы часто будете делать этот ход не задумываясь, а просто красиво вводя в игру уже заготовленные идеи.",
+								"Заставьте вернуться назад. | Взгляните на места, нанесённые на карту. Есть ли там что-то полезное, но не найденное игроками? Можете ли вы добавить новое препятствие, преодолимое, если вернуться назад? Не находится ли ключ от преградившей путь героев двери где-то в прошлых комнатах? что там изменилось? Какие новые угрозы? О чем забыли?",
 								"Предложите богатства за цену. | Чего желают игроки? Чем они готовы пожертвовать ради этого? Расположите желанный предмет вне досягаемости. Выберите нечто, ограничивающее персонажей: время, очки здоровья, снаряжение. Найдите способ дать им желаемое, но ценой потери чего-то еще.",
 								"Бросьте вызов одному из персонажей. | Чтобы бросить вызов персонажу, посмотрите, в чём он хорош. Поставьте перед вором запертую дверь, покажите священнику служителей враждебного бога. Дайте волшебнику исследовать мистические тайны. Пускай воину встретится пара врагов с толстыми черепами. Предоставьте персонажам возможность блеснуть. Или наоборот, потавьте трудное препятствие." 
 							]
@@ -199,7 +199,7 @@
 									}
 								},
 								ru: {
-									title: "Выйти против явной угрозы",
+									title: "Выйди против явной угрозы",
 									key: "directly_engage_threat",
 									data: {
 										move: {
@@ -351,10 +351,10 @@
 																title: "mark {potential}",
 															},
 															{
-																title: "clear {<i>c}ondition}",
+																title: "clear {condition}",
 															},
 															{
-																title: "shift {<i>}labels}",
+																title: "shift {labels}",
 															}
 														]		
 													}
@@ -453,7 +453,7 @@
 																title: "how could I get you character to ______?"
 															},
 															{
-																title: "how could I gain <i>Influence</i> over you?"
+																title: "how could I gain {Influence} over you?"
 															},
 														]		
 													}
@@ -464,12 +464,12 @@
 									}
 								},
 								ru: {
-									title: "Загляни за маску",
+									title: "Загляни под маску",
 									key: "pierce_mask",
 									data: {
 										move: {
 											data: {
-												condition: "Когда ты <b>срываешь чью-то маску</b>, чтобы разглядеть под ней личность, брось +%MUNDANE%.",
+												condition: "Когда ты [срываешь чью-то маску], чтобы разглядеть под ней личность, брось +%MUNDANE%.",
 												modifier: "Если ты {Злишься}, получи -2 к броску.",
 																								
 												parts: [
@@ -502,7 +502,7 @@
 																title: "как я могу заставить твоего персонажа ______?"
 															},
 															{
-																title: "как я могу получить на тебя <i>Влияние</i>?"
+																title: "как я могу получить на тебя {Влияние}?"
 															},
 														]		
 													}
@@ -829,7 +829,7 @@
 																	},
 																	{
 																		type: "partial",
-																		info: "On a 7-9, choose ome",
+																		info: "On a 7-9, choose one",
 																	}
 																],
 																list: [
@@ -1009,7 +1009,7 @@
 																type: 'great',
 																list: [
 																	{
-																		title: "ты должен немедленно покинуть сцену, cбежать, потерять сознание и т.д."
+																		title: "ты должен немедленно покинуть сцену, сбежать, потерять сознание и т.д."
 																	},
 																	{
 																		title: "ты теряешь контроль над собой либо своими силами жутким образом"
@@ -1024,13 +1024,13 @@
 																type: 'partial',
 																list: [
 																	{
-																		title: "ты срываешься словесно: {Спровоцируй} члена команды на безпассудный поступок или злоупотреби {Влиянием} и отметь ему {Состояние}"
+																		title: "ты срываешься словесно: {Спровоцируй} члена команды на безрассудный поступок или злоупотреби {Влиянием} и отметь ему {Состояние}"
 																	},
 																	{
 																		title: "ты отступаешь: твой противник получает {Возможность}"
 																	},
 																	{
-																		title: "ты преодалеваешь боль: отметь два {Состояния}"
+																		title: "ты преодолеваешь боль: отметь два {Состояния}"
 																	}
 																],	
 															},
@@ -1038,7 +1038,7 @@
 													},
 
 													{
-														info: "При провале ты держишся достойно. Отметь {Потенциал}, как при обычном провале, и расскажи, как ты выдержитваешь удар.", 
+														info: "При провале ты держишься достойно. Отметь {Потенциал}, как при обычном провале, и расскажи, как ты выдерживаешь удар.", 
 														type: 'miss',
 													}
 												]
@@ -1108,7 +1108,7 @@
 											
 											parts: [
 												{
-													info: "Если ты [соглашаешься с его словами], ГМ перераспределит соответсвенно твои {Ярлыки}",
+													info: "Если ты [соглашаешься с его словами], ГМ перераспределит соответственно твои {Ярлыки}",
 													
 												},
 
@@ -1133,7 +1133,10 @@
 									move: {
 										data: {
 											condition: "When you [reject someone's influence], roll.",
-											modifier: "If you’re {Insecure}, take -2",
+											modifier: [
+												"If you have {Influence} over someone, you take +1",
+												"If you’re {Insecure}, take -2",
+											],
 											
 											parts: [
 												{
@@ -1309,7 +1312,7 @@
 								data: {
 									move: {
 										data: {
-											condition: "Когда ты [помогаешь сокоманднику], потрать 1 из {Тимпула}, чтобы дать +1 к ходу после броска.",
+											condition: "Когда ты [помогаешь товарищу по команде], потрать 1 из {Тимпула}, чтобы дать +1 к ходу после броска.",
 										}
 									}									
 								}				
@@ -1336,7 +1339,7 @@
 								data: {
 									move: {
 										data: {
-											condition: "Когда ты [действуешь эгоистично], расскажи, как твои действия игнорируют или оскорбляют сокомандников. Удали одно очко Тимпула, и двинь один из своих {Ярлыков} вверх, адругой вниз, по своему выбору. Этим можно воспользоваться после броска, чтобы изменить значения {Ярлыка} от которого был совершен бросок.",
+											condition: "Когда ты [действуешь эгоистично], расскажи, как твои действия игнорируют или оскорбляют товарищей по команде. Удали одно очко Тимпула, и двинь один из своих {Ярлыков} вверх, а другой вниз, по своему выбору. Этим можно воспользоваться после броска, чтобы изменить значения {Ярлыка} от которого был совершен бросок.",
 										}
 									}									
 								}				
@@ -1385,7 +1388,7 @@
 								data: {
 									move: {
 										data: {
-											condition: "Когда вы [вступаете в битву против опасного опротивника как команда], добавьте два в {Тимпул}.",
+											condition: "Когда вы [вступаете в битву против опасного противника как команда], добавьте два в {Тимпул}.",
 											
 											parts: [
 												{												
@@ -1525,7 +1528,7 @@
 								data: {
 									move: {
 										data: {
-											condition: "В конце любой сцены, где ты [предпринял конкретное дейстиве], очисти соответсвующее {Состояние}.",
+											condition: "В конце любой сцены, где ты [предпринял конкретное действие], очисти соответствующее {Состояние}.",
 										
 											parts: [
 												{												
@@ -1537,10 +1540,10 @@
 															title: "Перестань {Бояться}, сбежав от чего-то трудного."
 														},
 														{
-															title: "Избавься от {Вины}, пожертвовав чем-то для искупленния вины."
+															title: "Избавься от {Вины}, пожертвовав чем-то для искупления вины."
 														},
 														{
-															title: "Избавься от {Отчаяния}, с головой погружившись в простые удовольствия."
+															title: "Избавься от {Отчаяния}, с головой погрузившись в простые удовольствия."
 														},
 														{
 															title: "Избавься от {Неуверенности}, совершив безрассудный поступок, не посоветовавшись с командой."
@@ -1589,7 +1592,7 @@
 															title: "take hold of something vulnerable to you"
 														},
 														{
-															title: "create something useful from your envinronment"
+															title: "create something useful from your environment"
 														},
 														{
 															title: "neutralize an opponent or threat, at least for now"
@@ -1626,7 +1629,7 @@
 															title: "завладей чем-нибудь "
 														},
 														{
-															title: "создай что-нибудь полезное с помошью своего окружения"
+															title: "создай что-нибудь полезное с помощью своего окружения"
 														},
 														{
 															title: "обезвредь противника или иную угрозу, как минимум на некоторое время"
@@ -1648,7 +1651,7 @@
 								data: {
 									move: {
 										data: {
-											condition: "When you [overhelm a vulnerable foe], roll +%DANGER%.",
+											condition: "When you [overwhelm a vulnerable foe], roll +%DANGER%.",
 											
 											parts: [
 												{
@@ -1791,7 +1794,7 @@
 								data: {
 									move: {
 										data: {
-											condition: "Когда ты [убеждлаешь кого-то ради его же интересов], брось +%SUPERIOR%.",
+											condition: "Когда ты [убеждаешь кого-то ради его же интересов], брось +%SUPERIOR%.",
 											
 											parts: [
 												{
@@ -1805,7 +1808,7 @@
 															parts: [
 																{
 																	type: "great",
-																	info: "На 10+ цель купилась и действует соответсвенно",
+																	info: "На 10+ цель купилась и действует соответственно",
 																			
 																},
 																{
@@ -1845,7 +1848,7 @@
 						},
 						{
 							en: {
-								title: "Emppathize",
+								title: "Empathize",
 								key: "Empathize",
 								data: {
 									move: {
@@ -1948,7 +1951,7 @@
 								data: {
 									move: {
 										data: {
-											condition: "Когда ты [произночишь геройскую речь], отставивая свои убеждения, брось +%SAVIOR%.",
+											condition: "Когда ты [произносишь геройскую речь], отстаивая свои убеждения, брось +%SAVIOR%.",
 											
 											parts: [
 												{
@@ -1972,7 +1975,7 @@
 															title: "цель не может сбежать, не ответив тебе"
 														},
 														{
-															title: "цель не может атаковать тебя, не уронив лицо или не сдав позциию"
+															title: "цель не может атаковать тебя, не уронив лицо или не сдав позицию"
 														},
 													]		
 												}
@@ -1987,13 +1990,14 @@
 					]
 				},
 				{
-					title: "SUPER ходы",
+					title: "Roll +SUPER",
 					key: "roll_super",
 					color: "",
 					ico: "",
 					type: 0,
 					kind: 2,
 					info: [
+						"Roll +SUPER",
 						"31 Custom Moves for Masks: A New Generation by Meghan Cross",
 						"these moves were written as a part of #movemonth hosted by james malloy (@andthemeltdowns) and brandon leon-gambetta (@bleongambetta)",
 						"{В процессе добавления...}"
@@ -2220,7 +2224,7 @@
 																{
 																	list: [
 																		"Разногласия во время выбора пиццы вызвали раскол в команде. Игроки, несогласные с получившимся выбором могут забрать {Влияние} у других игроков.",
-																		"Доставщик заблудился, и когда пицца у вас, она холодная и невкусная. (И вам отказываются вернуть деньги!) Отметьте состояние {Злой}, недовольно поедая холодную пиццу.",
+																		"Доставщик заблудился, и когда пицца у вас, она холодная и невкусная. (И вам отказываются вернуть деньги!) Отметь состояние {Злой}, недовольно поедая холодную пиццу.",
 																		"То ли что-то было сыровато, то ли это сочетание гамбургера, оливок и ананаса - но что-то пошло не так. Получи {-1 на следующие} броски, пока не удастся приянть таблетки от изжоги и выспаться, избавивишись от тошноты.",
 																	]
 																}
@@ -2335,6 +2339,850 @@
 													]	
 												}
 											],
+										}
+									}
+								}
+							},
+						},
+
+						{
+							en: {
+								title: "Shift Narrative Control",
+								key: "narrative_control",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											pre: "At the beginning of each session, each player takes 1 {hold}.",
+											condition: "During the session, whenever [the GM introduces an NPC that the players have never encountered], a player can spend one hold to ask one question from the list below of the NPC,",
+
+											parts: [
+												{
+													list: [
+														"What do you know about me that no one else does?",
+														"Who have we both gone to for advice?",
+														"What gift have you given me?",
+														"What about me frightens you?",
+														"What do you have that I want?",
+														"Why will I never forget you?",
+													]
+												}
+											]
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Перехвати контроль наратива",
+								key: "narrative_control",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											pre: "В начале каждой сессии каждый игрок получает 1 {запас}.",
+											condition: "В ходе сесси, когда [ГМ представляет нового НПС], игрок может потратить запас, чтобы задать один из нижепредставленных вопросов о НПС.",
+
+											parts: [
+												{
+													list: [
+														"Что ты знаешь обо мне, что никто другой не знает?",
+														"К кому бы мы оба обратились за советом?",
+														"Что ты мне подарил?",
+														"Что во мне пугает тебя?",
+														"Что есть у тебя, что я хочу?",
+														"Почему я никогда тебя не прощу?",
+													]
+												}
+											]
+										}
+									}
+								}
+							}
+						},
+
+						{
+							en: {
+								title: "Go fast",
+								key: "go_fast",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When you [sleep through your alarm] and wake up late for school, roll +%MUNDANE%.",
+
+											parts: [
+												{
+													type: 'great',
+													info: 'On a 10+, {hold} 2.',													
+												},
+												{
+													type: 'partial',
+													info: 'On a 7-9, {hold} 1',													
+												},
+												{
+													info: 'Spend {hold} 1 for 1 to remove options from the list below as you hurry to get ready:',													
+												},
+												{
+													list: [
+														"This is the third time in two weeks this has happened and your parent isn’t happy. Shift %SUPERIOR% up and %MUNDANE% down while you listen to them lecture you about being more responsible.",
+														"You missed the bus and decided to call a friend for a ride. They were already halfway to school but begrudgingly agreed to turn around and get you, which will make both of you late. Mark {Guilty} as you wait for them to pick you up.",
+														"You jump out of bed and race to get ready and manage to put yourself together in record time. Your hair is a disaster, your socks don’t match, and you’re pretty sure your shirt is on inside out - but you can’t let yourself be any later than you already are. When you get to school it doesn’t take long to realize what a mess you look like - mark {Insecure} as you frantically try to make yourself look put together.",
+													]													
+												},
+											]
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Бегом в школу!",
+								key: "go_fast",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [проспал будильник] и уже опаздываешь в школу, брось +%MUNDANE%.",
+
+											parts: [
+												{
+													type: 'great',
+													info: 'На 10+ получи {запас} 2',													
+												},
+												{
+													type: 'partial',
+													info: 'на 7-9 получи {запас} 1',													
+												},
+												{
+													info: 'Потрать запас 1 к 1, чтобы убрать варианты из списка ниже, так как ты в спешке пытаешься все успеть:',													
+												},
+												{
+													list: [
+														"Это уже третий раз за две недели, и твои родители этому не рады. Сдвинь %SUPERIOR% вверх, а %MUNDANE% вниз, выслушивая от родителей нотации о необходимости быть более ответственным.",
+														"Ты опоздал на автобус и решил попросить друга подбросить тебя до школы. Он уже был на полпути в школу, но согласился развернуться и подобрать тебя, из-за чего вы оба опоздали. Отметь состояние {Виноватый}.",
+														"Ты выпрыгнул из постели и в спешке готовишься к школе. Волосы в беспорядке, носки разные, и ты уверен, что футболка надета наизнанку, но не можешь позволить себе опоздать больше, чем уже оппаздываешь. В школе не понадобится много времени, чтобы особзнать насколько растрепанным ты выглядишь - отметь состояние {Неуверенный}, пока отчаянно пытаешься привести себя в порядок.",
+													]													
+												},
+											]
+										}
+									}
+								}
+							},							
+						},
+
+						{
+							en: {
+								title: "Backroom deal",
+								key: "backroom_deal",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When you are [working at your part time job] and a customer asks you to check the back room for something that you know is out of stock, roll +%MUNDANE%.",
+											
+											parts: [
+												{
+													type: "hit",
+													info: "On a hit, you are able to convince them that there is no additional backstock of the product and they leave you alone.",
+													parts: [
+														{
+															type: "great",
+															info: "On a 10+, the customer is so grateful for your effort, they find your boss to tell them what a good employee you are - clear a {condition} or shift %SUPERIOR% up and any other {label} down.",
+																	
+														},														
+													],
+												},
+												{
+													type: 'miss',
+													info: 'On a miss, they are not leaving until you go and check the stockroom for them; mark the {Angry} condition as you put on your best customer service smile and walk to the backroom to “double check” for their item.'
+												}
+											]
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Посмотрите на складе",
+								key: "backroom_deal",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [на своей подработке] и клиент просит проверить на складе наличие чего-то, чего точно нет в наличии, брось +%MUNDANE%.",
+											
+											parts: [
+												{
+													type: "hit",
+													info: "При успехе удалось убедить, что товар точно закончился и клиент оставит тебя в покое.",
+													parts: [
+														{
+															type: "great",
+															info: "На 10+ клиент наcтолько паризнателен, что находит твоего начальника и расхваливает тебя - очисть {Сосотояние} или сдвить %SUPERIOR% вверх и любой другой {Ярлык} вниз.",
+																	
+														},														
+													],
+												},
+												{
+													type: 'miss',
+													info: 'При провале он не отвяжется, пока ты не сходишь и не проверишь. Отметь состояние {Злой}, отправляясь проверить наличие "еще разик", натянув свою лучшую вежливую улыбку.'
+												}
+											]
+										}
+									}
+								}
+							},
+						},
+
+						{
+							en: {
+								title: "Under the Hood",
+								key: "uder_the_hood",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When you [defeat a villain and unmask them] to reveal their true identity, roll +%SAVIOR%.",
+
+											parts: [
+												{
+													type: 'hit',
+													info: 'On a hit...',
+													parts: [
+														{
+															type: 'great',
+															info: 'On a 10+, ask two and gain {influence} over them.',													
+														},
+														{
+															type: 'partial',
+															info: 'On a 7-9, ask one.',													
+														},
+													],
+													list: [
+														"Who are your accomplices?",
+														"What do you not want me to find out?",
+														"What part of your plan is still incomplete?",
+														"Where is your hideout?",
+														"What made you become a villain?",
+													]													
+												
+												},
+												{
+													type: 'miss',
+													info: 'On a miss, mark a {condition} as they are revealed to be someone you know'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Узнать тайну личности",
+								key: "uder_the_hood",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [побеждаешь злодея и срываешь его маску], чтобы выяснить настоящую личность, брось +%SAVIOR%.",
+
+											parts: [
+												{
+													type: 'hit',
+													info: 'При успехе...',
+													parts: [
+														{
+															type: 'great',
+															info: 'На 10+ задай 2 вопроса и получи {Влияние} на цель.',													
+														},
+														{
+															type: 'partial',
+															info: 'На 7-9 задай 1 вопрос.',													
+														},
+														
+													],
+													
+													list: [
+														"Кто твои сообщники?",
+														"Что ты хочешь, чтоб я узнал?",
+														"Какая часть ствоего плана еще не завершена?",
+														"Где твое убежише?",
+														"Что заставило тебя стать злодеем?",
+													]													
+													
+												},
+												{
+													type: 'miss',
+													info: 'При провале это оказался кто-то, кого ты знаешь, отметь {Состояние}.'
+												}
+												
+											]
+										}
+									}
+								}
+							},							
+						},
+
+						{
+							en: {
+								title: "Clocks on clocks",
+								key: "clocks_on_clocks",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When a [villain has completed their dramatic monologue and has set a bomb to explode], roll +%SUPERIOR%.",
+
+											parts: [
+												{
+													type: 'hit',
+													info: 'On a hit, you are able to disarm it, saving whatever the villain was attempting to destroy',
+													parts: [
+														{
+															type: 'great',													
+															info: 'On a 10+ you are able to disarm it fast enough to also apprehend the villain before they are able to escape - you may either gain {influence} over them or {+1 ongoing} against them.',													
+														}
+													]
+												},
+												{
+													type: 'miss',
+													info: 'On a miss, <take a powerful blow#player_moves|basic_moves|powerful_blow> as you realize too late that you can’t disarm it and barely escape the building before the explosion.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Часики-то тикают",
+								key: "clocks_on_clocks",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда [злодей закончил свой драматический диалог и готовится взорвать бомбу], брось +%SUPERIOR%.",
+
+											parts: [
+												{
+													type: 'hit',
+													info: 'При успехе тебе удалось обезвредить бомбу и спасти все, что злодей пытался уничтожить.',
+													parts: [
+														{
+															type: 'great',													
+															info: 'На 10+ ты справился так быстро, что смог даже задержать злодея, прежде чем ему удалось сбежать - можешь либо получить {Влияние} на него, либо {+1 на ходы} против него.',													
+														}
+													]
+												},
+												{
+													type: 'miss',
+													info: 'При провале сбеги в последний момнет и <получи мощный удар#player_moves|basic_moves|powerful_blow>, слишком поздно осознав, что не можешь обезвредить бомбу до того, как она взорвется.'
+												}
+												
+											]
+										}
+									}
+								
+								}
+							},							
+						},
+
+						{
+							en: {
+								title: "Temporary Permission",
+								key: "temporary_permission",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When an [adult hero has left you in charge] while they leave the city on a mission and you attempt to use their authority to get what you want, roll +%SUPERIOR%.",
+
+											parts: [
+												{
+													type: 'hit',
+													info: 'On a hit, it works and they will do what you want, but you need to do something to assure them that you are working for who you say you are.',
+													parts: [
+														{
+															type: 'great',													
+															info: 'On a 10+, your next move can be an <adult move#player_moves|adult_moves> as long as you are acting under the authority of an adult hero.',													
+														}
+													]
+												},
+												{
+													type: 'miss',
+													info: 'On a miss, they don’t believe you and refuse to help, shift %SUPERIOR% down and %MUNDANE% up.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Исполняющий обязанности",
+								key: "temporary_permission",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда [взрослый герой оставляет тебя за главного] пока сам на миссии вне города, и, пользуйясь его авторитетом, ты пытаешься убедить кого-то сделать что-то, брось +%SUPERIOR%.",
+
+											parts: [
+												{
+													type: 'hit',
+													info: 'При успехе это сработает и цель сделает, что ты хочешь, но тебе необходимо сделать нечто доказывающее, что ты работаешь на того, чьим авторитетом воспользовался.',
+													parts: [
+														{
+															type: 'great',													
+															info: 'На 10+ твой следующих ход может быть <взрослым ходом#player_moves|adult_moves>, если ты действуешь согласно авториетту взрослого героя.',													
+														}
+													]
+												},
+												{
+													type: 'miss',
+													info: 'При провале тебе не верят и отказываются помочь, сдвинь %SUPERIOR% вниз, а %MUNDANE% вверх.'
+												}
+												
+											]
+										}
+									}
+								}
+							},							
+						},
+
+						{
+							en: {
+								title: "Outmaneuver",
+								key: "outmaneuver",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When you [enter battle against a dangerous foe as a team], choose a team member and name them as your right hand, giving them {influence} over you if they don’t already have it. Roll +%SUPERIOR%.",
+
+											parts: [
+												{
+													type: 'hit',
+													info: 'On a hit...',
+													parts: [
+														{
+															type: 'great',													
+															info: 'On a 10+, выбери 2.',													
+														},
+														{
+															type: 'partial',													
+															info: 'On 7-9, выбери 1',													
+														},
+														
+													],
+													list: [
+														"You have each other’s backs. If either of you roll a 6- on a roll to <defend#player_moves|basic_moves|defend> one another, you can treat it as a 7-9.",
+														"Together you can notice what you might have missed alone. When either of you roll to <assess the situation#player_moves|basic_moves|asses_sitiation>, you can always ask at least one question from the list, even on a miss.",
+														"You understand each other. When either of you rolls to <comfort or support#player_moves|basic_moves|comfort_support> one another, you can add +1 to the roll.",
+													]
+												},
+												{
+													type: 'miss',
+													info: 'On a miss, you are {off balance and unsynchronized}; for the entirety of the confrontation, if you use {team pool} to help one another, you have to spend 2 team to give +1.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Переиграй",
+								key: "outmaneuver",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [выступаешь в битву против опасного врага в составе команды], выбери товарища по команде и назначь своей правой рукой. Дай на себя {Влияние}, если его еще нет. Брось +%SUPERIOR%.",
+
+											parts: [
+												{
+													type: 'hit',
+													info: 'При успехе...',
+													parts: [
+														{
+															type: 'great',													
+															info: 'На 10+ выбери 2.',													
+														},
+														{
+															type: 'partial',													
+															info: 'На 7-9 выбери 1',													
+														},
+														
+													],
+													list: [
+														"Вы прикрываете друг-друга. Если у кого-то из выс выпадает 6- на <защиту#player_moves|basic_moves|defend> второго, считайте, что результат 7-9.",
+														"Вместе вы можете заметить то, что один мог бы пропустить. Когда кто-то из вас <оценивает ситуацию#player_moves|basic_moves|asses_sitiation>, может задать как минимум 1 вопрос, даже при провале.",
+														"Вы отлично понимаете друг-друга. Когда кто-то из вас <утешает или поддерживает#player_moves|basic_moves|comfort_support> второго, добавьте +1 к броску",
+													]
+												},
+												{
+													type: 'miss',
+													info: 'При провале вы {выведены из равновесия и рассинхронизированы}; до конца сражения, при попытке одного помочь второму, необходимо потратить {2 тимпула}, чтобы дать бонус +1.'
+												}
+												
+											]
+										}
+									}
+								}
+							},							
+						},
+
+						{
+							en: {
+								title: "Out of this world",
+								key: "out_of_this_world",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When you [attempt to form an emotional connection with someone from another planet], roll +%FREAK%.",
+
+											parts: [
+												{
+													type: 'hit',
+													info: 'On a Hit, you may ask 1 question from the list below',
+													parts: [
+														{
+															type: 'great',													
+															info: 'On a 10+, ask two and gain {influence} over them.',													
+														}
+														
+														
+													],
+													list: [
+														"What can I do to show you that we aren’t as different as you may think?",
+														"What can I do to earn your trust?",
+														"What fears about humans can I assuage for you?",
+														"What is something about your people you want me to know?",
+														"What is something you are passionate about?",
+													]
+												},
+												{
+													type: 'miss',
+													info: 'On a miss, you stumble and end up accidentally insulting them, give them {influence} over you and mark the {insecure} condition as you attempt to apologize.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Из другого мира",
+								key: "out_of_this_world",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [пытаешься сформировать эмоциональную связь с кем-то с другой планеты], брось +%FREAK%.",
+
+											parts: [
+												{
+													type: 'hit',
+													info: 'При успехе можешь задать 1 вопрос из списка ниже',
+													parts: [
+														{
+															type: 'great',													
+															info: 'На 10+ задай 2 вопроса и получи {Влияние} на цель.',													
+														}
+														
+														
+													],
+													list: [
+														"Что я могу сделать, чтобы показать, что мы не так сильно отличаемся, как ты можешь думать?",
+														"Как я могу завоевать твое доверие?",
+														"Какие из твоих опасений в отношении людей я могу развеять?",
+														"Что ты хочешь, чтобы я знал, о твоём народе?",
+														"Чем ты увлечён?",
+													]
+												},
+												{
+													type: 'miss',
+													info: 'При провале ты допустил ошибку и случайно оскорбил цель. Дай на себя {Влияние} и отметь состояние {Неуверенный}, пытаясь извиниться.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+						},
+
+						{
+							en: {
+								title: "Qualifying statement",
+								key: "qualifying_statement",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When you [believe that you have defeated your foe] and are leaving the scene to recoup, roll +%SAVIOR%.",
+
+											parts: [
+												{
+													type: 'great',													
+													info: 'On a 10+ you are able to notice them as they attempt to sneak away, tell the GM how you ensure they are truly defeated and mark {potential}.',													
+												},
+												{
+													type: 'partial',													
+													info: 'On a 7-9, the threat was not quite defeated and will return to menace you again at a later date, though weakened. Gain {+1 forward} for your next encounter with them, as you are familiar with their tricks.',													
+												},
+
+												{
+													type: 'miss',
+													info: 'On a miss, they successfully manage to sneak away and begin their plans for revenge. You have {-1 ongoing} for all rolls involving this villain until they are defeated again.'
+												}
+											]
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Смелое утверждение",
+								key: "qualifying_statement",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [уверен в победе над врагом и покидаешь место событий], брось +%SAVIOR%.",
+
+											parts: [
+												{
+													type: 'great',													
+													info: 'На 10+ ты заметил попытку противника сбежать, расскажи ГМу, как ты убедился, что враг побежден окончательно и отметь {Потенциал}.',													
+												},
+												{
+													type: 'partial',													
+													info: 'На 7-9 противник не был побежден окончательно и вернется с будущем, хоть и ослабленный. Получи {+1 на следующий бросок} против этого противника, так как ты уже знаком с его уловками.',													
+												},
+
+												{
+													type: 'miss',
+													info: 'При провале, противник успешно сбежал и начал планировать свою месть. Ты {получаешь -1} на все броски, связанные с этим противником, пока он не будет побежден вновь.'
+												}
+											]
+										}
+									}
+								}
+							},
+						},
+
+						{
+							en: {
+								title: "learn from each other",
+								key: "learn_from_each_other",
+								kind: 2,
+								data: {
+									move: {
+										data: {											
+
+											parts: [
+												{										
+													info: 'When you [share a triumphant celebration with someone], ask what they have learned from you and if that makes them a better person. If they say it has made them a better person, give them {influence} over you and mark {potential}. If they say they have learned nothing or what they have learned has not made them a better person, mark a {condition}.',													
+												},
+												{												
+													info: 'When you [share a vulnerability or weakness with someone], ask them what they have to teach you. If it is something that you needed to learn, clear a {condition} and shift %SUPERIOR% up and any other {label} down. If they say they have nothing to teach you, they lose {influence} over you and you shift one {label} up and one {label} down, your choice.',													
+												},
+
+												
+											]
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Учиться друг у друга",
+								key: "learn_from_each_other",
+								kind: 2,
+								data: {
+									move: {
+										data: {											
+
+											parts: [
+												{										
+													info: 'Когда ты [разделяешь чувство триумфа с кем-то], спроси, чему он научился у тебя, и сделало ли это его лучше. Если он отвечает, что это сделало его лучше, дай {Влияние} на сябя и отметь {Потенциал}. Если он ответит, что ничему не научился, или то, чему научился, не делает его лучше, отметь {Состояние}.',													
+												},
+												{												
+													info: 'Когда ты [разделяешь слабость или уязвисость с кем-то], спроси, чему он должен тебя научить. Если это что-то из того, чему тебе нужно было научиться, очисти {Состояние} и сдвень %SUPERIOR% вверх и любой другой {Ярлык} вниз. Если он говорит, что тебя нечему учить, он лишается {Влияния} на тебя, а ты двигаешь один свой {Ярлык} вверх, другой вниз.',													
+												},
+
+												
+											]
+										}
+									}
+								}
+							},
+						},
+
+						{
+							en: {
+								title: "A radical crawl",
+								key: "radical_crawl",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When you are [knocked down and on the brink of defeat], roll +%SUPERIOR%.",
+
+											parts: [
+												{
+													type: 'great',													
+													info: 'On a 10+, you rally in a way you didn’t think possible - clear a {condition} and take {+1 ongoing} for the remainder of the confrontation as you catch a second wind.',													
+												},
+												{
+													type: 'partial',													
+													info: 'On a 7-9 you muster up just enough strength to keep going, take {+1 forward} and clear a {condition} for the remainder of the confrontation - marking a {condition} gain when the situation is resolved and the adrenaline wears off.',													
+												},
+
+												{
+													type: 'miss',
+													info: 'On a 6-, you are barely able to hold on - you can make one more {move} and treat any miss rolled as a 7-9. Immediately afterwards, tell the GM what removes you from the situation.'
+												}
+											]
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Из последних сил",
+								key: "radical_crawl",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [на волоске от поражения], брось +%SUPERIOR%.",
+
+											parts: [
+												{
+													type: 'great',													
+													info: 'На 10+ ты, сам не ожидая того, собрался с силами - у тебя открылось второе дыхание, очисть {Состояние} и {получи +1} до конца битвы .',													
+												},
+												{
+													type: 'partial',													
+													info: 'На 7-9 вам удалось собратсья с силами ровно на столько, чтобы продолжить действовать. Получи {+1 на следующий} бросок и очисть {Состояние} до конца битвы. Когда битва закончится и адреналин схлынет, отметь {Состояние}.',													
+												},
+
+												{
+													type: 'miss',
+													info: 'На 6- ты едва можешь держаться - ты можешь сделать еще один {Ход} и считать любой провал как 7-9. Сразу после того, расскажи ГМу, что вывело тебя из битвы.'
+												}
+											]
+										}
+									}
+								}
+							},
+						},
+
+						{
+							en: {
+								title: "Reverse XP",
+								key: "reverse_xp",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											info: "Any time you would mark {potential} as the result of a failed roll, you can instead choose to remove a {potential}, mark a {condition}, and treat the failed roll as a 10+. Describe to the GM how you were able to sidestep fate to achieve this success, and the toll it takes on you afterwards."
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Обмани судьбу",
+								key: "reverse_xp",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											info: "Когда ты должен отметить {Потенциал} в результате провала хода, можешь, вместо этого, убрать 1 имеющийся {Потенциал}, отметить {Сотояние} и считать, что на провальном броске выпало 10+. Опиши ГМу, как тебе удалось обмануть судьбу, чтобы добиться этого успеха, и какую цену придется заплатить за это позже."
+										}
+									}
+								}
+							},
+						},
+
+						{
+							en: {
+								title: "action reaction",
+								key: "action_reaction",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When you make a move to [take advantage of an opening created by a teammate], roll +%SAVIOR%.",
+
+											parts: [
+												{
+													type: 'hit',
+													info: 'On a hit..',
+													parts: [
+														{
+															type: 'great',													
+															info: 'On a 10+, hold two.',													
+														},														
+														{
+															type: 'partial',													
+															info: 'On a 7-9, hold one.',													
+														},														
+														
+													],
+													list: [
+														"Your teammate set you up for success and you’re going to keep the momentum moving. Give {+1 forward} to another teammate for their next move.",
+														"Your team is moving like clockwork and everyone can feel it. Add +1 to the {team pool} as the team synergy crystallizes.",
+														"Your teammate has given you the opportunity to think about your opponent’s next move, take {+1 forward} to <defend#player_moves|basic_moves|defend>.",
+														"You are making the most of this opportunity and feeling like a true hero. Shift %SAVIOR% up and any other {label} down.",
+													]
+												},
+												{
+													type: 'miss',
+													info: 'On a miss, you stumble and waste your opportunity, mark a {condition} as you give ground to your opponent.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Синергия",
+								key: "action_reaction",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты делаешь ход, чтобы [воспользоваться преимуществом, созданным товарищем по команде], брось +%SAVIOR%.",
+
+											parts: [
+												{
+													type: 'hit',
+													info: 'При успехе...',
+													parts: [
+														{
+															type: 'great',													
+															info: 'На 10 получи 2',													
+														},														
+														{
+															type: 'partial',													
+															info: 'На 7-9 получи 1',													
+														},														
+														
+													],
+													list: [
+														"Твой товарищ помог тебе, и ты сделаешь так же. Дай {+1 на следующий} ход другому товарищу по каоманде.",
+														"Ваша команда действует как слаженный механизм, ивы все это ощущаете. Добавьте 1 в {Тимпул}, ка воплощение синергии команды.",
+														"Твой товарищ дал тебе возможность подумать о следующем ходе противника, получи {+1 на следующую} попытку <защитить#player_moves|basic_moves|defend>.",
+														"Ты выжимаешь из этой возможности мак4симум и чувствуешь себя настоящим героем. Сдвинь %SAVIOR% вверх, а любой другой {ярлык} вниз.",
+													]
+												},
+												{
+													type: 'miss',
+													info: 'При провале, что-то идет не так и ты упускаешь возможность. Отметь {Состояние}, так как уступил проивнику.'
+												}
+												
+											]
 										}
 									}
 								}
@@ -2483,7 +3331,7 @@
 								data: {
 									move: {
 										data: {
-											info: "Ты постоянно экспериментуриуешь со своей экипировкой. Всякий раз, когда ты берешь новое снаряжение, можешь записать его в качестве способности, если эта строка пуста.||________",
+											info: "Ты постоянно экспериментируешь со своей экипировкой. Всякий раз, когда ты берешь новое снаряжение, можешь записать его в качестве способности, если эта строка пуста.||________",
 											condition: "Когда ты [впервые используешь часть экипировки] <против явной угрозы#player_moves|basic_moves|directly_engage_threat>, <давая волю силам#player_moves|basic_moves|unleash_your_power> или <защищая кого-нибудь#player_moves|basic_moves|defend>, ты можешь бросать +%MUNDANE% вместо обычного {Ярлыка}.",
 											
 											notes: "[No powers and not nearly enough training] requires you to pay attention to gear. Most other characters only care about stuff like ray guns and special devices when they’re immediately dangerous, but you should be listening for cool stuff you can pick up whenever possible. <Assessing the situation#player_moves|basic_moves|asses_sitiation> and <Straight. Up. Creepin’#player_moves|beacon|straight_up>. are great ways to flag cool stuff you can use."
@@ -2612,7 +3460,7 @@
 									move: {
 										data: {
 											condition: "When you [stand strong while dramatically under fire], roll +%SAVIOR% instead of +%DANGER% to <directly engage a threat#player_moves|basic_moves|directly_engage_threat>.",
-											notes: "[Suck it, Domitian] requires you to be dramatically under fire — that means the odds are against you, or you’re up against some terrifying threat. If the situation’s well in hand, chances are you’re not dramatically under fire. Of course, you’re ofen underpowered compared to your opposition, so it shouldn’t be too hard to get there."
+											notes: "[Suck it, Domitian] requires you to be dramatically under fire — that means the odds are against you, or you’re up against some terrifying threat. If the situation’s well in hand, chances are you’re not dramatically under fire. Of course, you’re often underpowered compared to your opposition, so it shouldn’t be too hard to get there."
 										}
 									}								
 								}
@@ -2624,7 +3472,7 @@
 									move: {
 										data: {
 											condition: "Когда ты [стоишь стойко, находясь под огнем], брось +%SAVIOR% вместо +%DANGER%  <выступая против явной угрозы#player_moves|basic_moves|directly_engage_threat>.",
-											notes: "[Suck it, Domitian] requires you to be dramatically under fire — that means the odds are against you, or you’re up against some terrifying threat. If the situation’s well in hand, chances are you’re not dramatically under fire. Of course, you’re ofen underpowered compared to your opposition, so it shouldn’t be too hard to get there."
+											notes: "[Suck it, Domitian] requires you to be dramatically under fire — that means the odds are against you, or you’re up against some terrifying threat. If the situation’s well in hand, chances are you’re not dramatically under fire. Of course, you’re often underpowered compared to your opposition, so it shouldn’t be too hard to get there."
 										}
 									}	
 								}
@@ -2751,7 +3599,7 @@
 												{
 													type: "hit",
 													info: "...можешь получить {1 запас} вместо выбора из вариантов.",
-													after: "Можешь потратить {запас} позже, чтобы появитсья в сцене, когда кому-то грозит опасность.",
+													after: "Можешь потратить {запас} позже, чтобы появиться в сцене, когда кому-то грозит опасность.",
 												}
 											],
 
@@ -3152,7 +4000,7 @@
 								data: {
 									move: {
 										data: {
-											pre: "You wear a mask and hide your real identity. Choose what {Label} you try to embody while wearing your mask:||●[Freak] ●[Danger] ●[Savior] ●[Superior]||Once per session, you can affirm either your heroic or secret identity to switch your {Mundane} with your mask’s {Label}.",
+											pre: "You wear a mask and hide your real identity. Choose what {Label} you try to embody while wearing your mask:||●[Freak] ●[Danger] ●[Savior] ●[Superior]||Once per session, you can affirm either your heroic or secret identity to switch your %MUNDANE% with your mask’s {Label}.",
 											
 											condition: "When you [reveal your secret identity] to someone who didn’t know it already, mark {potential}.",
 
@@ -3167,7 +4015,7 @@
 								data: {
 									move: {
 										data: {
-											pre: "Ты носишь маску, скрывая свою истинную личность. Выбери {Ярлык} который пытаешься воплотить в маске:||●[Freak] ●[Danger] ●[Savior] ●[Superior]||Один раз за сессию ты можешь заявить о своей геройской или скрытной личности и сдвинуть Ярлыки {Mundane} и {Маски}.",
+											pre: "Ты носишь маску, скрывая свою истинную личность. Выбери {Ярлык} который пытаешься воплотить в маске:||●[Freak] ●[Danger] ●[Savior] ●[Superior]||Один раз за сессию ты можешь показать, кто ты больше - герой в маске или обычный человек - и поменять местами значения Ярлыков %MUNDANE% и %Маски%.",
 											
 											condition: "Когда ты [открываешь свою тайную личность] кому-то, кто еще не знал, отметь {Потенциал}.",
 
@@ -3197,7 +4045,7 @@
 								data: {
 									move: {
 										data: {											
-											condition: "Когда ты [обязуешься кого-то спасти или победить ужасного врага], отметьте {Состояние} и {получи +1} для всех бросков связанных с этим стремлением. В конце любой сцены, в которой ты не приблизилась к цели, отметьте {Состояние}. [Добившись цели], отметь {потенциал}."
+											condition: "Когда ты [обязуешься кого-то спасти или победить ужасного врага], отметь {Состояние} и {получи +1} для всех бросков связанных с этим стремлением. В конце любой сцены, в которой ты не приблизилась к цели, отметь {Состояние}. [Добившись цели], отметь {потенциал}."
 											},
 
 											notes: "For [Game face], whether or not you made progress towards your goal is ultimately down to the GM’s discretion."
@@ -3282,7 +4130,7 @@
 								data: {
 									move: {
 										data: {
-											condition: "Когда ты [пытаешься использовать свою гражданкую личность] ввести в заблуждение, обхитрить или проскользнуть мимо кого-то, брось +%MUNDANE%.",
+											condition: "Когда ты [пытаешься использовать свою гражданскую личность] ввести в заблуждение, обхитрить или проскользнуть мимо кого-то, брось +%MUNDANE%.",
 											parts: [
 												{
 													type: "hit",
@@ -3453,7 +4301,7 @@
 								data: {
 									move: {
 										data: {											
-											condition: "Once per scene, when [you <defendl#player_moves|basic_moves|defend> a teammate] you can shift {Savior} up and another {Label} down in addition to any other benefits from the move, even on a miss. If you do, add {1 Team} to the pool.",	
+											condition: "Once per scene, when [you <defend#player_moves|basic_moves|defend> a teammate] you can shift {Savior} up and another {Label} down in addition to any other benefits from the move, even on a miss. If you do, add {1 Team} to the pool.",	
 										}
 									}									
 								}
@@ -3570,7 +4418,7 @@
 												},
 											],
 
-											notes: "[Never give up, never surrender] only triggers when you get hit by someone {far stronger than you}. Choosing {“}You get an opportunity or opening against your attacker} means the GM tells you what {opportunity or opening} you receive, suited to the situation. Choosing {to keep your attacker’s attention} ensures they won’t stop trying to attack you afer they notice how hardy you are — you can continue defending others by sacrificing yourself."
+											notes: "[Never give up, never surrender] only triggers when you get hit by someone {far stronger than you}. Choosing {“}You get an opportunity or opening against your attacker} means the GM tells you what {opportunity or opening} you receive, suited to the situation. Choosing {to keep your attacker’s attention} ensures they won’t stop trying to attack you after they notice how hardy you are — you can continue defending others by sacrificing yourself."
 										}
 									}									
 								}
@@ -3617,7 +4465,7 @@
 												},
 											],
 
-											notes: "[Never give up, never surrender] only triggers when you get hit by someone {far stronger than you}. Choosing {“}You get an opportunity or opening against your attacker} means the GM tells you what {opportunity or opening} you receive, suited to the situation. Choosing {to keep your attacker’s attention} ensures they won’t stop trying to attack you afer they notice how hardy you are — you can continue defending others by sacrificing yourself."
+											notes: "[Never give up, never surrender] only triggers when you get hit by someone {far stronger than you}. Choosing {“}You get an opportunity or opening against your attacker} means the GM tells you what {opportunity or opening} you receive, suited to the situation. Choosing {to keep your attacker’s attention} ensures they won’t stop trying to attack you after they notice how hardy you are — you can continue defending others by sacrificing yourself."
 										}
 									}
 								}																		
@@ -3667,7 +4515,7 @@
 												},
 											],
 
-											notes: "[Symbol of authority] should be aimed pretty specifically when you trigger it. You should be clear about the {specific person or group of people} you’re using it on — and the GM has final say over whether it makes sense that you’re using the move on a larger group. Generally speaking, you can only use [Symbol oа authority] on a group that’s {unified and not differentiated} from each other. ||The move only triggers when the person you command actually {recognizes and understands your authority}. If you tell a group of unintelligent robots — or 	aliens who’ve never heard oа your legacy — that they must stop what they’re doing, the move won’t trigger. It still triggers {on enemies} who know of you, but hate your legacy — they recognize your authority, even if they loathe it and choose to ignore it as much as possible. || You also might give them an order that lines up with one of the options on the list — for instance, ordering them to get out of your way. That’s fine, and it still comes down to the GM’s choice to say exactly which option they choose."
+											notes: "[Symbol of authority] should be aimed pretty specifically when you trigger it. You should be clear about the {specific person or group of people} you’re using it on — and the GM has final say over whether it makes sense that you’re using the move on a larger group. Generally speaking, you can only use [Symbol of authority] on a group that’s {unified and not differentiated} from each other. ||The move only triggers when the person you command actually {recognizes and understands your authority}. If you tell a group of unintelligent robots — or 	aliens who’ve never heard of your legacy — that they must stop what they’re doing, the move won’t trigger. It still triggers {on enemies} who know of you, but hate your legacy — they recognize your authority, even if they loathe it and choose to ignore it as much as possible. || You also might give them an order that lines up with one of the options on the list — for instance, ordering them to get out of your way. That’s fine, and it still comes down to the GM’s choice to say exactly which option they choose."
 										}
 									}									
 								}
@@ -3714,7 +4562,7 @@
 												},
 											],
 
-											notes: "[Symbol of authority] should be aimed pretty specifically when you trigger it. You should be clear about the {specific person or group of people} you’re using it on — and the GM has final say over whether it makes sense that you’re using the move on a larger group. Generally speaking, you can only use [Symbol oа authority] on a group that’s {unified and not differentiated} from each other. ||The move only triggers when the person you command actually {recognizes and understands your authority}. If you tell a group of unintelligent robots — or 	aliens who’ve never heard oа your legacy — that they must stop what they’re doing, the move won’t trigger. It still triggers {on enemies} who know of you, but hate your legacy — they recognize your authority, even if they loathe it and choose to ignore it as much as possible. || You also might give them an order that lines up with one of the options on the list — for instance, ordering them to get out of your way. That’s fine, and it still comes down to the GM’s choice to say exactly which option they choose."
+											notes: "[Symbol of authority] should be aimed pretty specifically when you trigger it. You should be clear about the {specific person or group of people} you’re using it on — and the GM has final say over whether it makes sense that you’re using the move on a larger group. Generally speaking, you can only use [Symbol of authority] on a group that’s {unified and not differentiated} from each other. ||The move only triggers when the person you command actually {recognizes and understands your authority}. If you tell a group of unintelligent robots — or 	aliens who’ve never heard of your legacy — that they must stop what they’re doing, the move won’t trigger. It still triggers {on enemies} who know of you, but hate your legacy — they recognize your authority, even if they loathe it and choose to ignore it as much as possible. || You also might give them an order that lines up with one of the options on the list — for instance, ordering them to get out of your way. That’s fine, and it still comes down to the GM’s choice to say exactly which option they choose."
 										}
 									}									
 								}																		
@@ -3779,8 +4627,8 @@
 												"For [Constructs], when you animate a construct {independent of yourself}, you can give it orders and have it take actions. It will obey you. For the most part, the GM tells you the results of anything it does, but the GM might have you make a move through your construct, if appropriate.",
 												"[Shielding] allows you to protect someone in the moment, rolling +%FREAK% to defend. It’s {transient and immediate}.",
 												"[Moat] allows you to set up a {lasting defense} in advance, but it won’t necessarily help you right in the moment when your friend is in danger. Moat lasts as long as you focus on it and spend more {burn} when it gets hit especially hard.",
-												"[Worship] allows you to awe an audience in addition to whatever else you do when you unleash. You can <unleash your powers#player_moves|basic_moves|unleash_your_power> specififically to put on the display if you so choose.",
-												"[Move] can refer to teleportation, barreling hard in one direction, or anything else that fifits your powers.",
+												"[Worship] allows you to awe an audience in addition to whatever else you do when you unleash. You can <unleash your powers#player_moves|basic_moves|unleash_your_power> specifically to put on the display if you so choose.",
+												"[Move] can refer to teleportation, barreling hard in one direction, or anything else that fits your powers.",
 												"[Elemental awareness] lets you ask the GM any question you want, but it has to be about the place you’re currently in, or elements in the area around you.",											
 											]
 										}
@@ -3816,10 +4664,10 @@
 													info: "Выбери 4 {Вспышки}:",
 													list: [
 														"[Сверхшторм]: Ты используешь разрушающий элемент своих сил. Потрать {1 Пламя}, <выходя против явной угрозы#player_moves|basic_moves|unleash_your_power>, чтобы бросить +%FREAK% вместо +%DANGER%. Если ты делаешь это, твои силы причинять {нежелательный побочный ущерб}, если не потратить еще {1 Пламя}.",
-														"[Заслон]: Ты создаешь защитное поле, чтобы остановить опасность. Потрать {1 Пламя}, чтобы <защитить#player_moves|basic_moves|defend> кого-то от сиюминтутной угрозы, чтобы бросить +%FREAK% вместо +%SAVIOR%.",
+														"[Заслон]: Ты создаешь защитное поле, чтобы остановить опасность. Потрать {1 Пламя}, чтобы <защитить#player_moves|basic_moves|defend> кого-то от сиюминутной угрозы, чтобы бросить +%FREAK% вместо +%SAVIOR%.",
 														"[Конструкт]: Потрать {1 Пламя}, чтобы с помощью своих сил создать объект размером не превышающим человека. Потрать дополнительно {1 Пламя}, чтобы оживить его. Конструк развоплотится в конце сцены.",
 														"[Барьер]: Потрать {1 Пламя}, чтобы создать барьер, который будет сдерживать угрозы до тех пор, пока ты концентрируешься на нём. ГМ может потребовать, чтобы ты потратил еще {1 Пламя}, если барьеру причинен особенно сильный вред.",
-														"[Богоподобный]: Ты являешь невероятную демонстрацию своих возможностей. Потрать 1 Пламя, чтобы присутсвующие застыли в немом благоговении, когда ты <даешь волю силам#player_moves|basic_moves|unleash_your_power>",
+														"[Богоподобный]: Ты являешь невероятную демонстрацию своих возможностей. Потрать 1 Пламя, чтобы присутствующие застыли в немом благоговении, когда ты <даешь волю силам#player_moves|basic_moves|unleash_your_power>",
 														"[Сверхшаг]: Потрать {1 Пламя}, чтобы переместиться в любое место по своему выбору внутри сцены, прорвавшись или проскользнув мимо любых препятствий или ограничений. Потрать 2 {Пламени}, чтобы переместиться в любое место, в котором ты ранее бывал.",
 														"[Усиление]: Потрать 1 {Пламя}, чтобы усилить своими силами действия товарища по команде, дав ему бонус {+1 к броску}, как если бы ты потратил очко из {тимпула}.",
 														"[Передоз]: Ты запускаешь свои невероятные способности на полную мощность, чтобы {преодолеть препятствие}, {изменить окружение} или {расширить свои чувства}. Потрать 2 {Пламени}, чтобы получить 10+, когда <даешь волю силам#player_moves|basic_moves|unleash_your_power>.",
@@ -3835,8 +4683,8 @@
 												"For [Constructs], when you animate a construct {independent of yourself}, you can give it orders and have it take actions. It will obey you. For the most part, the GM tells you the results of anything it does, but the GM might have you make a move through your construct, if appropriate.",
 												"[Shielding] allows you to protect someone in the moment, rolling +%FREAK% to defend. It’s {transient and immediate}.",
 												"[Moat] allows you to set up a {lasting defense} in advance, but it won’t necessarily help you right in the moment when your friend is in danger. Moat lasts as long as you focus on it and spend more {burn} when it gets hit especially hard.",
-												"[Worship] allows you to awe an audience in addition to whatever else you do when you unleash. You can <unleash your powers#player_moves|basic_moves|unleash_your_power> specififically to put on the display if you so choose.",
-												"[Move] can refer to teleportation, barreling hard in one direction, or anything else that fifits your powers.",
+												"[Worship] allows you to awe an audience in addition to whatever else you do when you unleash. You can <unleash your powers#player_moves|basic_moves|unleash_your_power> specifically to put on the display if you so choose.",
+												"[Move] can refer to teleportation, barreling hard in one direction, or anything else that fits your powers.",
 												"[Elemental awareness] lets you ask the GM any question you want, but it has to be about the place you’re currently in, or elements in the area around you.",											
 											]
 										}
@@ -3887,7 +4735,7 @@
 												}
 											],
 
-											notes: "[Belong in two worlds] inherently implies that you have some status and power with your people. You also must have some method of contacting your people, whatever that might be for you.|| The hold you spend on {pieces of tech} or {answers} can represent benefits you’ve gained over the course of your communication with your people, allowing you to say afer the fact that they gave you technology or  information during the conversation. Spending a {hold} to clear a {condition} through contact with home, however, is only appropriate when you’re actually in contact with home."
+											notes: "[Belong in two worlds] inherently implies that you have some status and power with your people. You also must have some method of contacting your people, whatever that might be for you.|| The hold you spend on {pieces of tech} or {answers} can represent benefits you’ve gained over the course of your communication with your people, allowing you to say after the fact that they gave you technology or  information during the conversation. Spending a {hold} to clear a {condition} through contact with home, however, is only appropriate when you’re actually in contact with home."
 										}
 									}									
 								}
@@ -3925,7 +4773,7 @@
 												}
 											],
 
-											notes: "[Belong in two worlds] inherently implies that you have some status and power with your people. You also must have some method of contacting your people, whatever that might be for you.|| The hold you spend on {pieces of tech} or {answers} can represent benefits you’ve gained over the course of your communication with your people, allowing you to say afer the fact that they gave you technology or  information during the conversation. Spending a {hold} to clear a {condition} through contact with home, however, is only appropriate when you’re actually in contact with home."
+											notes: "[Belong in two worlds] inherently implies that you have some status and power with your people. You also must have some method of contacting your people, whatever that might be for you.|| The hold you spend on {pieces of tech} or {answers} can represent benefits you’ve gained over the course of your communication with your people, allowing you to say after the fact that they gave you technology or  information during the conversation. Spending a {hold} to clear a {condition} through contact with home, however, is only appropriate when you’re actually in contact with home."
 										}
 									}									
 								}																	
@@ -3990,7 +4838,7 @@
 															type: "great",
 															info: "На 10+ выбери 1:",
 															list: [
-																"оно работраент даже лучше, чем ожидалось",
+																"оно работает даже лучше, чем ожидалось",
 																"ты сможешь его использовать еще один раз"
 															]																		
 														},
@@ -4001,7 +4849,7 @@
 													
 												{
 													type: "miss",
-													info: "При провале устройство сработает, но у него есть непредвиденный побочный эффект, который ГМ объявит уже после использоования.",															
+													info: "При провале устройство сработает, но у него есть непредвиденный побочный эффект, который ГМ объявит уже после использования.",															
 												},
 											
 											],
@@ -4078,7 +4926,7 @@
 												},
 											],
 
-											notes: "Iа you take a [Kirby-craf], its particulars are largely down to your fictional set up. How big is it? As big as you think makes sense. What does it look like? Whatever makes sense for your people’s technology. Its strengths and weaknesses just tell you and the GM the important pieces about what the ship can do and how it can be damaged. If it gets damaged, you have to repair it to use it again."
+											notes: "If you take a [Kirby-craft], its particulars are largely down to your fictional set up. How big is it? As big as you think makes sense. What does it look like? Whatever makes sense for your people’s technology. Its strengths and weaknesses just tell you and the GM the important pieces about what the ship can do and how it can be damaged. If it gets damaged, you have to repair it to use it again."
 										}
 									}
 								}
@@ -4100,9 +4948,9 @@
 														"скрывающее покрытие",
 														"мощное вооружение",
 														"регенерация",
-														"пространсвенный сдвиг (?)",
+														"пространственный сдвиг (?)",
 														"изменяемый размер",
-														"телепаятия",
+														"телепатия",
 													]
 												},
 												{
@@ -4118,7 +4966,7 @@
 												},
 											],
 
-											notes: "Iа you take a [Kirby-craf], its particulars are largely down to your fictional set up. How big is it? As big as you think makes sense. What does it look like? Whatever makes sense for your people’s technology. Its strengths and weaknesses just tell you and the GM the important pieces about what the ship can do and how it can be damaged. If it gets damaged, you have to repair it to use it again."
+											notes: "If you take a [Kirby-craft], its particulars are largely down to your fictional set up. How big is it? As big as you think makes sense. What does it look like? Whatever makes sense for your people’s technology. Its strengths and weaknesses just tell you and the GM the important pieces about what the ship can do and how it can be damaged. If it gets damaged, you have to repair it to use it again."
 										}
 									}
 								}
@@ -4145,7 +4993,7 @@
 								data: {
 									move: {
 										data: {
-											condition: "Когда ты <утешаешь или поддерживаешь#player_moves|basic_moves|comfort_support> кого-то, [рассказывая, как он иллюстрируют лучшее что есть на Земле], брось +%FREAK% вместпо +%MUNDANE%.",
+											condition: "Когда ты <утешаешь или поддерживаешь#player_moves|basic_moves|comfort_support> кого-то, [рассказывая, как он иллюстрируют лучшее что есть на Земле], брось +%FREAK% вместо +%MUNDANE%.",
 
 											
 										}
@@ -4194,7 +5042,7 @@
 											
 											],
 
-											notes: "For [Not so different afer all], remember that you have to actually do whatever options you choose. Make sure you let the other players know how you {confess a flaw of your home}, {mislead them about your home}, or {describe the glories of your home} during the conversation."
+											notes: "For [Not so different after all], remember that you have to actually do whatever options you choose. Make sure you let the other players know how you {confess a flaw of your home}, {mislead them about your home}, or {describe the glories of your home} during the conversation."
 										}
 									}									
 								}
@@ -4239,7 +5087,7 @@
 											
 											],
 
-											notes: "For [Not so different afer all], remember that you have to actually do whatever options you choose. Make sure you let the other players know how you {confess a flaw of your home}, {mislead them about your home}, or {describe the glories of your home} during the conversation."
+											notes: "For [Not so different after all], remember that you have to actually do whatever options you choose. Make sure you let the other players know how you {confess a flaw of your home}, {mislead them about your home}, or {describe the glories of your home} during the conversation."
 										}
 									}									
 								}														
@@ -4295,7 +5143,7 @@
 								data: {
 									move: {
 										data: {											
-											condition: "Ты изучал мир суперлюдей с помощью ресурсов наставника. Когда ты [впервые сталкиваешься с важным сверъестественным явленипем] (по своему выбору), брось +%SUPERIOR%.",	
+											condition: "Ты изучал мир суперлюдей с помощью ресурсов наставника. Когда ты [впервые сталкиваешься с важным сверхъестественным явлением] (по своему выбору), брось +%SUPERIOR%.",	
 											
 											parts: [	
 												{
@@ -4432,7 +5280,7 @@
 
 												{
 													type: 'miss',
-													info: 'При провале у него нет времени для тебя, потому что нечто серьезное пошло не так; отметьте {Состояние} по выбору ГМ.'
+													info: 'При провале у него нет времени для тебя, потому что нечто серьезное пошло не так; отметь {Состояние} по выбору ГМ.'
 												}
 											],
 										}
@@ -4609,7 +5457,7 @@
 								data: {
 									move: {
 										data: {											
-											condition: "Когда ты [пробиваешься сквозь препятствия], чтобы добратсья до чего-то или убежать от чего-то, брось +%DANGER%.",	
+											condition: "Когда ты [пробиваешься сквозь препятствия], чтобы добраться до чего-то или убежать от чего-то, брось +%DANGER%.",	
 											
 											parts: [		
 												{
@@ -4649,7 +5497,7 @@
 								data: {
 									move: {
 										data: {
-											condition: "When you [mark a {conditio}n], take {+1 forwar}d against the person you most blame for causing it.",
+											condition: "When you [mark a {condition}, take {+1 forward} against the person you most blame for causing it.",
 											notes: 'For [Coming for you], if it’s not immediately obvious who’s to blame for a given {condition} you mark, don’t worry about it and don’t bother to keep track—you’ll mark plenty of {conditions}, so just worry about the times when it’s a pretty clear choice.'
 										}
 									}
@@ -4744,7 +5592,7 @@
 								data: {
 									move: {
 										data: {											
-											condition: "Когда ты [пугаешь, угрожаешь, или принуждаешь] сделать что-то с помощью своей монтруозной формы, брось +%FREAK%.",	
+											condition: "Когда ты [пугаешь, угрожаешь, или принуждаешь] сделать что-то с помощью своей монструозной формы, брось +%FREAK%.",	
 											
 											parts: [	
 												{
@@ -4858,7 +5706,7 @@
 								"Контроль над опасностями",
 								"Месть за прошлые грехи",
 								"Раскрыть секреты мира",
-								"Создавать страх, хаос и панику",  "Распространять влияние и силу по городу",  "Искать правосудия и мести за прошлое/близких",  "Сбежать из этого мира любой ценой",  "Хранить баланс в мире",  "Поддерживать близких любыми способами",  "Вернуть утерянное",  "Разделять миры",  "Найти исцеление",  "Найти  и уничтожить того, кто сделал таким",  "Низвергнуть героев",  "Доказать свое превосходство",  "Следовать приказам",  "Контролировать супергероев/злодеев",  "Обеспечить правильное развитие событий",  "Доказать, что является величайшим криминальным лордом",  "Прорваться в эту реальность",  "Питаться самыми глубокими и сильными эмоциями",  "Защищать свою жизнь и жизни близких",  "Служить дому и защищать его",  "Вернуть былую славу",  "Переселиться в новое лучшее тело",  "Оставаться в центре внимания",  "Не быть забытым",  "Двигать мир к совершенству",  "Завоевать достойное место в мире",  "Поддерживать семью",  "Сохранять власть и положение любой ценой",  "Разрушить наследие предков",  "Перестроить мир по своему усмотрению",  "Разрушить саму систему супергероев/суперзлодеев",  "Стать настоящим героем",  "Освободиться от оков",  "Быть любимым",  "Стать мировой знаменитостью",  "Отыгрываться на других",  "Совершить то, что не смогли предки",  "Получить повышение",  "Контролировать новое поколение супергероев/суперзлодеев",  "Отомстить обидчикам",  "Вернуться к нормальной жизни",  "Установить контроль над событиями, для достижения цели в будущем",  "Обучить новое поколение",  "Жажда накопительства",  "Разрушить порядок, распространить анархию",  "Кормить и защищать угнетенных",  "Навести порядок",  "Защищать и развивать свой народ",  "Искать и побеждать достойных соперников",  "Избавиться от временных аномалий",  "Избавиться от боли",  "Захватить диковинки",  "Развить свои навыки",  "Проворачивать сложные ограбления",  "Устринить сверхчеловеческие способности", 
+								"Создавать страх, хаос и панику",  "Распространять влияние и силу по городу",  "Искать правосудия и мести за прошлое/близких",  "Сбежать из этого мира любой ценой",  "Хранить баланс в мире",  "Поддерживать близких любыми способами",  "Вернуть утерянное",  "Разделять миры",  "Найти исцеление",  "Найти  и уничтожить того, кто сделал таким",  "Низвергнуть героев",  "Доказать свое превосходство",  "Следовать приказам",  "Контролировать супергероев/злодеев",  "Обеспечить правильное развитие событий",  "Доказать, что является величайшим криминальным лордом",  "Прорваться в эту реальность",  "Питаться самыми глубокими и сильными эмоциями",  "Защищать свою жизнь и жизни близких",  "Служить дому и защищать его",  "Вернуть былую славу",  "Переселиться в новое лучшее тело",  "Оставаться в центре внимания",  "Не быть забытым",  "Двигать мир к совершенству",  "Завоевать достойное место в мире",  "Поддерживать семью",  "Сохранять власть и положение любой ценой",  "Разрушить наследие предков",  "Перестроить мир по своему усмотрению",  "Разрушить саму систему супергероев/суперзлодеев",  "Стать настоящим героем",  "Освободиться от оков",  "Быть любимым",  "Стать мировой знаменитостью",  "Отыгрываться на других",  "Совершить то, что не смогли предки",  "Получить повышение",  "Контролировать новое поколение супергероев/суперзлодеев",  "Отомстить обидчикам",  "Вернуться к нормальной жизни",  "Установить контроль над событиями, для достижения цели в будущем",  "Обучить новое поколение",  "Жажда накопительства",  "Разрушить порядок, распространить анархию",  "Кормить и защищать угнетенных",  "Навести порядок",  "Защищать и развивать свой народ",  "Искать и побеждать достойных соперников",  "Избавиться от временных аномалий",  "Избавиться от боли",  "Захватить диковинки",  "Развить свои навыки",  "Проворачивать сложные ограбления",  "Устранить сверхчеловеческие способности", 
 							]
 						}
 					},
@@ -4884,7 +5732,7 @@
 								"Принять защитную стойку и игнорировать урон",  "Улучшить свое тело/способности/инвентарь", 	 "Избежать атака со сверхъестественной грациозностью",  "Сломать или парализовать конечность точным ударом",  "Показать, что ужасная ловушка уже запущена",  "Раскрыть секрет, знания слабости или уязвимости противника",  "Метнуть опасный предмет",
 								"Заточить противника",  "Возложить вину на подходящую цель",  "Использовать гаджет для решения текущей проблемы",  "Избежать опасности",  "Предложить помощь за цену",  "Пробиться сквозь препятствия с помощью способностей",  "Мгновенно исцелиться",  "Поглотить жизненную силу",  "Переместиться в безопасное место",  "Откинуть противника силами",  "Вызывать страх и слабость для получения преимущества",  "Внезапно появиться в неожиданном месте",  "Создать суматоху своими способностями",  "Призвать толпы миньонов",  "Значительно изменить окружение силами",  "Швырнуть огромный/опасный объект",  "Искать сочувствия",  "Метнуть смертельно опасный объект с невероятной точностью",  "Атаковать силами сразу несколько целей",
 								"Требовать информацию о важном для себя",  "Минимальными усилиями нанести максимум урона",  "Подвергнуть опасности толпу",  "Нейтрализовать способности противника ",  "Обрушить шквал ударов",  "Применить опасное непонятное оружие",  "Управление техникой",  "Призвать на помощь продвинутые технологии и подкрепление",  "Высосать жизнь из окружения",  "Отравить",  "Использовать благие намерения в порочных целях",  "Обратиться в практически неуязвимого монстра",  "Вызвать внезапный ущерб силами",  "Предлагать помощь, когда она необходима, в обмен на услуги",  "Уговорить служить себе",  "Превратить обычный объект в страшное оружие",
-								"Спровоцировать кого-та на сильные эмоции",  "Впитать жизненную силу и эмоции касанием",  "Сбежать от физического конфликта",  "Избежать конфликта с помощью обмана",  "Предложить силу за огромную цену",  "Смести кого-то проявлением своих сила",  "Создать оружие из окружения",  "Обвинить кого-то в преступлении без улик",  "Раздавить кого-то или что-то",  "Призвать смертоносных миньонов",  "Выставить недостатки противника монологом",  "Усыпить",  "Очаровать окружающих речами",  "Неожиданно изящно избежать пленения",  "Раскрыть хитрый план, который уже запущена",  "Оказать поддержку потенциальному союзнику",  "Сдерживать противниками мощным проявлением способностей",  "Показать, что ситуация - часть его плана",  "Захватить что-нибудь важное",  "Создать заслон",  "Нивелировать способностями эффект или вред",  "Перестать сдерживаться",
+								"Спровоцировать кого-то на сильные эмоции",  "Впитать жизненную силу и эмоции касанием",  "Сбежать от физического конфликта",  "Избежать конфликта с помощью обмана",  "Предложить силу за огромную цену",  "Смести кого-то проявлением своих сила",  "Создать оружие из окружения",  "Обвинить кого-то в преступлении без улик",  "Раздавить кого-то или что-то",  "Призвать смертоносных миньонов",  "Выставить недостатки противника монологом",  "Усыпить",  "Очаровать окружающих речами",  "Неожиданно изящно избежать пленения",  "Раскрыть хитрый план, который уже запущена",  "Оказать поддержку потенциальному союзнику",  "Сдерживать противниками мощным проявлением способностей",  "Показать, что ситуация - часть его плана",  "Захватить что-нибудь важное",  "Создать заслон",  "Нивелировать способностями эффект или вред",  "Перестать сдерживаться",
 								"Хвастаться своими достижениями/возможностями",  "Мгновенно создать нужный гаджет",  "Прорваться сквозь охрану",  "Избавиться от препятствия",  "Выбить из равновесия",  "Призвать сверстников к действию",  "Уничтожить важный символ",  "Заблокировать способности",  "Защитить невинного в опасности",  "Исчезнуть и появиться неожиданно",  "Явить пророчество",  "Заключить сделку с более слабым",  "Переместиться в другое тело",  "Перенаправить удар в кого-то другого",  "Раскрыть страшную тайну врага",  "Устроить шоу для зрителей",  "Играть на публику",  "Сбежать в безопасное место",  "Устроить бессмысленное разрушение",  "Оскорблять и провоцировать",  "Захватить самого слабого противника",  "Пригвоздить к месту",  "Избежать конфликта, где можно проиграть",  "Выпустить в мир ужасных монстров",  "Исчезнуть из вида",  "Создать обманки",  "Выдать свое местоположение ",  "Явить свою истинную сущность, сбросив маскировку",  "Удерживать на месте",  "Внедрять свои мысли/убеждения",  "Пуститься в воспоминания",  "Трансформироваться в нечто иное",  "Оставить свой знак",  "Разглагольствовать о своем величии и слабости прочих",  "Прорваться в защищенную область или вырваться оттуда",  "Украсть, не вызвав тревогу",  "Посочувствовать и дать совет",  "Поглотить нечто и усилиться",  "Показать человека внутри монстра",  "На некоторое время кардинально изменить окружение",  "Узнать чей-то секрет",  "Произнести речь переде пленниками",  "Подчинить поверженного врага",  "Приказать своим войскам атаковать со всей силой",  "Подготовить оружие судного дня",  "Раскрыть гениальный план",  "Взорваться градом ударов",  "Принудить достойного соперника к битве",  "Указать на опасности в будущем",  "Запутать и обмануть",  "Сбить с ног всех в области",  "Парализовать цель",  "Привести рациональные обоснования своих действий", 
 							]
 						}
@@ -4989,7 +5837,7 @@
 					data: {
 						list: {
 							data: [
-								"Участие в программе подготовки супер-солдат",  "Эксперименты ученных",  "Эксперименты пришельцев",  "Босс мафии",  "Некогда восходящий супергерой",  "Ужасающая трагедия",  "Исследователь неизвестного",  "Умелый вор",  "Пленник места/обстоятельств",  "Воздействие странного артефакта",  "Обретение артефакта/сил после вторжения",  "Украденный артефакт/костюм",  "Заложник двух миров",  "Фальшивая память",  "Государственная программа",  "Бывший агент",  "Разочарование в прошлой жизни",  "Изучение металюдей",  "Пришелец из будущего",  "Пришелец из параллельной вселенной",  "Наследник влиятельной фигуры",  "Жертва действий металюдей",  "Создание из иных миров",  "Городская легенда",  "Сделка с дьяволом",  "Искусственное создание",  "Слуга без хозяина",  "Некогда знаменитый злодей",  "Разум, запертый против воли",  "Некогда великий герой",  "Возвращение из другого времени/мира",  "Пытавшийся начать мирную жизнь суперзлодей",  "Избранный для защиты Земли",  "Разочарование в прошлых ценностях",  "Юный гений",  "Трагедия по вине металюдей",  "Неудачная попытка стать героем",  "Жертва обмана",  "Внемировая сущность",  "Бестелесное создание",  "Несбывшиеся надежды",  "Жертва межмировой катастрофы",  "Потомок суперзлодея",  "Жертва обмана корпорации",  "Некогда великая личность",  "Одна ошибка, и ты ошибся",  "Космический преступник",  "Забытый всеми",  "Лидер народа из космоса/будущего/другого мира",  "Воин из космоса/будущего/другого мира",  "Искусственное создание из космоса/будущего/другого мира",  "Охотник за головами из космоса/будущего/другого мира",  "Охотник за сокровищами из космоса/будущего/другого мира",  "Убийца, берущийся только за очень сложные цели",  "Наемник, берущийся только за очень сложные дела",  "Бывший защитник и слуга закона",  
+								"Участие в программе подготовки супер-солдат",  "Эксперименты ученных",  "Эксперименты пришельцев",  "Босс мафии",  "Некогда восходящий супергерой",  "Ужасающая трагедия",  "Исследователь неизвестного",  "Умелый вор",  "Пленник места/обстоятельств",  "Воздействие странного артефакта",  "Обретение артефакта/сил после вторжения",  "Украденный артефакт/костюм",  "Заложник двух миров",  "Фальшивая память",  "Государственная программа",  "Бывший агент",  "Разочарование в прошлой жизни",  "Изучение металюдей",  "Пришелец из будущего",  "Пришелец из параллельной вселенной",  "Наследник влиятельной фигуры",  "Жертва действий металюдей",  "Создание из иных миров",  "Городская легенда",  "Сделка с дьяволом",  "Искусственное создание",  "Слуга без хозяина",  "Некогда знаменитый злодей",  "Разум, запертый против воли",  "Некогда великий герой",  "Возвращение из другого времени/мира",  "Пытавшийся начать мирную жизнь суперзлодей",  "Избранный для защиты Земли",  "Разочарование в прошлых ценностях",  "Юный гений",  "Трагедия по вине металюдей",  "Неудачная попытка стать героем",  "Жертва обмана",  "Внемировая сущность",  "Бестелесное создание",  "Несбывшиеся надежды",  "Жертва межмировой катастрофы",  "Потомок суперзлодея",  "Жертва обмана корпорации",  "Некогда великая личность",  "Одна ошибка, и ты ошибся",  "Космический преступник",  "Забытый всеми",  "Лидер народа из космоса/будущего/другого мира",  "Воин из космоса/будущего/другого мира",  "Искусственное создание из космоса/будущего/другого мира",  "Охотник за головами из космоса/будущего/другого мира",  "Охотник за сокровищами из космоса/будущего/другого мира",  "Убийца, берущийся только за очень сложные цели",  "Наемник, берущийся только за очень сложные дела",  "Бывший защитник и слуга закона", "Принуждён против воли",  
 							]
 						}
 					},
@@ -5513,7 +6361,7 @@
   }
 
   // We need that our library is globally accesible, then we save in the window
-  if(typeof(window.lib_DW) === 'undefined'){
-    window.lib_DW = returnLibrary();
+  if(typeof(window.lib_MASKS) === 'undefined'){
+    window.lib_MASKS = returnLibrary();
   }
 })(window); // We send the window variable withing our function

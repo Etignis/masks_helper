@@ -537,6 +537,10 @@ Vue.component('move', {
 			type: String,
 			default: ""
 		},
+		after: {
+			type: String,
+			default: ""
+		},
 		pre: {
 			type: String,
 			default: ""
@@ -591,6 +595,10 @@ Vue.component('move', {
 		},
 		_info: function(){
 			let sText = _formatText(this.info);//.split("|").join("<br>");
+			return sText;
+		},
+		_after: function(){
+			let sText = _formatText(this.after);//.split("|").join("<br>");
 			return sText;
 		},
 		_pre: function(){
@@ -661,7 +669,9 @@ Vue.component('move', {
 		<div class='modifier' v-html="_modifier" v-if="_modifier.length>2"></div>
 		<div class='move_info' v-html="_info" v-show="_info.length>1"></div>
 		
-		<slot></slot>		
+		<slot></slot>	
+		
+		<div class='move_info' v-html="_after" v-show="_after.length>1"></div>	
 		
 		<div class='notes' v-html="_notes" v-if="_notes.length>2"></div>
 		<div class='translator' v-html="_translator" v-if="_translator.length>2"></div>

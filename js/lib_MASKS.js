@@ -966,10 +966,10 @@
 																type: 'partial',
 																list: [
 																	{
-																		title: "you lash out verbally: {Provoke} a teammate to foolhardy action or take advantage of your influence to inflict a {Condition}"
+																		title: "you lash out verbally: <Provoke#player_moves|basic_moves|provoke> a teammate to foolhardy action or take advantage of your influence to inflict a {Condition}"
 																	},
 																	{
-																		title: "you give ground: your opposition gets an opportunity"
+																		title: "you give ground: your opposition gets an {opportunity}"
 																	},
 																	{
 																		title: "you struggle past the pain: mark two {Conditions}"
@@ -1024,7 +1024,7 @@
 																type: 'partial',
 																list: [
 																	{
-																		title: "ты срываешься словесно: {Спровоцируй} члена команды на безрассудный поступок или злоупотреби {Влиянием} и отметь ему {Состояние}"
+																		title: "ты срываешься словесно: <Спровоцируй#player_moves|basic_moves|provoke> члена команды на безрассудный поступок или злоупотреби {Влиянием} и отметь ему {Состояние}"
 																	},
 																	{
 																		title: "ты отступаешь: твой противник получает {Возможность}"
@@ -3162,11 +3162,11 @@
 													parts: [
 														{
 															type: 'great',													
-															info: 'На 10 получи 2',													
+															info: 'На 10 выбери 2',													
 														},														
 														{
 															type: 'partial',													
-															info: 'На 7-9 получи 1',													
+															info: 'На 7-9 выбери 1',													
 														},														
 														
 													],
@@ -3180,6 +3180,659 @@
 												{
 													type: 'miss',
 													info: 'При провале, что-то идет не так и ты упускаешь возможность. Отметь {Состояние}, так как уступил проивнику.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+						},
+
+						{
+							en: {
+								title: "Copymouse",
+								key: "copymouse",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When you [attempt to disguise yourself] as someone else, roll +%FREAK%.",
+
+											parts: [
+												{
+													type: 'hit',
+													info: 'On a hit, your disguise is successful and likely to fool anyone you encounter.',
+													parts: [
+														{
+															type: 'great',													
+															info: 'On a 10+, your disguise is flawless, take {+1 forward} while acting under this assumed identity.',													
+														},														
+														{
+															type: 'partial',													
+															info: 'On a 7-9, tell the GM one thing about the disguise that is imperfect and might blow your cover.',													
+														},														
+														
+													],
+													
+												},
+												{
+													type: 'miss',
+													info: 'On a miss, you aren’t fooling anyone, though you’re welcome to try; you have a {-1 ongoing} on any attempts to maintain this ruse.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Под личиной",
+								key: "copymouse",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [пытаешься выдать себя за кого-то другого], брось +%FREAK%.",
+
+											parts: [
+												{
+													type: 'hit',
+													info: 'При успехе у тебя получается и похоже, ты одурачил всех, кого хотел.',
+													parts: [
+														{
+															type: 'great',													
+															info: 'На 10+ твоя маскировка безупречна, получи {+1 на следующий} ход, пока действуешь под выбранной личиной.',													
+														},														
+														{
+															type: 'partial',													
+															info: 'На 7-9 расскажи ГМу, что в твоей маскировке неидеально и может тебя выдать.',													
+														},														
+														
+													],
+													
+												},
+												{
+													type: 'miss',
+													info: 'При провале ты никого не обманул, хотя ты все еще можешь попытаться. Получи {-1 на все} попытки выдать себя за другого.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+						},
+
+						{
+							en: {
+								title: "Spinners",
+								key: "spinners",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When you [feel the balance between your personal life and your superheroics spinning out of control], roll +%MUNDANE%.",
+
+											parts: [
+												{
+													type: 'hit',
+													info: 'Spend {hold} 1 for 1 to remove options from the list below.',
+													parts: [
+														{
+															type: 'great',													
+															info: 'On a 10+, {hold} 2.',		
+															
+														},
+														{
+															type: 'partial',													
+															info: 'On a 7-9, {hold} 1.',		
+															
+														},
+													]
+												},
+												{
+													type: 'miss',
+													info: 'On a miss, you have been burning the candle at both ends and now there is no more candle to burn. You must take all options from the list below and until you take some time to truly relax (Go to the mall, hang out with friends, see a movie, etc) you have {-1 ongoing}.'
+												},
+												{
+													list: [
+														"You want to be a hero, but you can’t stop thinking about the pile of schoolwork that won’t stop growing. The next time you <enter battle against a dangerous foe as a team#player_moves|periphreal_moves|adding_teampool>, remove 1 from the {team pool}.",
+														"You thought you had it all figured out, but things are slipping through the cracks - both as a hero, and as a “regular” teenager. Mark the {guilty} condition as you attempt to make amends with those who you have disappointed or let down.",
+														"Your tensions are running high - perhaps too high - and it is beginning to impact the members of your team. The next time someone attempts to <comfort or support you#player_moves|basic_moves|comfort_support>, it is treated as a miss, no matter the roll.",
+													]
+												}
+												
+											]
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Замотался",
+								key: "spinners",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [чувствуешь, что баланс между твоей личной и супергоройской жизнями нарушается], брось +%MUNDANE%.",
+
+											parts: [
+												{
+													type: 'hit',
+													info: 'Потрать {запас} 1 к 1, чтобы убрать варианты из списка ниже.',
+													parts: [
+														{
+															type: 'great',													
+															info: 'На 10+ получи {запас} 2.',		
+															
+														},
+														{
+															type: 'partial',													
+															info: 'На 7-9 получи {запас} 1.',		
+															
+														},
+													]
+												},
+												{
+													type: 'miss',
+													info: 'При провале ты перестарался и выгорел. Ты должен выбрать все варианты из списка ниже, и, пока не отдохнёшь по настоящему (сходишь в ТЦ, потусишь с друзьями, сходишь в кино и т.д.), получаешь {-1 на все}.'
+												},
+												{
+													list: [
+														"Ты хочешь быть героем, но не можешь престать думать о стопке домашки, которая продолжает расти. В следующий раз, когда ты <вструпаешь в битву с опасным врагом командой#player_moves|periphreal_moves|adding_teampool>, вычти 1 из {тимпула}.",
+														"Ты думал, чт оу тебя все под контролем, но упустил что-то важное как вс геройской, так и в обычной жизни. Отметь состояние {Виноватый}, пока пытаешься загладить вину перед тем кого подвёл или разочаровал.",
+														"Ты так напряжен из-застресса, что это начинает влиять на команду. В следующий раз, когда кто-нибудь из команды попытается <утешить или поддержать#player_moves|basic_moves|comfort_support> тебя, попытка провалется, вне зависимости от броска.",
+													]
+												}
+												
+											]
+										}
+									}
+								}
+							},
+						},
+
+						{
+							en: {
+								title: "moveable objects",
+								key: "moveable_objects",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When you [move to a new city and seek to establish yourself as a hero there], roll +%SAVIOR%.",
+
+											parts: [
+												{
+													type: 'hit',
+													info: 'On a hit, your reputation precedes you - shift %SAVIOR% up and %DANGER% down, and tell the GM two tales of superheroics that the citizens have heard.',
+													parts: [
+														{
+															type: 'great',													
+															info: 'On a 10+, you are welcomed into your new city with open arms and you gain {influence} over the city’s mayor.',		
+															
+														},
+														{
+															type: 'partial',													
+															info: 'On a 7-9, the GM will also tell you something negative the citizens have heard about you that means you will have to earn their trust.',		
+															
+														},
+													]
+												},
+												{
+													type: 'miss',
+													info: 'On a 6-, there is someone in your new city who thinks the worst of you and has been actively working to spread negative propaganda against you, leading the city to be mistrusting and wary of you. Tell the GM who this person is and why they feel so negatively towards you.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Переезд",
+								key: "moveable_objects",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [переезжаешь в новый город и пытаешься зарекомендовать себя как героя], брось +%SAVIOR%.",
+
+											parts: [
+												{
+													type: 'hit',
+													info: 'При успехе, твоя репутация опережает тебя. Сдвинь %SAVIOR% вверх, а %DANGER% вниз и расскажи ГМу 2 твоих супергеройских деяния, которые известны горожанам.',
+													parts: [
+														{
+															type: 'great',													
+															info: 'На 10+ тебя тепло встречают в новом городе с распростертыми объятиями. Ты получаешь {Влияние} на мэра города..',		
+															
+														},
+														{
+															type: 'partial',													
+															info: 'на 7-9 ГМ также расскажет тебе одну негативную вещь, которую слышали о тебе горожане. Тебе придется завоёвывать их доверие.',		
+															
+														},
+													]
+												},
+												{
+													type: 'miss',
+													info: 'На 6- кто-то в новом городе думает о тебе в очень негативном ключе и активно работал над распространением порочащих тебя слухов, что привело к недоверию и опасениям на твой счет. Расскажи ГМу, кто этот человек и почему он так настроен против тебя.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+						},
+
+						{
+							en: {
+								title: "bones in there",
+								key: "bones_in_there",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When you are [being briefed for a mission by an adult hero and they inadvertently make an innuendo], roll +%MUNDANE%.",
+
+											parts: [
+												{
+													type: 'great',													
+													info: 'On a 10+, you are able to stifle your laughter and the adult hero is impressed with your maturity and professionalism - shift %SUPERIOR% up and any other {label} down, your choice.',		
+													
+												},
+												{
+													type: 'partial',													
+													info: 'On a 7-9, you giggle a bit, but manage to cover it with a cough pretty convincingly (you think). The adult hero is a bit wary, and you’ll need to work extra hard to impress them on this mission.',		
+													
+												},
+												{
+													type: 'miss',
+													info: 'On a 6-, you laugh. Loudly. The adult hero is not impressed and considers not making you a part of this mission, shift %MUNDANE% up and %SUPERIOR% down.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Оговорочка по Фрейду",
+								key: "bones_in_there",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [участвуешь в брифинге перед миссией со взрослым героем, и он случайно делает двусмысленную оговорку], брось +%MUNDANE%.",
+
+											parts: [
+												{
+													type: 'great',													
+													info: 'На 10+ ты смог сдержать смех, и взрослый герой впечатлён твоей сознательностью и профессионализмом - сдвинь %SUPERIOR% вверх и любой другой {Ярлык} вниз по своему выбору.',															
+												},
+												{
+													type: 'partial',													
+													info: 'На 7-9 ты не смог сдержать смешок, но довольно хорошо (как ты думаешь) замаскировал кашлем. Взрослый герой несколько насторожился, и тебе придется неслабо потрудиться на этой миссии, чтобы впечатлить его.',
+												},
+												{
+													type: 'miss',
+													info: 'На 6- ты заржал. Громко. Взрослый герой не впечатлён и решает не брать тебя на эту миссию,  сдвинь %MUNDANE% вверх, а %SUPERIOR% вниз.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+						},
+
+						{
+							en: {
+								title: "capital ship combat",
+								key: "capital_ship_combat",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When you are [on a mission and stumble into a grand-scale spaceship battle] that you have no business being a part of, roll +%SUPERIOR%",
+
+											parts: [
+												{
+													type: 'hit',
+													info: 'On a hit, your ship is small and nimble enough to cut through the conflict with minimal difficulties',
+													parts: [
+														{
+															type: 'great',													
+															info: 'On a 10+, someone in the battle notices your expert flying and is going to remember you, tell the GM who it was and take {influence} over them.',	
+														},
+														{
+															type: 'partial',													
+															info: 'On a 7-9, you made it to the other side, but lost something in the process. Tell the GM what on your ship needs to be repaired.',																	
+														},
+													]
+												},
+											
+												{
+													type: 'miss',
+													info: 'On a 6-, you got tagged by an enemy fighter when you thought you were in the clear. Your ship is badly in need of repair and needs to land soon or you’ll be drifting. Mark the {angry} condition as you assess the damage.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Большое космическое сражение",
+								key: "capital_ship_combat",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [на миссии попадаешь в крупномасштабное сражение космических кораблей], которое тебя, в общем-то, не касается, брось +%SUPERIOR%",
+
+											parts: [
+												{
+													type: 'hit',
+													info: 'При успехе твой корабль достаточно маленький и шустрый, чтобы прорваться сквозь заварушку с минимальными сложностями',
+													parts: [
+														{
+															type: 'great',													
+															info: 'На 10+ кто-то из участников битвы обратил внимание на твои высокие навыки управления кораблём и запомнил тебя. Расскажи ГМу, кто это был, и получи на него {Влияние}.',	
+														},
+														{
+															type: 'partial',													
+															info: 'На 7-9 ты прорвался, но в процессе что-то потерял. Расскажи ГМу, что требуется твоему кораблю для починки.',																	
+														},
+													]
+												},
+											
+												{
+													type: 'miss',
+													info: 'На 6- вражеский истребитель подстрелил тебя, когда ты уже почти прорвался. Корабль требует срочного ремонта, тебе требуется приземлиться, иначе останешься дрейфовать в космосе. Из-за полученных повреждений отметь состояние {Злой}.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+						},
+
+						{
+							en: {
+								title: "dice in pools",
+								key: "dice_in_pools",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When the [team plans and prepares for a confrontation against a vastly superior foe], and the time has come to enter battle against them, roll +%SAVIOR%.",
+
+											parts: [
+												
+												{
+													type: 'great',													
+													info: 'On a 10+, add 3d6 to a pool.',	
+												},
+												{
+													type: 'partial',													
+													info: 'on a 7-9, add 2d6.',																	
+												},													
+											
+												{
+													type: 'miss',
+													info: 'On a 6-, add 1d6.'
+												}
+												
+											],
+
+											after: "At any point during the battle when you make a roll, you can choose to expend a die from the pool to reroll one of the dice rolled."
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Запас кубиков",
+								key: "dice_in_pools",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда [команда  планирует и готовится к сражению со значительно превосходящим врагом], и подошло время вступить в битву, брось +%SAVIOR%.",
+
+											parts: [
+												
+												{
+													type: 'great',													
+													info: 'На 10+ получи 3d6.',	
+												},
+												{
+													type: 'partial',													
+													info: 'На 7+ получи 2d6.',																	
+												},													
+											
+												{
+													type: 'miss',
+													info: 'На 6- получи 1d6.'
+												}
+												
+											],
+
+											after: "В любое время в течение битвы, после броска, можешь потратить кубик из запаса, чтобы перебросить один из кубиков, участвующих в броске."
+										}
+									}
+								}
+							},
+						},
+
+						{
+							en: {
+								title: "friends in space",
+								key: "friends_in_space",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When [the team returns to the spaceship] after a hard day of heroics with the intention to rest and recharge, roll +%MUNDANE%.",
+
+											parts: [												
+												{
+													type: 'hit',
+													info: 'On a hit, everyone has a relaxing night in and will face the next day with renewed vigor; the next time you <enter battle against a dangerous foe#player_moves|periphreal_moves|adding_teampool>, you will start with +1 to your {team pool}. Additionally, tell the GM one thing you learned about each of your teammates from this night of relaxation and bonding.',
+													parts: [
+														{
+															type: 'great',													
+															info: 'On a 10+, everyone can take the effects of a successful <comfort or support#player_moves|basic_moves|comfort_support> someone move.',													
+														}
+													],
+												},
+												{
+													type: 'miss',
+													info: 'On a miss, everyone is overtired and hungry, which leads to a heated argument. Everyone spends the night apart in their own rooms and the next time you <enter battle against a dangerous foe#player_moves|periphreal_moves|adding_teampool>, you will start with -1 to your {team pool}.'
+												}
+											],
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Космические друзья",
+								key: "friends_in_space",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда [команда возвращается на космический корабль после тяжелого трудового дня героических деяний] с намерением отдохнуть и восстановить силы, брось +%MUNDANE%.",
+
+											parts: [												
+												{
+													type: 'hit',
+													info: 'При успехе все хорошо отдохнули ночью и начнут новый день с новыми силами. В следующий раз, когда вы <вступите в битву с опасным противником#player_moves|periphreal_moves|adding_teampool>, добавьте дополнительное очко в {Тимпул}. Кроме того, расскажите ГМу по одной вещи, которые вы узнали о товарищах в течение ночи отдыха и общения.',
+													parts: [
+														{
+															type: 'great',													
+															info: 'На 10+ каждый может воспользоваться эффектом успешного хода <"утешь или поддержи"#player_moves|basic_moves|comfort_support>.',													
+														}
+													],
+												},
+												{
+													type: 'miss',
+													info: 'При провале все слишком устали и голодны, что приводит к серьезной ссоре. Каждый проводит ночь в своей комнате отдельно от других, и в следующий раз, когда вы <вступите в битву с опасным противником#player_moves|periphreal_moves|adding_teampool>, вычтите 1 из {Тимпула}.'
+												}
+											],
+										}
+									}
+								}
+							},
+						},
+
+						{
+							en: {
+								title: "prepare for the future",
+								key: "prepare_for_the_future",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When it is [time for you to leave your team to become a paragon] of the city as an adult hero, roll +%SAVIOR%.",
+
+											parts: [
+												{
+													type: 'hit',
+													info: 'On a hit, your team throws you a going away party!',
+													parts: [
+														{
+															type: 'great',													
+															info: 'On a 10+ choose 2',													
+														},
+														{
+															type: 'partial',													
+															info: 'On a 7-9, choose 1',													
+														},	
+													],
+													list: [
+														"Each one of your teammates gives you something to remember your time together. Together with each player, determine what gift you were given and what memory it is tied to. Clear a {condition}, mark {potential}, or shift %MUNDANE% up and any other {label} down.",
+														"You realize as the party begins to wind down how much you are going to miss your team. You promise to always be there for them, no matter what. Give any team members who don't already have {influence} over you {influence} over you.",
+														"One team member in particular is the most upset by you leaving. Who is it and why are they so upset? You spend some time away from the party, just the two of you. Roll to <comfort or support them#player_moves|basic_moves|comfort_support> and treat a miss as if it were a 7-9.",
+													]
+												},
+												{
+													type: 'miss',
+													info: 'On a miss, your team doesn’t think much of you moving on, knowing that they will still see you from time to time, and does nothing to mark the occasion. Mark a {condition} as you say goodbye without ceremony.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Стань парагоном",
+								key: "prepare_for_the_future",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда настает время [тебе покинуть команду и стать парагоном] города, в качестве взрослого героя, брось +%SAVIOR%.",
+
+											parts: [
+												{
+													type: 'hit',
+													info: 'При успехе, команда закатывает тебе прощальную вечеринку.',
+													parts: [
+														{
+															type: 'great',													
+															info: 'На 10+ выбери 2',													
+														},
+														{
+															type: 'partial',													
+															info: 'На 7-9 выбери 1',													
+														},	
+													],
+													list: [
+														"Каждый из товарищей дарит тебе что-то на память о совместно проведенном времени. Вместе с другими игроками решите, что это за подарки, и о чем именно они напоминают. Очисть {Состояние}, отметь {Потенциал}, либо сдвинь %MUNDANE% вверх, а любой другой {Ярлык} вниз.",
+														"Когда вечеринка подходит к концу, ты осознаешь, как сильно будешь скучать по команде. Ты обещаешь, не смотря ни на что, быть рядом, если им потребуется твоя помощь. Дай {Влияние} на себя тому, у кого его еще нет.",
+														"Один из товарищей по команде особенно расстроен твоим уходом. Кто это и почему так расстроен? Вы проводите некоторое время отдельно от всех, только вы вдвоем. Брось <утешить или поддержать#player_moves|basic_moves|comfort_support>, и, если случится провал, расценивай его как 7-9.",
+													]
+												},
+												{
+													type: 'miss',
+													info: 'При провале, твоя команда не придает такого уж большого значения твоему уходу, так как знает, что вы будете видеться время от времени, и не делает ничего, чтобы отметить событие. Отметь {Состояние} покидая команду без прощальной церемонии.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+						},
+
+						{
+							en: {
+								title: "rethink fantasy",
+								key: "rethink_fantasy",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When you [have a wish granted by magical means] and the result was not what you expected, roll +%FREAK%.",
+
+											parts: [
+												{
+													type: 'hit',
+													info: 'On a hit, you are able to negate the effects of your wish with minimal difficulty.',
+													parts: [
+														{
+															type: 'great',													
+															info: 'On a 10+, you are able to completely undo any damage done by your wish and no one knows you were the cause.',													
+														},
+														{
+															type: 'partial',													
+															info: 'On a 7-9, there is one lingering effect of the wish, tell the GM what it is.',													
+														},	
+													],												
+												},
+												{
+													type: 'miss',
+													info: 'On a 6-, this problem is bigger than you and you need to ask for help from someone you normally wouldn’t call. Tell the GM who they are and mark the {insecure} condition as you plead with them to help you.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Бойся своих желангий",
+								key: "rethink_fantasy",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда твоё [желание исполняется каким-то магическим образом], и результат получается не таким, каким ты ожидал, брось +%FREAK%.",
+
+											parts: [
+												{
+													type: 'hit',
+													info: 'При успехе тебе удвется обратить эффект жедания с минимальными усилиями.',
+													parts: [
+														{
+															type: 'great',													
+															info: 'На 10+ тебе удается устранить весь урон, нанесенный исполнением твоего желания, и никто не узнает, что причиной был ты.',													
+														},
+														{
+															type: 'partial',													
+															info: 'На 7-9 остается некий продолжительный эффект от желапния, расскажи ГМу, что это.',													
+														},	
+													],												
+												},
+												{
+													type: 'miss',
+													info: 'On a 6-, this problem is bigger than you and you need to ask for help from someone you normally wouldn’t call. Tell the GM who they are and mark the {insecure} condition as you plead with them to help you.'
 												}
 												
 											]

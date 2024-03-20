@@ -3842,6 +3842,383 @@
 							},
 						},
 
+						{
+							en: {
+								title: "a television show",
+								key: "television_show",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When you realize [your team is about to be stuck in a bottle episode], roll +%MUNDANE%",
+
+											parts: [
+												{
+													type: 'great',													
+													info: 'On a 10+, you refuse to be trapped in one place all day when you have things to do. Whatever the issue is - something needing to be found, an outfit crisis, someone needing a pep-talk - you solve it handedly. Take {+1 forward} as you go about the rest of your day.',													
+												},
+												{
+													type: 'partial',													
+													info: 'On a 7-9, you suffer minor delays, but your plans don’t get disrupted too much. Tell the GM what held you up and what effect it had on your plans.',													
+												},
+												{
+													type: 'miss',
+													info: 'On a 6-, you’re in a bottle episode. Tell the GM what the issue is that is keeping you and your team in place and what plans you are missing to deal with it. Mark the {angry} condition as the bottle episode plays itself out.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Теле шоу",
+								key: "television_show",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты осознаешь, [что твой команда застревает в бутылочном эпизоде], брось +%MUNDANE%",
+
+											parts: [
+												{
+													type: 'great',													
+													info: 'На 10+ ты отказываешься оставаться в одном месте весь день, потому чт оу тебя еще есть дела. В чем бы ни была проблема - что-то нужно найти, проблема с костюмом, кого-то нужно подбодрить - ты с этим справился. Получи {+1 на следующий} до конца дня.',													
+												},
+												{
+													type: 'partial',													
+													info: 'На 7-9 возникают незначительные задержки, но твои планы не сильно нарушены. Расскажи ГМу, что тебя задержало, и как это повлияло на планы.',													
+												},
+												{
+													type: 'miss',
+													info: 'На 6- вы в бутылочном эпизоде. Расскажите ГМу, какая проблема удерживает вас с командой в этом месте, и какие планы нарушенны из-за необходимости решить эту проблему. Из-за внезапного бутылочногго эпизода отметь состояние {Злой}.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+						},
+
+						{
+							en: {
+								title: "initialize initiative",
+								key: "initialize_initiative",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When you [make the first steps to befriend another superhero team], roll +%SAVIOR%",
+											info: 'Tell the GM about the hero from the other team that you reach out to.',
+
+											parts: [
+												{
+													type: 'great',													
+													info: 'On a 10+, they are excited to hear from you - you gain {influence} over them and you make plans to work together in the future.',													
+												},
+												{
+													type: 'partial',													
+													info: "On a 7-9, they were receptive to a partnership in the future, but feel your team hasn't proved  yourselves as heroes yet. You get +1 forward against the next foe you face if you are acting in a way that would impress the other heroes.",													
+												},
+												{
+													type: 'miss',
+													info: 'On a miss, you reach out but the other team has no interest in talking or working together. Mark either the {insecure} or {angry} condition as you tell your team the bad news.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Прояви инициативу",
+								key: "initialize_initiative",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [делаешь первый шаг, чтобы подружиться с другой супергерйоской командой], брось +%SAVIOR%",
+											info: 'Расскажи ГМу о герое из другой команды, к которому ты обращаешься.',
+
+											parts: [
+												{
+													type: 'great',													
+													info: 'На 10+ он рад тебя услышать - ты получаешь на него {Влияние} и вы вместе строите планы на дальнейшее сотрудничество.',													
+												},
+												{
+													type: 'partial',													
+													info: "На 7-9 он готов к сотрудничеству в будущем, но считает, что твоя команда пока еще не проявилла себя как настоящие герои. Ты получаешь {+1 на следующий} ход против следующего противника, с которым столкнёшься, если действуешь таким образом, чтобы впечатлить других героев.",													
+												},
+												{
+													type: 'miss',
+													info: 'При провале ты не встречаешь понимания, другая команда не заинтерсована в совместнйо работе. Отметь либо {Неуверенный}, либо {Злой}, рассказывая команде плохие новости.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+						},
+
+						{
+							en: {
+								title: "consequences",
+								key: "consequences",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When you and your team [are made to do community service to clean up a mess made by your last bout of heroics], roll +%SAVIOR%",
+											info: 'Tell the GM what confrontation caused the damage, where the community service is taking place, and who is chaperoning you.',
+
+											parts: [
+												{
+													type: 'great',													
+													info: 'On a 10+ you work together to clean up all of the damage you caused. Your chaperone alerts the mayor, who is incredibly impressed by your motivation and professionalism, and you gain {influence} over them.',													
+												},
+												{
+													type: 'partial',													
+													info: "On a 7-9, it takes all day and the work isn’t perfect, but it’s done - clear a {condition} or mark {potential}.",													
+												},
+												{
+													type: 'miss',
+													info: 'On a 6-, you all can’t stop goofing around when you’re meant to be cleaning. You barely make any headway on the cleanup and are going to have to come back every day until the work is done. Mark the {guilty} condition as your chaperone gives you a long lecture about the importance of taking responsibility for your actions.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Последствия",
+								key: "consequences",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда вас с командой [привлекают к общественным работам про устранению беспорядка, который вы устроили в ходе своего последнего подвигап], брось +%SAVIOR%",
+											info: 'Расскажи ГМу о противостоянии, причинившему ущерб, где именно происходят общественные работы, и кто вас курирует.',
+
+											parts: [
+												{
+													type: 'great',													
+													info: 'На 10+ вы работаете сообща, чтобы устранить последсвия причиненного вами ущерба. Ваш куратор оповещает мэра, который весьма впечателн вашей мотивированностью и профессионализмом, ты получаешь {Влияние} на него.',													
+												},
+												{
+													type: 'partial',													
+													info: "На 7-9 это заняло весь день и результат не идеален. Очисть {Состояние} или отметь {Потенциал}.",													
+												},
+												{
+													type: 'miss',
+													info: 'На 6- вы бездельничаете, уборка продвигается крайне медленно, и вам приходится возвращатсья день за днём, пока работа не будет завершена. Отметь состояние {Виноватый}, так как куратор читает тебе длинную лекцию о том, как важно брать на себя ответсвенность за поступки.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+						},
+
+						{
+							en: {
+								title: "stop",
+								key: "stop",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When you are [entering a city on the business end of a spaceship], roll +%SUPERIOR%",
+											
+											parts: [
+												{
+													type: 'great',													
+													info: 'On a 10+ you manage to figure out the controls enough to slow the descent and land it safely, causing minimal damage. Mark {potential} or clear a {condition}.',													
+												},
+												{
+													type: 'partial',													
+													info: "On a 7-9, you are able to land the ship without harming anyone, but the city suffers some damage in the incredibly bumpy landing. Shift %SUPERIOR% up and any other {label} down, your choice.",													
+												},
+												{
+													type: 'miss',
+													info: 'On a 6-, you have no idea how to fly this thing and the best you can manage is to put it over water in the hopes that that will soften the impact. Roll to <take a powerful blow#player_moves|basic_moves|powerful_blow> as the ship plunges into the water.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Посадка",
+								key: "stop",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты [пытаешься посадить космический корабль в городе], брось +%SUPERIOR%",
+											
+											parts: [
+												{
+													type: 'great',													
+													info: 'На 10+ тебе удалось разобраться в управлении достаточно хорошо, чтобы замедлить спуск и благополучно приземлиться, причинив минимум ущерба. Отметь {Потенциал} или очисть {Состояние}.',													
+												},
+												{
+													type: 'partial',													
+													info: "На 7-9 тебе удалось посадить корабль, не причинив никому вреда, но из-за неумелого приземления городу был нанесен некоторый ущерб. Сдвинь %SUPERIOR% вверх, а любой другой Ярлык вниз..",													
+												},
+												{
+													type: 'miss',
+													info: 'На 6- у тебя нет ни малейшего представления, как управлять этой штуковиной, и лучшее, что тебе удается - попытаться посадить на воду, в надежде, что это смягчит удар. <Получи мощный удар#player_moves|basic_moves|powerful_blow>, когда корабль падает на воду.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+						},
+
+						{
+							en: {
+								title: "hack",
+								key: "hack",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When you attempt to [hack into the supercomputer of a villain], roll +%SUPERIOR%.",
+
+											parts: [
+												{
+													type: 'hit',
+													info: `On a hit, declare "I'm in" as you successfully bypass network security.`,
+													parts: [
+														{
+															type: 'great',													
+															info: 'On a 10+ choose 2',													
+														},
+														{
+															type: 'partial',													
+															info: 'On a 7-9 choose 1',													
+														},
+													],
+													list: [
+														"You manage to find important information about the villain's next move. Take {+1 forward} when acting on this information.",
+														"You make it so the villain will never know they were hacked. Shift %SUPERIOR% up and %MUNDANE% down.",
+														"You stumble upon notes and documents about you and your team in a (formerly) secret folder - they definitely view you as a threat. You gain {influence} over them.",
+													]
+												},
+												{
+													type: 'miss',													
+													info: "On a miss, you can't get past security and you have alerted the villain to a break in attempt that can easily be traced back to you. They will be even more vigilant about safeguarding their information now. Mark the {insecure} condition and you have a {-1 ongoing} for any attempts to get information from or about this villain.",													
+												},
+											]
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Взлом",
+								key: "hack",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда ты пытаешься [взломать суперкомпьютер злодея], брось +%SUPERIOR%.",
+
+											parts: [
+												{
+													type: 'hit',
+													info: `При успехе объяви "Я вошёл", успешно обойдя системы безопасности.`,
+													parts: [
+														{
+															type: 'great',													
+															info: 'На 10+ выбери 2',													
+														},
+														{
+															type: 'partial',													
+															info: 'На 7-9 выбери 1',													
+														},
+													],
+													list: [
+														"Тебе удалось найти важную информацию о следующем шаге злодея. Получи +1 на следующий ход, если действуешь соответсвенно полученной информации.",
+														"Ты устроил все так, что злодей никогда не узнает о взломе. Сдвинь %SUPERIOR% вверх, а %MUNDANE% вниз.",
+														"В (некогда) секретной папке ты натыкаешься на заметки и документы о тебе и твоей команде - он определенно расценивает вас как угрозу. Ты получаешь {Влияние} на него.",
+													]
+												},
+												{
+													type: 'miss',													
+													info: "При провале ты не смог обойти системы безопасности, и злодей знает о попытке взлома, по которой можно выйти на тебя. Теперь он еще тщательнее будет обеспечивать безопасность своей информации. Отметь состояние {Неуверенный} и получи {-1 на все попытки} получить информацию у этого злодея или о нём.",													
+												},
+											]
+										}
+									}
+								}
+							},
+						},
+						
+						{
+							en: {
+								title: "roll",
+								key: "roll",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "When your [alarm goes off in the morning] after a late night of superheroics and you just want to roll over and go back to sleep, do that. Roll +%MUNDANE% to see what you missed at school by staying in bed.",
+											
+											parts: [
+												{
+													type: 'great',													
+													info: 'On a 10+, nothing at all. The fire alarm system malfunctioned five minutes into the day and the entire school spent hours standing outside waiting for it to be fixed before school was cancelled and everyone was eventually sent home.',													
+												},
+												{
+													type: 'partial',													
+													info: "On a 7-9, a field trip to city hall to learn about local politics from the mayor, who you rescued from a villain the night before. You sleep well knowing you aren’t missing any schoolwork, though it would have been nice to potentially hear the mayor singing your (or your heroic alter-ego’s) praises in front of your classmates.",													
+												},
+												{
+													type: 'miss',
+													info: 'On a 6-, a pop quiz in the class you’re struggling in the most. It will take some convincing (or a well worded note from an adult) to get the teacher to let you make it up. But that’s tomorrow-you’s problem.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+							ru: {
+								title: "Выспись",
+								key: "roll",
+								kind: 2,
+								data: {
+									move: {
+										data: {
+											condition: "Когда наутро после долгой ночи геройства [ты просыпаешься от звонка будильника] с единственным желанием перевернуться на другой бок и опять уснуть, сделай это. Брось +%MUNDANE%, чтобы узнать, что ты пропустил в школе, заснув обратно.",
+											
+											parts: [
+												{
+													type: 'great',													
+													info: 'На 10+ совершенно ничего. С утра испортилась система пожаротушения, и вся школа несколько часов простояла снаружи, ожидая, когда же система будет исправлена. А потом занятия отменили, и всех отпустили по домам.',													
+												},
+												{
+													type: 'partial',													
+													info: "На 7-9 это экскурсия в городскую администрацию, с целью узнать о политике мэра, которого ты спас от злодея минувшей ночью. Ты спишь спокойно, зная, что не пропустил ни одного занятия, хотя было б неплохо услышать, как мэр восхваляет тебя (или твоё геройское альтер-эго) пред всем классом.",													
+												},
+												{
+													type: 'miss',
+													info: 'На 6- это внезапная контрольная, по предмету, с который у тебя хуже всего. Придётся неслабо потрудиться (или выслушать нудную лекцию от взрослого), чтобы уговорить учителя позволить тебе написать контрольную позже. Но это проблемы завтрашнего тебя.'
+												}
+												
+											]
+										}
+									}
+								}
+							},
+						},
 					]
 				},
 

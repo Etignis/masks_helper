@@ -3807,7 +3807,7 @@
 								}
 							},
 							ru: {
-								title: "Бойся своих желангий",
+								title: "Бойся своих желаний",
 								key: "rethink_fantasy",
 								kind: 2,
 								data: {
@@ -3818,7 +3818,7 @@
 											parts: [
 												{
 													type: 'hit',
-													info: 'При успехе тебе удвется обратить эффект жедания с минимальными усилиями.',
+													info: 'При успехе тебе удается обратить эффект желания с минимальными усилиями.',
 													parts: [
 														{
 															type: 'great',													
@@ -3826,7 +3826,7 @@
 														},
 														{
 															type: 'partial',													
-															info: 'На 7-9 остается некий продолжительный эффект от желапния, расскажи ГМу, что это.',													
+															info: 'На 7-9 остается некий продолжительный эффект от желания, расскажи ГМу, что это.',													
 														},	
 													],												
 												},
@@ -3971,7 +3971,7 @@
 									move: {
 										data: {
 											info: "You’re always picking up new gear to keep yourself in the game. Whenever you pick up a new piece of gear, you can write it in as a new ability if this line is empty.||________",
-											condition: "The first time you [u]se each piece of gear] to <directly engage a threat#player_moves|basic_moves|directly_engage_threat>, <unleash your powers#player_moves|basic_moves|unleash_your_power>, or <defend someone#player_moves|basic_moves|defend>, you can roll +%MUNDANE% instead of the normal {Label}.",
+											condition: "The first time you [use each piece of gear] to <directly engage a threat#player_moves|basic_moves|directly_engage_threat>, <unleash your powers#player_moves|basic_moves|unleash_your_power>, or <defend someone#player_moves|basic_moves|defend>, you can roll +%MUNDANE% instead of the normal {Label}.",
 											
 											notes: "[No powers and not nearly enough training] requires you to pay attention to gear. Most other characters only care about stuff like ray guns and special devices when they’re immediately dangerous, but you should be listening for cool stuff you can pick up whenever possible. <Assessing the situation#player_moves|basic_moves|asses_sitiation> and <Straight. Up. Creepin’#player_moves|beacon|straight_up>. are great ways to flag cool stuff you can use."
 											}
@@ -4011,7 +4011,7 @@
 								data: {
 									move: {
 										data: {
-											condition: "[Помогая члену команды] ты можешь потратить 2 очка из {тимпаула}, чтобы дать ему +2.",
+											condition: "[Помогая члену команды] ты можешь потратить 2 очка из {тимпула}, чтобы дать ему +2.",
 											}
 									}									
 								}

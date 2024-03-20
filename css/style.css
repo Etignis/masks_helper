@@ -20,8 +20,12 @@
   --c_light: #51adf6;
   --c_lighest: #82c4f8;
   --c_dark: #0c7cd5;
+  --c_bg_m1: #333;
+  --c_bg_m2: #3b3b3b;
+  --c_bg_m3: #424242;
   --c_contrast: #fff;
   --c_shadow_dark: #000;
+  --c_shadow_normal: #00000030;
   --c_back_part: #00000029;
 }
 .clear {
@@ -473,16 +477,15 @@ ul.checklist li.marked {
   opacity: 1;
 }
 #data_list {
-  background: #333;
-  background: linear-gradient(to top, #2b2b2b, #333 11rem);
+  background: var(--c_bg_m1);
 }
 #section_list {
-  background: #3b3b3b;
-  background: linear-gradient(to top, #333333, #3b3b3b 11rem);
+  box-shadow: 0 0 20px 10px var(--c_shadow_normal);
+  background: var(--c_bg_m2);
 }
 #subsection_list {
-  background: #424242;
-  background: linear-gradient(to top, #3b3b3b, #424242 11rem);
+  box-shadow: 0 0 20px 10px var(--c_shadow_normal);
+  background: var(--c_bg_m3);
 }
 @media screen and (min-width: 65em) {
   #menu {
@@ -794,7 +797,7 @@ li.no_offset {
   flex-grow: 1;
   background: rgba(74, 74, 74, 0.9);
   position: relative;
-  box-shadow: 0 0 20px 10px black;
+  box-shadow: 0 0 20px 10px var(--c_shadow_normal);
 }
 #contain footer {
   margin-top: 4rem;
@@ -987,7 +990,7 @@ ul.compact li {
 }
 @media screen and (min-width: 65em) {
   #contain {
-    box-shadow: 0 0 20px 10px #333;
+    box-shadow: 0 0 20px 10px var(--c_shadow_normal);
   }
   #move {
     display: flex;

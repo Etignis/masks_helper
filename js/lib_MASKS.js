@@ -2000,7 +2000,7 @@
 						"Roll +SUPER",
 						"31 Custom Moves for Masks: A New Generation by Meghan Cross",
 						"these moves were written as a part of #movemonth hosted by james malloy (@andthemeltdowns) and brandon leon-gambetta (@bleongambetta)",
-						"{В процессе добавления...}"
+						"Ходы, откровенно говоря, специфические. Но можно использовать для вдохновения."
 					],
 					sub: [
 						{
@@ -4975,12 +4975,12 @@
 													parts: [
 														{
 															type: "great",
-															info: "На 10+ спроси 3.",
+															info: "На 10+ выбери 3.",
 																	
 														},
 														{
 															type: "partial",
-															info: "На 7-9 спроси 2.",
+															info: "На 7-9 выбери 2.",
 																	
 														},
 													],

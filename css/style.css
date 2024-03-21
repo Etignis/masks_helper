@@ -577,14 +577,17 @@ ul.checklist li.marked {
   padding: var(--padding-small);
 }
 .move .modifier {
-  margin-top: var(--padding);
   line-height: 1.5em;
 }
 .move .move_info,
 .move .condition {
   margin: var(--padding) 0;
-  margin-bottom: var(--padding-big);
+  margin-bottom: 0;
   line-height: 1.5em;
+}
+.move .move_info p,
+.move .condition p {
+  margin: var(--padding) 0;
 }
 .move .notes,
 .move .translator {

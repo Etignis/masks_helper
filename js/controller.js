@@ -668,6 +668,7 @@ Vue.component('move', {
 		<div class='condition' v-html="_condition"></div>
 		<div class='modifier' v-html="_modifier" v-if="_modifier.length>2"></div>
 		<div class='move_info' v-html="_info" v-show="_info.length>1"></div>
+		<br>
 		
 		<slot></slot>	
 		
@@ -727,7 +728,7 @@ Vue.component('move_part', {
 				list: el.list?el.list.map(item=>({title: _formatText(item.title, {noP: true})})): []
 			}));
 			
-			console.dir(aResultList);
+			//console.dir(aResultList);
 			
 			return aResultList;
 		},

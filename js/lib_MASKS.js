@@ -93,9 +93,371 @@
 							]
 						}
 					},
+				},	
+								
+				{
+					title: "Маяк",
+					key: "beacon",
+					color: "",
+					ico: "",
+					data: {
+						list: {
+							meta: {
+								bShuffle: false,
+							},
+							data: [
+								{
+									en: "Draw attention to their inadequacies",
+									ru: "Обрати внимание на его недостатки"
+								},
+								{
+									en: "Praise their best traits",
+									ru: "Похвали его лучшие черты"
+								},
+								{
+									en: "Make them pay for their audacity",
+									ru: "Заставь его платить за смелость"
+								},
+								{
+									en: "Compare them to the others",
+									ru: "Сравни его с другими"
+								},
+								{
+									en: "Play to their drives",
+									ru: "Сыграй на его побуждениях"
+								},
+							]
+						}
+					},
+				},		
+								
+				{
+					title: "Бык",
+					key: "bull",
+					color: "",
+					ico: "",
+					data: {
+						list: {
+							meta: {
+								bShuffle: false,
+							},
+							data: [
+								{
+									en: "Endanger their love",
+									ru: "Подвергни опасности его любовь"
+								},							
+								{
+									en: "Bolster their rival",
+									ru: "Поддержи его соперника"
+								},							
+								{
+									en: "Reveal dark secrets of their past",
+									ru: "Раскрой темные тайны его прошлого"
+								},							
+								{
+									en: "Attack with someone just like them",
+									ru: "Атакуй кем-то похожим на него"
+								},							
+								{
+									en: "Swarm with mundane forces",
+									ru: "Нашли полчище обычных людей"
+								},							
+							]
+						}
+					},
+				},		
+								
+				{
+					title: "Бунтарь",
+					key: "delinquent",
+					color: "",
+					ico: "",
+					data: {
+						list: {
+							meta: {
+								bShuffle: false,
+							},
+							data: [
+								{
+									en: "Put them in chains",
+									ru: "Закуй его в цепи ограничений"
+								},							
+								{
+									en: "Give or take an audience",
+									ru: "Дай или отбери аудиторию"
+								},							
+								{
+									en: "Give them conditional love",
+									ru: "Дай ему любовь за цену"
+								},							
+								{
+									en: "Show them the line",
+									ru: "Проведи перед ним черту"
+								},							
+								{
+									en: "Offer a helping hand",
+									ru: "Предложи руку помощи"
+								},							
+							]
+						}
+					},
+				},		
+								
+				{
+					title: "Обречённый",
+					key: "doomed",
+					color: "",
+					ico: "",
+					data: {
+						list: {
+							meta: {
+								bShuffle: false,
+							},
+							data: [
+								{
+									en: "Mark their doom track",
+									ru: "Отметь трек судьбы"
+								},							
+								{
+									en: "Offer a chance to further their cause",
+									ru: "Предложи шанс продолжить дело"
+								},							
+								{
+									en: "Remind them of what they could lose",
+									ru: "Напомни, что может потерять"
+								},							
+								{
+									en: "Push them to the brink",
+									ru: "Подтолкни к грани"
+								},							
+								{
+									en: "Offer temporary relief with a cost",
+									ru: "Предложи временный покой за цену"
+								},							
+							]
+						}
+					},
+				},		
+								
+				{
+					title: "Янус",
+					key: "janus",
+					color: "",
+					ico: "",
+					data: {
+						list: {
+							meta: {
+								bShuffle: false,
+							},
+							data: [
+								{
+									en: "Bring their obligations to bear",
+									ru: "Призови к выполнению обязательств"
+								},							
+								{
+									en: "Endanger someone from either life",
+									ru: "Угрожай кому-то из другой жизни"
+								},							
+								{
+									en: "Make their lives cross over",
+									ru: "Заставь жизни пересечься"
+								},							
+								{
+									en: "Put more obligations on them",
+									ru: "Наложи еще больше обязательств"
+								},							
+								{
+									en: "Take away their mask",
+									ru: "Отними маску"
+								},							
+							]
+						}
+					},
+				},		
+								
+				{
+					title: "Наследие",
+					key: "legasy",
+					color: "",
+					ico: "",
+					data: {
+						list: {
+							meta: {
+								bShuffle: false,
+							},
+							data: [
+								{
+									en: "Remind them of their traditions",
+									ru: "Напомни о традициях"
+								},							
+								{
+									en: "Compare them to the past",
+									ru: "Сравни с прошлым поколением"
+								},							
+								{
+									en: "Make them answer their family’s concerns",
+									ru: "Заставь ответить за дела семьи"
+								},							
+								{
+									en: "Raise expectations on them",
+									ru: "Повысь ожидания"
+								},							
+								{
+									en: "Honor them",
+									ru: "Восславь"
+								},							
+							]
+						}
+					},
 				},		
 				
+								
+				{
+					title: "Нова",
+					key: "nova",
+					color: "",
+					ico: "",
+					data: {
+						list: {
+							meta: {
+								bShuffle: false,
+							},
+							data: [
+								{
+									en: "Remind them of past collateral damage",
+									ru: "Напомни о побочном ущербе в прошлом"
+								},							
+								{
+									en: "Reveal a terrible truth of their powers",
+									ru: "Открой страшную правду о его силе"
+								},							
+								{
+									en: "Make their powers flare out of control",
+									ru: "Заставь силы выйти из-под контроля"
+								},							
+								{
+									en: "Stoke their conditions",
+									ru: "Дави на {Состояния}"
+								},							
+								{
+									en: "Introduce threats only they can tackle",
+									ru: "Вводи угрозу только для него"
+								},							
+							]
+						}
+					},
+				},		
 				
+								
+				{
+					title: "Чужак",
+					key: "outsider",
+					color: "",
+					ico: "",
+					data: {
+						list: {
+							meta: {
+								bShuffle: false,
+							},
+							data: [
+								{
+									en: "Draw attention to their differences",
+									ru: "Обрати внимание на различия"
+								},							
+								{
+									en: "Make a request from home",
+									ru: "Пришли весточку из дома"
+								},							
+								{
+									en: "Представь наблюдателя из дома",
+									ru: ""
+								},							
+								{
+									en: "Accept and support them in their moments of weakness",
+									ru: "Прими и поддержи в моменты слабочсти"
+								},							
+								{
+									en: "Provoke their beliefs and practices in tense situations",
+									ru: "Подвергай сомнению убеждения в напряженных ситуациях"
+								},							
+							]
+						}
+					},
+				},		
+				
+								
+				{
+					title: "Протеже",
+					key: "protege",
+					color: "",
+					ico: "",
+					data: {
+						list: {
+							meta: {
+								bShuffle: false,
+							},
+							data: [
+								{
+									en: "Convey their mistakes",
+									ru: "Укажи на дорущенные ошибки"
+								},							
+								{
+									en: "Bestow wisdom, wanted or unwanted",
+									ru: "Дари мудрость, желаемую и нет"
+								},							
+								{
+									en: "Hold up a mirror to them",
+									ru: "Покажи отражение"
+								},							
+								{
+									en: "Give them exactly what they need at a cost",
+									ru: "Дай именно то, что требуется, за цену"
+								},							
+								{
+									en: "Endanger their mentor",
+									ru: "Подвергни наставника опасности"
+								},							
+							]
+						}
+					},
+				},		
+				
+								
+				{
+					title: "Преображенный",
+					key: "transformed",
+					color: "",
+					ico: "",
+					data: {
+						list: {
+							meta: {
+								bShuffle: false,
+							},
+							data: [
+								{
+									en: "Reject them",
+									ru: "Отвергни его"
+								},							
+								{
+									en: "Show how they are feared or hated",
+									ru: "Покажи, как его боятся и ненавидят"
+								},							
+								{
+									en: "Attack them with unthinking hordes",
+									ru: "Атакуй его бездумными ордами"
+								},							
+								{
+									en: "Remind them of what they’ve lost",
+									ru: "Напомни, что он потерял"
+								},							
+								{
+									en: "See their true self",
+									ru: "Покажи ему его истинную сущность"
+								},							
+							]
+						}
+					},
+				},		
 				
 			]
 		},

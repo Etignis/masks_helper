@@ -918,11 +918,11 @@ Vue.component('chooser', {
 Vue.component('lister', {
 	props: {		
 		title: {
-			type: String,
+			type: [String, Array],
 			default: ""
 		},		
 		subtitle: {
-			type: String,
+			type: [String, Array],
 			default: ""
 		},	
 		content: {
@@ -938,7 +938,11 @@ Vue.component('lister', {
 	},
 	computed: {
 		_title: function(){
-			if(Array.isArray(this.content)) {
+			if(typeof this.title == 'string') {
+				return _formatText(this.title, {noP: true}); 
+			} else if(Array.isArray(this.title)) {
+				return this.title.map(el=>_formatText(el, {noP: true})).join('<br>\r\n'); 
+			} else if(Array.isArray(this.content)) {
 				return this.content[0];
 			} else if(typeof this.content == 'object') {
 				return this.content.title || "";
@@ -948,7 +952,9 @@ Vue.component('lister', {
 			
 		},
 		_subtitle: function(){
-			if(Array.isArray(this.content)) {
+			if(Array.isArray(this.subtitle)) {
+				return this.subtitle.map(el=>_formatText(el, {noP: true})).join('\r\n'); 
+			} else if(Array.isArray(this.content)) {
 				return this.content[1];
 			} else if(typeof this.content == 'object') {
 				return this.content.subtitle || "";
@@ -961,7 +967,7 @@ Vue.component('lister', {
 		
 	},
 	template: `<li class='no_offset lister item'>
-		<div v-html="title"></div>
+		<div v-html="_title"></div>
 		<div v-html="subtitle" v-if="subtitle.length > 0" style="font-style: italic"></div>
 	</li>`
 });
@@ -1201,15 +1207,37 @@ var app = new Vue({
 				aList = oContent.list.data.map((el, i)=>{
 					if(typeof el == 'string'){
 						return {
-							key:i, 
+							key: i, 
 							title: el.includes("|")?`<b>${el.split("|")[0].trim()}</b> ${el.split("|")[1].trim()}`: el
 						}
+					} else if (
+						typeof el === 'object' &&
+						!Array.isArray(el)
+					) {
+						let aLg = this.settings.lang.filter(oLang=> oLang.active).map(oLang=> oLang.code);
+						let oRet={
+							key: i
+						};
+						let aTitles = [];
+						aLg.forEach(sLg=>{
+							if(el[sLg]) {
+								if(typeof el[sLg] == 'string' && el[sLg]) {
+									aTitles.push(el[sLg]);
+								}
+							}
+						});
+						if(aTitles.length) {
+							oRet.title = aTitles;
+							return oRet;
+						}
+
+						return null;
 					} else {
 						return el
 					}
 				});
 					
-				o.list = aList;
+				o.list = aList.filter(el=>el!==null);
 			}
 						
 			if(oContent && oContent.pre){
@@ -1252,9 +1280,38 @@ var app = new Vue({
 			
 			return this.random_list.map(el=> { 
 				if(typeof el == 'string') {
-					let aParts = el.split("|"); return aParts.length>1?`<b>${aParts[0]}</b><br> ${aParts[1]}`:el					
-				} else {
-					return el.title;
+					let aParts = el.split("|"); 
+					return _formatText( 
+						aParts.length>1?`<b>${aParts[0]}</b><br> ${aParts[1]}`:el,
+						{noP: true});		
+				} else if(el.title){
+					
+					if(Array.isArray(el.title)) {
+						return  _formatText(el.title.join('\r\n<br>'), {noP:true });
+					} else {
+						return _formatText(el.title, {noP:true });
+					}
+				} else if (
+					typeof el === 'object' &&
+					!Array.isArray(el)
+				) {
+					let aLg = this.settings.lang.filter(oLang=> oLang.active).map(oLang=> oLang.code);
+					
+					let aTitles = [];
+					aLg.forEach(sLg=>{
+						if(el[sLg]) {
+							if(typeof el[sLg] == 'string' && el[sLg]) {
+								aTitles.push(el[sLg]);
+							}
+						}
+					});
+					if(aTitles.length) {
+						return _formatText(aTitles.join('<br>\r\n'), {noP:true });
+					}
+
+					return "";
+				}else {
+					return '';//el.title;
 				}
 				
 			}).join("<hr>");
@@ -1391,6 +1448,10 @@ var app = new Vue({
 			
 			
 			this.libPathValue = this._getWithLangs();			
+		},
+		//FIXIT
+		_random2: function(){
+			this.random_list = [this.displayData.list[randd(0, this.displayData.list.length-1)]];
 		},
 		lang_switch: function(sCode){
 			let oLg = this.settings.lang.find(oLang=> oLang.code == sCode);

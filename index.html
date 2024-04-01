@@ -232,10 +232,22 @@
 			
 			<!-- Списки -->
 			<div id='result' class='widther'  v-show="showResult" >				
+				<div id="top_toolbar">
+					<div class="toolbar_content">
+						<toggler v-for="lang in settings.lang"
+						:key="lang.code"
+						:code="lang.code"
+						:title="lang.title"
+						:active="lang.active"
+						@toggle="lang_switch"
+					></toggler>
+					</div>					
+				</div>
+
 				<section class='padding'  v-show="String(random_result).length > 0">
 					<header>
 						<h1>Случайный результат:</h1>
-						<button @click="_random" title='Получить случайный результат' id='getRandom'>🎲</button>
+						<button @click="_random2" title='Получить случайный результат' id='getRandom'>🎲</button>
 					</header>
 					
 					<div class='highlight' v-html="random_result">
@@ -263,7 +275,7 @@
 					<h1 v-else> Список:</h1>
 					<ul :class="{compact: listCompact}">
 						<lister v-for="item in displayData.list"
-							:key="item.i"
+							:key="item.key"
 							:title="item.title"
 							:subtitle="item.subtitle"
 						>

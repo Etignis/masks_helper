@@ -27,7 +27,7 @@
 									ru: "Вызови {Состояние}"
 								},
 								{
-									en: "Take Influence over someone",
+									en: "Take {Influence} over someone",
 									ru: "Получи {Влияние} на кого-то"
 								},
 								{

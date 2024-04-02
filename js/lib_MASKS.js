@@ -1322,12 +1322,12 @@
 																		title: "you struggle past the pain: mark two {Conditions}"
 																	}
 																],	
-															},
-															{
-																info: "On a miss, you stand strong. Mark {Potential} as normal, and say how you weather the blow.", 
-																type: 'miss',
 															}
 														]
+													},
+													{
+														info: "On a miss, you stand strong. Mark {Potential} as normal, and say how you weather the blow.", 
+														type: 'miss',
 													}
 												]
 													

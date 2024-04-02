@@ -1017,8 +1017,8 @@
 							
 							{
 								en: {
-									title: "Asses the situation",
-									key: "asses_sitiation",
+									title: "Assess the situation",
+									key: "assess_sitiation",
 									data: {
 										move: {
 											data: {
@@ -1067,7 +1067,7 @@
 								},
 								ru: {
 									title: "Оцени ситуацию",
-									key: "asses_sitiation",
+									key: "assess_sitiation",
 									data: {
 										move: {
 											data: {
@@ -3212,7 +3212,7 @@
 													],
 													list: [
 														"You have each other’s backs. If either of you roll a 6- on a roll to <defend#player_moves|basic_moves|defend> one another, you can treat it as a 7-9.",
-														"Together you can notice what you might have missed alone. When either of you roll to <assess the situation#player_moves|basic_moves|asses_sitiation>, you can always ask at least one question from the list, even on a miss.",
+														"Together you can notice what you might have missed alone. When either of you roll to <assess the situation#player_moves|basic_moves|assess_sitiation>, you can always ask at least one question from the list, even on a miss.",
 														"You understand each other. When either of you rolls to <comfort or support#player_moves|basic_moves|comfort_support> one another, you can add +1 to the roll.",
 													]
 												},
@@ -3252,7 +3252,7 @@
 													],
 													list: [
 														"Вы прикрываете друг-друга. Если у кого-то из выс выпадает 6- на <защиту#player_moves|basic_moves|defend> второго, считайте, что результат 7-9.",
-														"Вместе вы можете заметить то, что один мог бы пропустить. Когда кто-то из вас <оценивает ситуацию#player_moves|basic_moves|asses_sitiation>, может задать как минимум 1 вопрос, даже при провале.",
+														"Вместе вы можете заметить то, что один мог бы пропустить. Когда кто-то из вас <оценивает ситуацию#player_moves|basic_moves|assess_sitiation>, может задать как минимум 1 вопрос, даже при провале.",
 														"Вы отлично понимаете друг-друга. Когда кто-то из вас <утешает или поддерживает#player_moves|basic_moves|comfort_support> второго, добавьте +1 к броску",
 													]
 												},
@@ -5189,7 +5189,7 @@
 												},
 											],
 											
-											notes: "<No powers and not nearly enough training#player_moves|beacon|no_powers> requires you to pay attention to gear. Most other characters only care about stuff like ray guns and special devices when they’re immediately dangerous, but you should be listening for cool stuff you can pick up whenever possible. <Assessing the situation#player_moves|basic_moves|asses_sitiation> and <Straight. Up. Creepin’]. are great ways to flag cool stuff you can use."
+											notes: "<No powers and not nearly enough training#player_moves|beacon|no_powers> requires you to pay attention to gear. Most other characters only care about stuff like ray guns and special devices when they’re immediately dangerous, but you should be listening for cool stuff you can pick up whenever possible. <Assessing the situation#player_moves|basic_moves|assess_sitiation> and <Straight. Up. Creepin’]. are great ways to flag cool stuff you can use."
 										}
 									}									
 								}
@@ -5243,7 +5243,7 @@
 												},
 											],
 											
-											notes: "<No powers and not nearly enough training#player_moves|beacon|no_powers> requires you to pay attention to gear. Most other characters only care about stuff like ray guns and special devices when they’re immediately dangerous, but you should be listening for cool stuff you can pick up whenever possible. <Assessing the situation#player_moves|basic_moves|asses_sitiation> and [Straight. Up. Creepin’] are great ways to flag cool stuff you can use."
+											notes: "<No powers and not nearly enough training#player_moves|beacon|no_powers> requires you to pay attention to gear. Most other characters only care about stuff like ray guns and special devices when they’re immediately dangerous, but you should be listening for cool stuff you can pick up whenever possible. <Assessing the situation#player_moves|basic_moves|assess_sitiation> and [Straight. Up. Creepin’] are great ways to flag cool stuff you can use."
 
 										}
 									}									
@@ -5260,7 +5260,7 @@
 											info: "You’re always picking up new gear to keep yourself in the game. Whenever you pick up a new piece of gear, you can write it in as a new ability if this line is empty.||________",
 											condition: "The first time you [use each piece of gear] to <directly engage a threat#player_moves|basic_moves|directly_engage_threat>, <unleash your powers#player_moves|basic_moves|unleash_your_power>, or <defend someone#player_moves|basic_moves|defend>, you can roll +%MUNDANE% instead of the normal {Label}.",
 											
-											notes: "[No powers and not nearly enough training] requires you to pay attention to gear. Most other characters only care about stuff like ray guns and special devices when they’re immediately dangerous, but you should be listening for cool stuff you can pick up whenever possible. <Assessing the situation#player_moves|basic_moves|asses_sitiation> and <Straight. Up. Creepin’#player_moves|beacon|straight_up>. are great ways to flag cool stuff you can use."
+											notes: "[No powers and not nearly enough training] requires you to pay attention to gear. Most other characters only care about stuff like ray guns and special devices when they’re immediately dangerous, but you should be listening for cool stuff you can pick up whenever possible. <Assessing the situation#player_moves|basic_moves|assess_sitiation> and <Straight. Up. Creepin’#player_moves|beacon|straight_up>. are great ways to flag cool stuff you can use."
 											}
 									}									
 								}
@@ -5274,7 +5274,7 @@
 											info: "Ты постоянно экспериментируешь со своей экипировкой. Всякий раз, когда ты берешь новое снаряжение, можешь записать его в качестве способности, если эта строка пуста.||________",
 											condition: "Когда ты [впервые используешь часть экипировки] <против явной угрозы#player_moves|basic_moves|directly_engage_threat>, <давая волю силам#player_moves|basic_moves|unleash_your_power> или <защищая кого-нибудь#player_moves|basic_moves|defend>, ты можешь бросать +%MUNDANE% вместо обычного {Ярлыка}.",
 											
-											notes: "[No powers and not nearly enough training] requires you to pay attention to gear. Most other characters only care about stuff like ray guns and special devices when they’re immediately dangerous, but you should be listening for cool stuff you can pick up whenever possible. <Assessing the situation#player_moves|basic_moves|asses_sitiation> and <Straight. Up. Creepin’#player_moves|beacon|straight_up>. are great ways to flag cool stuff you can use."
+											notes: "[No powers and not nearly enough training] requires you to pay attention to gear. Most other characters only care about stuff like ray guns and special devices when they’re immediately dangerous, but you should be listening for cool stuff you can pick up whenever possible. <Assessing the situation#player_moves|basic_moves|assess_sitiation> and <Straight. Up. Creepin’#player_moves|beacon|straight_up>. are great ways to flag cool stuff you can use."
 											}
 									}									
 								}
@@ -5736,7 +5736,7 @@
 								data: {
 									move: {
 										data: {
-											condition: "When you <assess the situation#player_moves|basic_moves|asses_sitiation>, you can always ask one of the following questions, even on a miss:",
+											condition: "When you <assess the situation#player_moves|basic_moves|assess_sitiation>, you can always ask one of the following questions, even on a miss:",
 											
 											parts: [
 												{												
@@ -5754,7 +5754,7 @@
 												}
 											],
 
-											notes: "For [Criminal mind], you still get +1 ongoing to act on the answers to those questions, just like for a normal <assess the situation move#player_moves|basic_moves|asses_sitiation>."
+											notes: "For [Criminal mind], you still get +1 ongoing to act on the answers to those questions, just like for a normal <assess the situation move#player_moves|basic_moves|assess_sitiation>."
 										}
 									}									
 								}
@@ -5766,7 +5766,7 @@
 								data: {
 									move: {
 										data: {
-											condition: "<Оценивая ситуацию#player_moves|basic_moves|asses_sitiation>, ты можешь задать один из этих вопросов, даже при провале:",
+											condition: "<Оценивая ситуацию#player_moves|basic_moves|assess_sitiation>, ты можешь задать один из этих вопросов, даже при провале:",
 											
 											parts: [
 												{												
@@ -5784,7 +5784,7 @@
 												}
 											],
 
-											notes: "For [Criminal mind], you still get +1 ongoing to act on the answers to those questions, just like for a normal <assess the situation move#player_moves|basic_moves|asses_sitiation>."
+											notes: "For [Criminal mind], you still get +1 ongoing to act on the answers to those questions, just like for a normal <assess the situation move#player_moves|basic_moves|assess_sitiation>."
 										}
 									}									
 								}					
@@ -7236,7 +7236,7 @@
 								data: {
 									move: {
 										data: {
-											condition: "When you [<assess the situation#player_moves|basic_moves|asses_sitiation> before entering into a fight], you may ask one additional question, even on a miss.",
+											condition: "When you [<assess the situation#player_moves|basic_moves|assess_sitiation> before entering into a fight], you may ask one additional question, even on a miss.",
 										}
 									}
 								}
@@ -7247,7 +7247,7 @@
 								data: {
 									move: {
 										data: {
-											condition: "Когда ты [<оцениваешь ситуацию#player_moves|basic_moves|asses_sitiatio> перед вступлением в бой], ты можешь задать еще один вопрос, даже при провале.",
+											condition: "Когда ты [<оцениваешь ситуацию#player_moves|basic_moves|assess_sitiatio> перед вступлением в бой], ты можешь задать еще один вопрос, даже при провале.",
 										}
 									}
 								}

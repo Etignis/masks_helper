@@ -874,7 +874,7 @@ button.toggler.active::after {
 }
 .info {
   border: 2px solid var(--color);
-  padding: 1rem;
+  padding: var(--padding-big);
   border-radius: 3px;
   background: #455A64;
   color: white;

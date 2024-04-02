@@ -9,13 +9,21 @@
 			color: "",
 			ico: "",
 			visible: true,
+			group: {
+				by: "type",
+				rules: {
+					0: "Общие ходы",
+					1: "Ходы буклетов",
+				}
+			},
 
 			sub: [			
 				{
-					title: "Общие",
+					title: "Основные",
 					key: "common",
 					color: "",
 					ico: "",
+					type: 0,
 					data: {
 						list: {
 							meta: {
@@ -100,6 +108,7 @@
 					key: "beacon",
 					color: "",
 					ico: "",
+					type: 1,
 					data: {
 						list: {
 							meta: {
@@ -136,6 +145,7 @@
 					key: "bull",
 					color: "",
 					ico: "",
+					type: 1,
 					data: {
 						list: {
 							meta: {
@@ -172,6 +182,7 @@
 					key: "delinquent",
 					color: "",
 					ico: "",
+					type: 1,
 					data: {
 						list: {
 							meta: {
@@ -208,6 +219,7 @@
 					key: "doomed",
 					color: "",
 					ico: "",
+					type: 1,
 					data: {
 						list: {
 							meta: {
@@ -244,6 +256,7 @@
 					key: "janus",
 					color: "",
 					ico: "",
+					type: 1,
 					data: {
 						list: {
 							meta: {
@@ -280,6 +293,7 @@
 					key: "legasy",
 					color: "",
 					ico: "",
+					type: 1,
 					data: {
 						list: {
 							meta: {
@@ -317,6 +331,7 @@
 					key: "nova",
 					color: "",
 					ico: "",
+					type: 1,
 					data: {
 						list: {
 							meta: {
@@ -354,6 +369,7 @@
 					key: "outsider",
 					color: "",
 					ico: "",
+					type: 1,
 					data: {
 						list: {
 							meta: {
@@ -383,14 +399,14 @@
 							]
 						}
 					},
-				},		
-				
+				},	
 								
 				{
 					title: "Протеже",
 					key: "protege",
 					color: "",
 					ico: "",
+					type: 1,
 					data: {
 						list: {
 							meta: {
@@ -420,14 +436,14 @@
 							]
 						}
 					},
-				},		
-				
+				},
 								
 				{
 					title: "Преображенный",
 					key: "transformed",
 					color: "",
 					ico: "",
+					type: 1,
 					data: {
 						list: {
 							meta: {

@@ -385,12 +385,16 @@
 									ru: "Пришли весточку из дома"
 								},							
 								{
-									en: "Представь наблюдателя из дома",
-									ru: ""
+									en: "Introduce a monitor from home",
+									ru: "Представь наблюдателя из дома"
 								},							
 								{
 									en: "Accept and support them in their moments of weakness",
 									ru: "Прими и поддержи в моменты слабочсти"
+								},							
+								{
+									en: "Provoke their beliefs and practices in tense situations",
+									ru: "Подвергай сомнению убеждения в напряженных ситуациях"
 								},							
 								{
 									en: "Provoke their beliefs and practices in tense situations",

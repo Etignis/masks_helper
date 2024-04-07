@@ -395,11 +395,7 @@
 								{
 									en: "Provoke their beliefs and practices in tense situations",
 									ru: "Подвергай сомнению убеждения в напряженных ситуациях"
-								},							
-								{
-									en: "Provoke their beliefs and practices in tense situations",
-									ru: "Подвергай сомнению убеждения в напряженных ситуациях"
-								},							
+								},
 							]
 						}
 					},

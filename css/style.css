@@ -275,6 +275,9 @@ ul.checklist li {
 ul.checklist li.marked {
   list-style-type: "✅ ";
 }
+ul.checklist li.loading {
+  list-style-type: "✴️ ";
+}
 @media screen and (min-width: 65em) {
   #app {
     flex-direction: row;

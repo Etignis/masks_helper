@@ -2945,7 +2945,7 @@
 								}
 							},
 							ru: {
-								title: "discover your own mythic background",
+								title: "Узнай о мифическом наследии",
 								key: "mythic_background",
 								data: {
 									move: {

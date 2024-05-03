@@ -9,6 +9,16 @@
 	background: @gray2;
 }
 
+.censor{
+	//background: var(--c_shadow_normal);
+	&::before{
+		content: "[ "
+	}
+	&::after{
+		content: " ]"
+	}
+} 
+
 .move{
 	max-width: 80rem;
 	margin: var(--padding);

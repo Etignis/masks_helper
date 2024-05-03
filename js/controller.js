@@ -29,6 +29,8 @@ function _formatText(sText, oParams){
 	// }
 	
 	sText = sText	
+		.replace(/~[^~\|]+\|([^~\|]+)~/ig, `<span class='censor'>$1</span>`)
+		.replace(/~[^~\|]+~/ig, `<span class='censor'>███████</span>`)
 		.replace(/<([^#]+)(#[^\>]+)>/ig, `<a href='$2' class='internal'>$1</a>`)
 		.replace(/\[([^\[\]]+)\]/g, "<b>$1</b>")
 		.replace(/\{([^\{\}]+)\}/g, "<i>$1</i>")							
@@ -593,6 +595,10 @@ Vue.component('move', {
 			}
 			return sText;
 		},
+		_title: function(){
+			let sText = _formatText(this.title, {noP: true});//.split("|").join("<br>");
+			return sText;
+		},
 		_info: function(){
 			let sText = _formatText(this.info);//.split("|").join("<br>");
 			return sText;
@@ -661,7 +667,7 @@ Vue.component('move', {
 		
 	},
 	template: `<article class='move'>
-		<h1 class='title'>{{title}}</h1>
+		<h1 class='title' v-html='_title'></h1>
 		<div class='kind' v-show='_kind.length>3' v-html='_kind'></div>
 		<div class='replace' v-html="_replace" v-show="_replace.length>1"></div>
 		<div class='move_info' v-html="_pre" v-show="_pre.length>1"></div>
@@ -1148,14 +1154,16 @@ var app = new Vue({
 
 		_section :function(){
 			if(this.checked.main && this.section.length) {
-				return this.section;
+				//return this.section;
+				return this.section.map(el=>{el.title = _formatText(el.title, {noP: true}); return el});
 			}
 			return [];
 		},
 
 		_subsection :function(){
 			if(this.checked.section && this.subsection.length) {
-				return this.subsection;
+				//return this.subsection;
+				return this.subsection.map(el=>{el.title = _formatText(el.title, {noP: true}); return el});
 			}
 			return [];
 		},
@@ -1395,6 +1403,7 @@ var app = new Vue({
 			alert('lib version: '+lib_MASKS.version)
 		}
 		this.structure = lib_MASKS.getStructure(null, null, 'ru', this.filterbar.search);
+		this.structure = this.structure.map(el=>{el.title = _formatText(el.title, {noP: true}); return el});
 		if(this.bDebug) {
 			alert('structure length: '+this.structure.length)
 		}
@@ -1776,7 +1785,7 @@ var app = new Vue({
 			
 			
 			if(aHash.length>0) {
-				window.location.hash = aHash.join("|");
+				window.location.hash = aHash.join("/");
 			} else {
 				this.removeHash();
 				this.structure = lib_MASKS.getStructure(null, null, 'ru', this.filterbar.search);
@@ -1791,7 +1800,7 @@ var app = new Vue({
 			sHash = decodeURIComponent(sHash);
 			var oHash = {};
 			
-			let aHash = sHash.split("|");
+			let aHash = sHash.split("/");
 			if(aHash[0]) {
 				this.checked.main = aHash[0];
 				this.section = this._formatMenuListbyGroups(

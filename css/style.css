@@ -540,6 +540,12 @@ ul.checklist li.marked {
   padding: .5rem;
   background: #424242;
 }
+.censor::before {
+  content: "[ ";
+}
+.censor::after {
+  content: " ]";
+}
 .move {
   max-width: 80rem;
   margin: var(--padding);

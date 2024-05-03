@@ -277,6 +277,15 @@ ul.checklist li.marked {
 }
 ul.checklist li.loading {
   list-style-type: "✴️ ";
+  animation: 2s infinite alternate blink;
+}
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: .5;
+  }
 }
 @media screen and (min-width: 65em) {
   #app {

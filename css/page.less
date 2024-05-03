@@ -133,7 +133,18 @@ ul.checklist{
       }
       &.loading{
         list-style-type: "✴️ ";
+        animation: 2s infinite alternate blink;
       }
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: .5;
   }
 }
 
